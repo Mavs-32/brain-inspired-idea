@@ -30,7 +30,13 @@
                                 <a href="${paper.link}" target="_blank">${paper.title}</a>
                             </h2>
                             <p class="text-sm text-gray-400 mb-4">发布日期: ${paper.published}</p>
-                            <p class="text-gray-700 leading-relaxed">${paper.summary}</p>
+                            
+                            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4 rounded-r-md">
+                                <p class="text-sm font-bold text-blue-800 mb-1">💡 DeepSeek 核心观点提取：</p>
+                                <p class="text-gray-800 font-medium leading-relaxed">${paper.ai_summary}</p>
+                            </div>
+                            
+                            <p class="text-xs text-gray-400 leading-relaxed">原文摘要预览: ${paper.summary}</p>
                         </div>
                     `;
                     container.innerHTML += card;
