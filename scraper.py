@@ -7,11 +7,9 @@ import time
 from datetime import datetime
 from openai import OpenAI
 
-# 配置 DeepSeek API
 API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 client = None
 if API_KEY:
-    # DeepSeek 完全兼容 OpenAI 的 SDK，只需修改 base_url
     client = OpenAI(api_key=API_KEY, base_url="https://api.deepseek.com")
 else:
     print("警告：未检测到 DEEPSEEK_API_KEY 环境变量，AI 总结功能将跳过。")
@@ -20,9 +18,11 @@ def generate_ai_summary(title, abstract):
     if not client:
         return "AI 总结不可用（未配置 API 密钥）。"
     
+    # 巧妙的提示词：让 AI 充当评审，判断价值并总结
     prompt = f"""
-    你是一个类脑计算和人工智能领域的顶级专家。请根据以下论文的标题和摘要，用 1 到 2 句话（必须用中文）极其精炼地总结出这篇论文的**核心创新点或主要观点**。
-    不要翻译原摘要，直接说重点。
+    你是一个类脑计算、CSNN 和人工智能领域的顶级评审专家。请阅读以下论文：
+    1. 价值评估：如果这篇论文提出了重大理论突破、极具潜力的神经形态硬件架构，或解决了关键难题，请在回复的最开头加上“🔥 重点推荐：”。如果是常规研究，则不需要加。
+    2. 核心观点：用 1-2 句话（中文）极其精炼地总结它的**核心创新点**。不要翻译原摘要。
     
     论文标题: {title}
     论文摘要: {abstract}
@@ -31,20 +31,19 @@ def generate_ai_summary(title, abstract):
         response = client.chat.completions.create(
             model="deepseek-chat",
             messages=[
-                {"role": "system", "content": "你是一个专业的学术阅读助手，擅长从长篇英文摘要中提取核心价值。"},
+                {"role": "system", "content": "你是一个严谨的学术阅读助手，擅长评估论文价值并提取核心信息。"},
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.3, # 稍微调低温度，让学术总结更严谨
+            temperature=0.3, 
             max_tokens=150
         )
-        time.sleep(1) # 稍微停顿，防止触发 API 并发限制
+        time.sleep(1) 
         return response.choices[0].message.content.strip()
     except Exception as e:
         print(f"AI 总结失败: {e}")
         return "AI 总结生成失败。"
 
 def fetch_papers():
-    # 增加 CSNN 等精准搜索词
     search_query = 'abs:"spiking neural network" OR abs:"CSNN" OR abs:"neuromorphic" OR abs:"brain-inspired"'
     url = f'http://export.arxiv.org/api/query?search_query={urllib.parse.quote(search_query)}&sortBy=submittedDate&sortOrder=desc&max_results=10'
     
@@ -61,7 +60,6 @@ def fetch_papers():
             
             print(f"正在处理: {title[:30]}...")
             
-            # 调用 DeepSeek 生成中文摘要
             ai_viewpoint = generate_ai_summary(title, abstract)
             
             papers.append({
@@ -71,18 +69,15 @@ def fetch_papers():
                 'summary': abstract[:150] + '...', 
                 'ai_summary': ai_viewpoint         
             })
-        print(f"成功抓取并总结了 {len(papers)} 篇论文！")
         return papers
     except Exception as e:
         print(f"抓取发生错误: {e}")
         return []
 
 if __name__ == '__main__':
-    print("开始抓取并调用 DeepSeek 生成总结...")
     papers = fetch_papers()
     with open('papers.json', 'w', encoding='utf-8') as f:
         json.dump({
             "updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 
             "papers": papers
         }, f, ensure_ascii=False, indent=2)
-    print("全部处理完成！")
