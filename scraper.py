@@ -18,7 +18,6 @@ def generate_ai_summary(title, abstract):
     if not client:
         return "AI 总结不可用（未配置 API 密钥）。"
     
-    # 巧妙的提示词：让 AI 充当评审，判断价值并总结
     prompt = f"""
     你是一个类脑计算、CSNN 和人工智能领域的顶级评审专家。请阅读以下论文：
     1. 价值评估：如果这篇论文提出了重大理论突破、极具潜力的神经形态硬件架构，或解决了关键难题，请在回复的最开头加上“🔥 重点推荐：”。如果是常规研究，则不需要加。
@@ -44,12 +43,24 @@ def generate_ai_summary(title, abstract):
         return "AI 总结生成失败。"
 
 def fetch_papers():
-    search_query = 'abs:"spiking neural network" OR abs:"CSNN" OR abs:"neuromorphic" OR abs:"brain-inspired"'
-    url = f'http://export.arxiv.org/api/query?search_query={urllib.parse.quote(search_query)}&sortBy=submittedDate&sortOrder=desc&max_results=10'
+    # 1. 去掉双引号，使用 arXiv 最喜欢的安全搜索语法
+    search_query = 'all:spiking OR all:neuromorphic OR all:CSNN'
+    
+    # 2. 使用标准的 urlencode 生成参数，完美解决 400 Bad Request
+    params = urllib.parse.urlencode({
+        'search_query': search_query,
+        'sortBy': 'submittedDate',
+        'sortOrder': 'desc',
+        'max_results': 10
+    })
+    url = f'http://export.arxiv.org/api/query?{params}'
     
     try:
-        response = urllib.request.urlopen(url, timeout=15)
-        root = ET.fromstring(response.read())
+        # 3. 伪装成真实的电脑浏览器
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+        response = urllib.request.urlopen(req, timeout=20)
+        xml_data = response.read()
+        root = ET.fromstring(xml_data)
         
         papers = []
         for entry in root.findall('{http://www.w3.org/2005/Atom}entry'):
@@ -69,9 +80,11 @@ def fetch_papers():
                 'summary': abstract[:150] + '...', 
                 'ai_summary': ai_viewpoint         
             })
+            
+        print(f"🎉 成功抓取并总结了 {len(papers)} 篇论文！")
         return papers
     except Exception as e:
-        print(f"抓取发生错误: {e}")
+        print(f"❌ 抓取发生错误: {e}")
         return []
 
 if __name__ == '__main__':
