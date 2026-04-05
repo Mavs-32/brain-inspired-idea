@@ -1,21 +1,19 @@
-import urllib.request
-import urllib.parse
-import xml.etree.ElementTree as ET
 import json
 import os
 import time
 from datetime import datetime
+import arxiv  # 引入官方库
 from openai import OpenAI
 
 API_KEY = os.environ.get("DEEPSEEK_API_KEY")
-client = None
+ai_client = None
 if API_KEY:
-    client = OpenAI(api_key=API_KEY, base_url="https://api.deepseek.com")
+    ai_client = OpenAI(api_key=API_KEY, base_url="https://api.deepseek.com")
 else:
     print("警告：未检测到 DEEPSEEK_API_KEY 环境变量，AI 总结功能将跳过。")
 
 def generate_ai_summary(title, abstract):
-    if not client:
+    if not ai_client:
         return "AI 总结不可用（未配置 API 密钥）。"
     
     prompt = f"""
@@ -27,7 +25,7 @@ def generate_ai_summary(title, abstract):
     论文摘要: {abstract}
     """
     try:
-        response = client.chat.completions.create(
+        response = ai_client.chat.completions.create(
             model="deepseek-chat",
             messages=[
                 {"role": "system", "content": "你是一个严谨的学术阅读助手，擅长评估论文价值并提取核心信息。"},
@@ -36,41 +34,35 @@ def generate_ai_summary(title, abstract):
             temperature=0.3, 
             max_tokens=150
         )
-        time.sleep(1) 
+        time.sleep(1.5) 
         return response.choices[0].message.content.strip()
     except Exception as e:
         print(f"AI 总结失败: {e}")
         return "AI 总结生成失败。"
 
 def fetch_papers():
-    # 1. 去掉双引号，使用 arXiv 最喜欢的安全搜索语法
-    search_query = 'all:spiking OR all:neuromorphic OR all:CSNN'
-    
-    # 2. 使用标准的 urlencode 生成参数，完美解决 400 Bad Request
-    params = urllib.parse.urlencode({
-        'search_query': search_query,
-        'sortBy': 'submittedDate',
-        'sortOrder': 'desc',
-        'max_results': 10
-    })
-    url = f'http://export.arxiv.org/api/query?{params}'
-    
+    papers = []
     try:
-        # 3. 伪装成真实的电脑浏览器
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
-        response = urllib.request.urlopen(req, timeout=20)
-        xml_data = response.read()
-        root = ET.fromstring(xml_data)
+        # 使用官方包构建搜索，彻底规避 HTTP 400 错误
+        search = arxiv.Search(
+            query='all:"spiking neural network" OR all:neuromorphic OR all:CSNN',
+            max_results=10,
+            sort_by=arxiv.SortCriterion.SubmittedDate,
+            sort_order=arxiv.SortOrder.Descending
+        )
         
-        papers = []
-        for entry in root.findall('{http://www.w3.org/2005/Atom}entry'):
-            title = entry.find('{http://www.w3.org/2005/Atom}title').text.replace('\n', ' ')
-            published = entry.find('{http://www.w3.org/2005/Atom}published').text[:10]
-            link = entry.find('{http://www.w3.org/2005/Atom}id').text
-            abstract = entry.find('{http://www.w3.org/2005/Atom}summary').text.replace('\n', ' ').strip()
+        # 执行查询
+        client = arxiv.Client()
+        results = list(client.results(search))
+        
+        for paper in results:
+            title = paper.title.replace('\n', ' ')
+            # 直接提取格式化好的日期
+            published = paper.published.strftime('%Y-%m-%d')
+            link = paper.entry_id
+            abstract = paper.summary.replace('\n', ' ').strip()
             
             print(f"正在处理: {title[:30]}...")
-            
             ai_viewpoint = generate_ai_summary(title, abstract)
             
             papers.append({
