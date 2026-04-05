@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类脑智能最新论文追踪</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8 font-sans">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-800 mb-2">类脑智能最新论文每日追踪</h1>
+        <p class="text-gray-500 mb-8" id="update-time">正在获取最新数据...</p>
+        
+        <div id="papers-container" class="space-y-6">
+            </div>
+    </div>
+
+    <script>
+        fetch('papers.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('update-time').textContent = `最后更新时间: ${data.updated}`;
+                const container = document.getElementById('papers-container');
+                container.innerHTML = ''; 
+                
+                data.papers.forEach(paper => {
+                    const card = `
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <h2 class="text-xl font-semibold text-blue-600 mb-2">
+                                <a href="${paper.link}" target="_blank">${paper.title}</a>
+                            </h2>
+                            <p class="text-sm text-gray-400 mb-4">发布日期: ${paper.published}</p>
+                            <p class="text-gray-700 leading-relaxed">${paper.summary}</p>
+                        </div>
+                    `;
+                    container.innerHTML += card;
+                });
+            })
+            .catch(error => {
+                document.getElementById('papers-container').innerHTML = '<p class="text-red-500">无法加载论文数据，请稍后再试。</p>';
+            });
+    </script>
+</body>
+</html>
