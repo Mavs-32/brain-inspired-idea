@@ -2,7 +2,7 @@ import json
 import os
 import time
 from datetime import datetime
-import arxiv  # 依然使用最稳定的官方库
+import arxiv  
 from openai import OpenAI
 
 API_KEY = os.environ.get("DEEPSEEK_API_KEY")
@@ -17,7 +17,7 @@ def generate_ai_summary(title, abstract):
         return "AI 总结不可用（未配置 API 密钥）。"
     
     prompt = f"""
-    你是一个类脑计算和人工智能领域的顶级评审专家。请阅读以下论文：
+    你是一个脉冲神经网络(SNN)领域的顶级评审专家。请阅读以下论文：
     1. 价值评估：如果这篇论文是该领域的开创性工作或提出了核心基础理论，请在回复的最开头加上“🔥 领域经典：”。
     2. 核心观点：用 1-2 句话（中文）极其精炼地总结它的**核心创新点**。不要翻译原摘要。
     
@@ -43,11 +43,11 @@ def generate_ai_summary(title, abstract):
 def fetch_papers():
     papers = []
     try:
-        # 极简配置：直接使用 arxiv 官方包
+        # 💡 核心改动 1：关键词极度纯净，只瞄准 SNN 和 CSNN
+        # 💡 核心改动 2：限制放宽到 30 篇
         search = arxiv.Search(
-            query='all:"spiking neural network" OR all:neuromorphic OR all:CSNN',
-            max_results=10,
-            # 💡 核心魔法在这里：改成按“相关度(Relevance)”排序，打破时间限制！
+            query='all:"spiking neural network" ',
+            max_results=30,
             sort_by=arxiv.SortCriterion.Relevance, 
             sort_order=arxiv.SortOrder.Descending
         )
@@ -72,7 +72,7 @@ def fetch_papers():
                 'ai_summary': ai_viewpoint         
             })
             
-        print(f"🎉 成功抓取并总结了 {len(papers)} 篇高相关性论文！")
+        print(f"🎉 成功抓取并总结了 {len(papers)} 篇 SNN 高相关性论文！")
         return papers
     except Exception as e:
         print(f"❌ 抓取发生错误: {e}")
