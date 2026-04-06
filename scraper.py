@@ -1,17 +1,22 @@
 import urllib.request
 import urllib.parse
+import urllib.error
 import json
 import os
 import time
 from datetime import datetime
 from openai import OpenAI
 
+# DeepSeek API 配置
 API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 client = None
 if API_KEY:
     client = OpenAI(api_key=API_KEY, base_url="https://api.deepseek.com")
 else:
     print("警告：未检测到 DEEPSEEK_API_KEY 环境变量，AI 总结功能将跳过。")
+
+# Semantic Scholar API 配置 (预留，目前先不填)
+S2_API_KEY = os.environ.get("S2_API_KEY")
 
 def generate_ai_summary(title, abstract):
     if not client:
@@ -42,58 +47,73 @@ def generate_ai_summary(title, abstract):
         return "AI 总结生成失败。"
 
 def fetch_papers():
-    # 搜索词加入了 IEEE，限定在计算机科学/工程领域，搜索全年代的高相关性论文
     query = '("spiking neural network" OR "neuromorphic" OR "CSNN") AND "IEEE"'
-    
-    # fields 参数要求返回：标题,摘要,链接,年份,发表期刊/会议,引用量
     fields = 'title,abstract,url,year,venue,citationCount'
     url = f'https://api.semanticscholar.org/graph/v1/paper/search?query={urllib.parse.quote(query)}&limit=15&fields={fields}'
     
-    try:
-        # Semantic Scholar 也需要简单的 User-Agent 伪装
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
-        response = urllib.request.urlopen(req, timeout=20)
-        data = json.loads(response.read().decode('utf-8'))
-        
-        papers = []
-        for item in data.get('data', []):
-            abstract = item.get('abstract')
-            # 跳过没有摘要的论文
-            if not abstract:
-                continue
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'application/json'
+    }
+    
+    # 如果以后有了 S2 的密钥，会自动带上
+    if S2_API_KEY:
+        headers['x-api-key'] = S2_API_KEY
+
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            response = urllib.request.urlopen(req, timeout=20)
+            data = json.loads(response.read().decode('utf-8'))
+            
+            papers = []
+            for item in data.get('data', []):
+                abstract = item.get('abstract')
+                if not abstract:
+                    continue
+                    
+                title = item.get('title', 'Unknown Title')
+                year = str(item.get('year', 'Unknown'))
+                link = item.get('url', '#')
+                citations = item.get('citationCount', 0)
+                venue = item.get('venue', 'IEEE/Other')
                 
-            title = item.get('title', 'Unknown Title')
-            year = str(item.get('year', 'Unknown'))
-            link = item.get('url', '#')
-            citations = item.get('citationCount', 0)
-            venue = item.get('venue', 'IEEE/Other')
+                print(f"正在处理: {title[:30]}... (引用量: {citations})")
+                ai_viewpoint = generate_ai_summary(title, abstract)
+                
+                papers.append({
+                    'title': f"[{venue}] {title}",
+                    'published': year,
+                    'link': link,
+                    'summary': abstract[:150] + '...', 
+                    'ai_summary': ai_viewpoint,
+                    'citations': citations         
+                })
+                
+            papers = sorted(papers, key=lambda x: x.get('citations', 0), reverse=True)
+            print(f"🎉 成功抓取并总结了 {len(papers)} 篇高价值经典论文！")
+            return papers
             
-            print(f"正在处理: {title[:30]}... (发表于 {year}, 引用量: {citations})")
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                print(f"⚠️ 触发频率限制 (429)，准备重试... (第 {attempt + 1}/{max_retries} 次尝试)")
+                time.sleep(15) # 被拦截后冷静 15 秒再试
+            else:
+                print(f"❌ 抓取发生错误: {e}")
+                return []
+        except Exception as e:
+            print(f"❌ 发生未知错误: {e}")
+            return []
             
-            ai_viewpoint = generate_ai_summary(title, abstract)
-            
-            papers.append({
-                'title': f"[{venue}] {title}", # 在标题前加上期刊/会议名称
-                'published': year,
-                'link': link,
-                'summary': abstract[:150] + '...', 
-                'ai_summary': ai_viewpoint,
-                'citations': citations         # 新增：保存引用量数据
-            })
-            
-        # 在本地按“引用量”从高到低排序，确保最牛的论文排在最前面
-        papers = sorted(papers, key=lambda x: x.get('citations', 0), reverse=True)
-        
-        print(f"🎉 成功抓取并总结了 {len(papers)} 篇高价值经典论文！")
-        return papers
-    except Exception as e:
-        print(f"❌ 抓取发生错误: {e}")
-        return []
+    print("❌ 重试次数耗尽，Semantic Scholar 拒绝了访问。")
+    return []
 
 if __name__ == '__main__':
     papers = fetch_papers()
-    with open('papers.json', 'w', encoding='utf-8') as f:
-        json.dump({
-            "updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 
-            "papers": papers
-        }, f, ensure_ascii=False, indent=2)
+    if papers: # 只有抓到数据才覆盖文件，防止把网页变白
+        with open('papers.json', 'w', encoding='utf-8') as f:
+            json.dump({
+                "updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 
+                "papers": papers
+            }, f, ensure_ascii=False, indent=2)
