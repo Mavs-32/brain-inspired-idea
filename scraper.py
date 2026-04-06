@@ -15,7 +15,6 @@ if API_KEY:
 else:
     print("警告：未检测到 DEEPSEEK_API_KEY 环境变量，AI 总结功能将跳过。")
 
-# Semantic Scholar API 配置 (预留，目前先不填)
 S2_API_KEY = os.environ.get("S2_API_KEY")
 
 def generate_ai_summary(title, abstract):
@@ -47,16 +46,17 @@ def generate_ai_summary(title, abstract):
         return "AI 总结生成失败。"
 
 def fetch_papers():
-    query = '("spiking neural network" OR "neuromorphic" OR "CSNN") AND "IEEE"'
+    # 1. 解除 IEEE 封印，放眼全球顶级期刊和会议
+    query = 'spiking neural network neuromorphic CSNN'
     fields = 'title,abstract,url,year,venue,citationCount'
-    url = f'https://api.semanticscholar.org/graph/v1/paper/search?query={urllib.parse.quote(query)}&limit=15&fields={fields}'
+    
+    # 2. 扩大搜索范围，抓取前 50 篇高相关性文章
+    url = f'https://api.semanticscholar.org/graph/v1/paper/search?query={urllib.parse.quote(query)}&limit=50&fields={fields}'
     
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
         'Accept': 'application/json'
     }
-    
-    # 如果以后有了 S2 的密钥，会自动带上
     if S2_API_KEY:
         headers['x-api-key'] = S2_API_KEY
 
@@ -67,38 +67,51 @@ def fetch_papers():
             response = urllib.request.urlopen(req, timeout=20)
             data = json.loads(response.read().decode('utf-8'))
             
-            papers = []
+            raw_papers = []
             for item in data.get('data', []):
-                abstract = item.get('abstract')
-                if not abstract:
+                # 过滤掉没有摘要的无效数据
+                if not item.get('abstract'):
                     continue
-                    
+                raw_papers.append(item)
+                
+            # 3. 本地掐尖：按引用量从高到低排序，寻找真正的“开山之作”
+            raw_papers = sorted(raw_papers, key=lambda x: x.get('citationCount', 0), reverse=True)
+            
+            # 4. 只取引用量最高的 Top 10 论文发给 AI 总结
+            top_papers = raw_papers[:10]
+            
+            papers = []
+            for item in top_papers:
                 title = item.get('title', 'Unknown Title')
                 year = str(item.get('year', 'Unknown'))
                 link = item.get('url', '#')
                 citations = item.get('citationCount', 0)
-                venue = item.get('venue', 'IEEE/Other')
                 
-                print(f"正在处理: {title[:30]}... (引用量: {citations})")
-                ai_viewpoint = generate_ai_summary(title, abstract)
+                # 获取发表来源，如果没有则显示 General
+                venue = item.get('venue')
+                if not venue:
+                    venue = "Journal/Conference"
+                
+                print(f"💎 正在处理神文: [{venue}] {title[:20]}... (年份: {year}, ⭐ 引用量: {citations})")
+                
+                ai_viewpoint = generate_ai_summary(title, item.get('abstract'))
                 
                 papers.append({
                     'title': f"[{venue}] {title}",
                     'published': year,
                     'link': link,
-                    'summary': abstract[:150] + '...', 
+                    'summary': item.get('abstract')[:150] + '...', 
                     'ai_summary': ai_viewpoint,
                     'citations': citations         
                 })
                 
-            papers = sorted(papers, key=lambda x: x.get('citations', 0), reverse=True)
             print(f"🎉 成功抓取并总结了 {len(papers)} 篇高价值经典论文！")
             return papers
             
         except urllib.error.HTTPError as e:
             if e.code == 429:
                 print(f"⚠️ 触发频率限制 (429)，准备重试... (第 {attempt + 1}/{max_retries} 次尝试)")
-                time.sleep(15) # 被拦截后冷静 15 秒再试
+                time.sleep(15) 
             else:
                 print(f"❌ 抓取发生错误: {e}")
                 return []
@@ -111,7 +124,7 @@ def fetch_papers():
 
 if __name__ == '__main__':
     papers = fetch_papers()
-    if papers: # 只有抓到数据才覆盖文件，防止把网页变白
+    if papers: 
         with open('papers.json', 'w', encoding='utf-8') as f:
             json.dump({
                 "updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 
