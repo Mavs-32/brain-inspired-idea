@@ -1,4 +1,75 @@
 {
-  "updated": "2026-04-06 16:49:33",
-  "papers": []
+  "updated": "2026-04-06 17:11:59",
+  "papers": [
+    {
+      "title": "Training a Hidden Markov Model with a Bayesian Spiking Neural Network",
+      "published": "2016-06-02",
+      "link": "http://arxiv.org/abs/1606.00825v2",
+      "summary": "It is of some interest to understand how statistically based mechanisms for signal processing might be integrated with biologically motivated mechanis...",
+      "ai_summary": "🔥 领域经典：\n该论文的核心创新点在于，提出了一种将隐马尔可夫模型（HMM）的固定概率结构与基于脉冲时序依赖可塑性（STDP）规则的贝叶斯脉冲神经网络（SNN）相结合的新型混合模型，其中SNN负责学习并表征HMM的发射概率，为理解大脑如何实现序列数据处理的统计计算提供了新的神经计算框架。"
+    },
+    {
+      "title": "A Digital Machine Learning Algorithm Simulating Spiking Neural Network CoLaNET",
+      "published": "2025-03-21",
+      "link": "http://arxiv.org/abs/2503.17111v2",
+      "summary": "During last several years, our research team worked on development of a spiking neural network (SNN) architecture, which could be used in the wide ran...",
+      "ai_summary": "🔥 领域经典：\n该论文的核心创新点是提出了一种名为CoLaNET的脉冲神经网络架构，其通过结合“按类分列的柱状结构”与“反赫布-多巴胺调制可塑性”的新颖组合来实现监督学习分类任务，并进一步开发了一个能高精度模拟该脉冲网络行为的连续数值（非脉冲）机器学习算法，以解决其数学分析难题。"
+    },
+    {
+      "title": "Event Encryption: Rethinking Privacy Exposure for Neuromorphic Imaging",
+      "published": "2023-06-06",
+      "link": "http://arxiv.org/abs/2306.03369v3",
+      "summary": "Bio-inspired neuromorphic cameras sense illumination changes on a per-pixel basis and generate spatiotemporal streaming events within microseconds in ...",
+      "ai_summary": "🔥 领域经典：\n\n该论文的核心创新点在于，首次从“噪声去除”的逆向视角出发，将精心设计的噪声主动引入神经形态视觉的原始事件流中，以实现对隐私敏感数据的加密，从而在保护隐私的同时维持了数据在加密后对高级任务处理的可用性。"
+    },
+    {
+      "title": "Adaptive motor control and learning in a spiking neural network realised on a mixed-signal neuromorphic processor",
+      "published": "2018-10-25",
+      "link": "http://arxiv.org/abs/1810.10801v1",
+      "summary": "Neuromorphic computing is a new paradigm for design of both the computing hardware and algorithms inspired by biological neural networks. The event-ba...",
+      "ai_summary": "🔥 领域经典：\n该论文的核心创新点在于，首次在混合信号神经形态处理器上，实现了一个利用片上可塑性突触权重、通过感觉反馈在线学习并存储“逆模型”的脉冲神经网络运动控制系统，为构建高效、自适应的类脑机器人控制器提供了原理验证。"
+    },
+    {
+      "title": "Pre-Synaptic Pool Modification (PSPM): A Supervised Learning Procedure for Spiking Neural Networks",
+      "published": "2018-10-07",
+      "link": "http://arxiv.org/abs/1810.03199v3",
+      "summary": "Learning synaptic weights of spiking neural network (SNN) models that can reproduce target spike trains from provided neural firing data is a central ...",
+      "ai_summary": "🔥 领域经典：\n本文提出了一种名为“突触前池修饰”的启发式监督学习规则，其核心创新在于：**通过不依赖梯度的随机权重更新机制，在指定时间窗内精确生成或消除脉冲，从而优化脉冲序列的相似性，且该方法对网络结构与神经元模型无特定假设。**"
+    },
+    {
+      "title": "Synthetic Biology meets Neuromorphic Computing: Towards a bio-inspired Olfactory Perception System",
+      "published": "2025-04-14",
+      "link": "http://arxiv.org/abs/2504.10053v2",
+      "summary": "In this study, we explore how the combination of synthetic biology, neuroscience modeling, and neuromorphic electronic systems offers a new approach t...",
+      "ai_summary": "🔥 领域经典：\n该论文的核心创新点在于，首次提出并论证了通过合成生物学与神经形态计算的协同设计，构建一种集成了仿生嗅觉受体门控离子通道、生物-半导体接口以及基于脉冲神经网络的事件驱动编码与计算三大关键特征的混合系统，以实现对复杂嗅觉感知与处理过程的整体模拟。"
+    },
+    {
+      "title": "Evaluating Spiking Neural Network On Neuromorphic Platform For Human Activity Recognition",
+      "published": "2023-08-01",
+      "link": "http://arxiv.org/abs/2308.00787v1",
+      "summary": "Energy efficiency and low latency are crucial requirements for designing wearable AI-empowered human activity recognition systems, due to the hard con...",
+      "ai_summary": "🔥 领域经典：\n本文的核心创新点在于，首次在可穿戴人体活动识别任务中，系统性地评估了基于脉冲神经网络和神经形态处理器（Intel Loihi）的完整事件驱动方案，并验证了其在保持与传统神经网络相当精度的同时，能实现更优的能效延迟积。"
+    },
+    {
+      "title": "Watermarking Neuromorphic Brains: Intellectual Property Protection in Spiking Neural Networks",
+      "published": "2024-05-07",
+      "link": "http://arxiv.org/abs/2405.04049v1",
+      "summary": "As spiking neural networks (SNNs) gain traction in deploying neuromorphic computing solutions, protecting their intellectual property (IP) has become ...",
+      "ai_summary": "🔥 领域经典：\n该论文首次系统性地将数字水印技术（指纹式和后门式）引入脉冲神经网络领域，为保护SNN模型的知识产权建立了方法论基础，并针对SNN的独特动力学特性（如脉冲时序、事件驱动）评估了水印方案的保真度、鲁棒性和抗攻击能力。"
+    },
+    {
+      "title": "Spiking Neural Network Equalization on Neuromorphic Hardware for IM/DD Optical Communication",
+      "published": "2022-06-01",
+      "link": "http://arxiv.org/abs/2206.00401v1",
+      "summary": "A spiking neural network (SNN) non-linear equalizer model is implemented on the mixed-signal neuromorphic hardware system BrainScaleS-2 and evaluated ...",
+      "ai_summary": "🔥 领域经典：\n该论文的核心创新点在于，首次在混合信号神经形态硬件BrainScaleS-2上实现并验证了脉冲神经网络非线性均衡器，并将其应用于IM/DD光通信系统，其硬件性能损失小于1 dB，且误码率表现优于数字线性均衡。"
+    },
+    {
+      "title": "Spiking Neural Network on Neuromorphic Hardware for Energy-Efficient Unidimensional SLAM",
+      "published": "2019-03-06",
+      "link": "http://arxiv.org/abs/1903.02504v2",
+      "summary": "Energy-efficient simultaneous localization and mapping (SLAM) is crucial for mobile robots exploring unknown environments. The mammalian brain solves ...",
+      "ai_summary": "🔥 领域经典：\n该论文的核心创新点在于，提出了一种在神经形态芯片（Loihi）上运行的脉冲神经网络架构，通过引入脉冲编码的参考系变换、视觉似然计算和贝叶斯推理，首次以极低能耗实现了类脑的、事件驱动的一维SLAM。"
+    }
+  ]
 }
