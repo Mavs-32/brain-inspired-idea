@@ -1,4 +1,245 @@
 {
-  "updated": "2026-04-07 02:05:52",
-  "papers": []
+  "updated": "2026-04-07 04:33:38",
+  "papers": [
+    {
+      "title": "[AAAI Conference on Artificial Intelligence] Spiking-YOLO: Spiking Neural Network for Energy-Efficient Object Detection",
+      "published": "2019",
+      "link": "https://www.semanticscholar.org/paper/71b411d47ae7b9cf8f6ff26dc2eda8e5038ef94c",
+      "summary": "Over the past decade, deep neural networks (DNNs) have demonstrated remarkable performance in a variety of applications. As we try to solve more advan...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：本文首次将脉冲神经网络（SNN）成功应用于复杂的物体检测任务，通过提出**通道归一化**和**带符号的不平衡阈值神经元**两项创新方法，解决了深层SNN在回归任务中信息传递慢且精度损失大的关键问题，实现了与经典YOLO模型性能相当但能耗极低的脉冲物体检测模型。",
+      "citations": 505
+    },
+    {
+      "title": "[International Conference on Learning Representations] Spikformer: When Spiking Neural Network Meets Transformer",
+      "published": "2022",
+      "link": "https://www.semanticscholar.org/paper/ffd91f85d6d19e75309ececfd190afa6bb562284",
+      "summary": "We consider two biologically plausible structures, the Spiking Neural Network (SNN) and the self-attention mechanism. The former offers an energy-effi...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出**脉冲自注意力（SSA）机制**，将Transformer的自注意力与脉冲神经网络的稀疏、事件驱动特性结合，用脉冲形式的Query、Key和Value建模视觉特征，无需softmax操作，实现了高能效的脉冲Transformer（Spikformer）框架。",
+      "citations": 433
+    },
+    {
+      "title": "[Computer Vision and Pattern Recognition] RMP-SNN: Residual Membrane Potential Neuron for Enabling Deeper High-Accuracy and Low-Latency Spiking Neural Network",
+      "published": "2020",
+      "link": "https://www.semanticscholar.org/paper/8aad18f5c474cd25e283a7b3c956894d94f82873",
+      "summary": "Spiking Neural Networks (SNNs) have recently attracted significant research interest as the third generation of artificial neural networks that can en...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：该论文提出了一种名为“残差膜电位（RMP）”的“软复位”脉冲神经元模型，用于替代传统的“硬复位”模型，以在ANN-SNN转换中保留膜电位超过阈值时的“残差”信息，从而在显著减少推理时间步数的同时，实现接近无损的高精度转换。",
+      "citations": 390
+    },
+    {
+      "title": "[IEEE Transactions on Neural Networks and Learning Systems] DIET-SNN: A Low-Latency Spiking Neural Network With Direct Input Encoding and Leakage and Threshold Optimization",
+      "published": "2021",
+      "link": "https://www.semanticscholar.org/paper/1921489a2801f053d0906079f0015ba6e68dd505",
+      "summary": "Bioinspired spiking neural networks (SNNs), operating with asynchronous binary signals (or spikes) distributed over time, can potentially lead to grea...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出一种通过端到端梯度下降直接优化脉冲神经元膜电位泄漏和发放阈值的方法，并结合直接输入编码（无需将图像转换为脉冲序列），从而在极低时间步长（5步）内实现高精度图像分类，显著降低了SNN的推理延迟和计算能耗。",
+      "citations": 328
+    },
+    {
+      "title": "[Nature Communications] A biomimetic neural encoder for spiking neural network",
+      "published": "2021",
+      "link": "https://www.semanticscholar.org/paper/28bf3b2499c1a77dc5e1a05bef3b26cb56d25483",
+      "summary": "Spiking neural networks (SNNs) promise to bridge the gap between artificial neural networks (ANNs) and biological neural networks (BNNs) by exploiting...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：本文提出了一种基于双栅MoS₂场效应晶体管的仿生神经编码器，其核心创新在于**首次在单一硬件器件中实现了多种生物神经编码算法（如基于发放率、发放时序和发放计数的编码），并能以极低的能量（≈1–5 pJ/脉冲）将模拟信号直接转换为具有生物合理随机性的脉冲序列**。",
+      "citations": 148
+    },
+    {
+      "title": "[AAAI Conference on Artificial Intelligence] Temporal-Coded Deep Spiking Neural Network with Easy Training and Robust Performance",
+      "published": "2019",
+      "link": "https://www.semanticscholar.org/paper/71962c8b35e1b8bb45ed874c61c447103f4a4688",
+      "summary": "Spiking neural network (SNN) is promising but the development has fallen far behind conventional deep neural networks (DNNs) because of difficult trai...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：通过推导脉冲神经元的闭式输入-输出响应表达式，构建可直接训练的抽象SNN模型，避免了训练过程中对膜电位的复杂计算，并论证了单脉冲时序编码的非泄漏积分发放神经元是实现高效直接训练深度SNN的最佳选择。",
+      "citations": 113
+    },
+    {
+      "title": "[Biomedical Signal Processing and Control] Energy efficient ECG classification with spiking neural network",
+      "published": "2021",
+      "link": "https://www.semanticscholar.org/paper/f11177822547ee2e23c62de2d50a81fc39ace6f3",
+      "summary": "Abstract Heart disease is one of the top ten threats to global health in 2019 according to the WHO. Continuous monitoring of ECG on wearable devices c...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出一种用于心电信号分类的脉冲神经网络（SNN）方法，通过将训练好的卷积神经网络（CNN）转换为SNN，在精度损失小于1%的情况下，实现了极低的平均功耗（0.077 W），为可穿戴设备上的持续心电监测提供了高能效解决方案。",
+      "citations": 110
+    },
+    {
+      "title": "[IEEE International Joint Conference on Neural Network] An Efficient Spiking Neural Network for Recognizing Gestures with a DVS Camera on the Loihi Neuromorphic Processor",
+      "published": "2020",
+      "link": "https://www.semanticscholar.org/paper/0c6dfd1688f2422224ecae0bbcd30df4e36042a6",
+      "summary": "Spiking Neural Networks (SNNs), the third generation NNs, have come under the spotlight for machine learning based applications due to their biologica...",
+      "ai_summary": "🔥 领域经典：  \n这篇论文的核心创新点在于，提出了一套针对英特尔Loihi神经形态处理器的、从深度神经网络（DNN）到脉冲神经网络（SNN）的系统性转换与部署方法，并设计了一种面向DVS事件相机的预处理流程，从而在Loihi上以极低的硬件资源（仅37个核心）实现了高精度的实时手势识别。",
+      "citations": 107
+    },
+    {
+      "title": "[Neural Networks] Necessary conditions for STDP-based pattern recognition learning in a memristive spiking neural network",
+      "published": "2020",
+      "link": "https://www.semanticscholar.org/paper/912258da41066ca84b3387ad10b4150680d8025f",
+      "summary": "This work is aimed to study experimental and theoretical approaches for searching effective local training rules for unsupervised pattern recognition ...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：本文提出了基于忆阻器脉冲神经网络的STDP学习收敛的“相关性增长-反相关性衰减”原则，并将其确立为模式识别任务中无监督学习收敛的必要条件，为硬件SNN的参数配置提供了通用准则。",
+      "citations": 107
+    },
+    {
+      "title": "[IEEE Transactions on Neural Networks and Learning Systems] Computing Primitive of Fully VCSEL-Based All-Optical Spiking Neural Network for Supervised Learning and Pattern Classification",
+      "published": "2020",
+      "link": "https://www.semanticscholar.org/paper/529779e18cc62d2641350bafb8a28967b49faa5e",
+      "summary": "We propose computing primitive for an all-optical spiking neural network (SNN) based on vertical-cavity surface-emitting lasers (VCSELs) for supervise...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出了一种完全基于垂直腔面发射激光器（VCSEL）的全光脉冲神经网络计算原语，通过建立神经元-突触自洽统一模型，首次实现了基于全光硬件和生物可塑性机制（STDP）的监督学习与模式分类。",
+      "citations": 72
+    },
+    {
+      "title": "[Frontiers in Computational Neuroscience] GLSNN: A Multi-Layer Spiking Neural Network Based on Global Feedback Alignment and Local STDP Plasticity",
+      "published": "2020",
+      "link": "https://www.semanticscholar.org/paper/8a011d446e3fb12496a1adfa3c1fda138a852355",
+      "summary": "Spiking Neural Networks (SNNs) are considered as the third generation of artificial neural networks, which are more closely with information processin...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出一种结合全局随机反馈对齐和局部差分STDP可塑性的多层脉冲神经网络训练方法，通过全局反馈直接传递误差目标，并利用局部可塑性优化突触权重，实现了高效且鲁棒的非微分SNN训练。",
+      "citations": 67
+    },
+    {
+      "title": "[2020 IEEE/ACM International Conference On Computer Aided Design (ICCAD)] Encoding, Model, and Architecture: Systematic Optimization for Spiking Neural Network in FPGAs",
+      "published": "2020",
+      "link": "https://www.semanticscholar.org/paper/4f4ed1113990f3f14c5ebd3c576c6a93bfc59c40",
+      "summary": "Spiking neural network (SNN) has drawn research interests as it mimics dynamic activities of human brain and has the potential to perform real-time co...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：本文提出了一个面向FPGA的脉冲神经网络（SNN）**端到端系统优化框架**，其核心创新在于将SNN统一建模为**无限脉冲响应（IIR）滤波器网络**，并协同优化神经编码、模型与硬件架构，从而在保持高精度的同时，显著提升了部署的灵活性与硬件效率。",
+      "citations": 65
+    },
+    {
+      "title": "[IEEE transactions on neural systems and rehabilitation engineering] A Spiking Neural Network With Adaptive Graph Convolution and LSTM for EEG-Based Brain-Computer Interfaces",
+      "published": "2023",
+      "link": "https://www.semanticscholar.org/paper/147e306d10e8ee19caf3b84ffbda3a984cd5db8d",
+      "summary": "Electroencephalography (EEG) signals classification is essential for the brain-computer interface (BCI). Recently, energy-efficient spiking neural net...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出了一种结合自适应图卷积与脉冲长短期记忆（LSTM）的脉冲神经网络（SGLNet），通过可学习的脉冲编码器、脉冲化的自适应图卷积模块以及脉冲LSTM单元，有效挖掘了脑电信号通道间的空间拓扑关系与脉冲序列的时序依赖，提升了模型在多种脑机接口任务上的通用性与性能。",
+      "citations": 63
+    },
+    {
+      "title": "[Neural Networks] An unsupervised STDP-based spiking neural network inspired by biologically plausible learning rules and connections",
+      "published": "2022",
+      "link": "https://www.semanticscholar.org/paper/ffa70f147756c642669ab5b5298c48296c2ba1ca",
+      "summary": "The backpropagation algorithm has promoted the rapid development of deep learning, but it relies on a large amount of labeled data and still has a lar...",
+      "ai_summary": "🔥 领域经典：否（该论文在特定方法上取得了当前最佳性能，并首次将无监督STDP-SNN应用于CIFAR10，但尚未达到定义领域范式或提出核心基础理论的开创性经典地位。）\n\n核心观点：通过整合自适应突触滤波器、自适应发放阈值和自适应侧向抑制连接这三种神经元与突触可塑性机制，并设计基于多样本多时刻的STB-STDP学习规则，显著提升了无监督脉冲神经网络在复杂任务上的训练速度与性能。",
+      "citations": 62
+    },
+    {
+      "title": "[IEEE Transactions on Neural Networks and Learning Systems] Tuning Convolutional Spiking Neural Network With Biologically Plausible Reward Propagation",
+      "published": "2020",
+      "link": "https://www.semanticscholar.org/paper/185fb7de04028e77d26ea0bd8ee7e96a85f3f6fd",
+      "summary": "Spiking neural networks (SNNs) contain more biologically realistic structures and biologically inspired learning principles than those in standard art...",
+      "ai_summary": "🔥 领域经典：  \n本文提出了一种生物可信的奖励传播算法，其核心创新点在于**用目标标签而非误差信号进行前向传播，并结合局部梯度差异进行突触修正，从而为脉冲神经网络提供了一种更接近大脑皮层学习机制的高效训练方法**。",
+      "citations": 58
+    },
+    {
+      "title": "[Neural computing & applications (Print)] Detection of COVID-19 from CT scan images: A spiking neural network-based approach",
+      "published": "2021",
+      "link": "https://www.semanticscholar.org/paper/53306dd7203c08605f6c5c322a46b14dc5b2c4bb",
+      "summary": "The outbreak of a global pandemic called coronavirus has created unprecedented circumstances resulting into a large number of deaths and risk of commu...",
+      "ai_summary": "这篇论文**不是**该领域的开创性工作或高被引经典。它是一项将现有技术应用于特定任务的应用型研究。\n\n核心观点：将脉冲神经网络（SNN）应用于COVID-19的CT图像分类，旨在验证SNN在医学图像分析任务中的可行性与高效性，并展示了其可媲美传统深度学习的性能。",
+      "citations": 57
+    },
+    {
+      "title": "[IEEE International Joint Conference on Neural Network] CarSNN: An Efficient Spiking Neural Network for Event-Based Autonomous Cars on the Loihi Neuromorphic Research Processor",
+      "published": "2021",
+      "link": "https://www.semanticscholar.org/paper/c1cc9d133afee2320c311b3e1ce8d9dd6aa3e3be",
+      "summary": "Autonomous Driving (AD) related features provide new forms of mobility that are also beneficial for other kind of intelligent and autonomous systems l...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：首次在英特尔Loihi神经形态芯片上实现了基于事件相机的脉冲神经网络汽车分类器，在保证低延迟（0.72毫秒）与低功耗（310毫瓦）的同时，验证了SNN在自动驾驶边缘设备上的可行性与高效性。",
+      "citations": 55
+    },
+    {
+      "title": "[Neural Information Processing Systems] SNN-RAT: Robustness-enhanced Spiking Neural Network through Regularized Adversarial Training",
+      "published": "2022",
+      "link": "https://www.semanticscholar.org/paper/0484f95ef6a6ee544e0a9f9eb5dfe35f7166c09f",
+      "summary": "Spiking neural networks (SNNs) are promising to be widely deployed in real-time and safety-critical applications with the advance of neuromorphic comp...",
+      "ai_summary": "🔥 领域经典：否（该论文针对特定安全威胁提出防御方法，属于重要应用研究，但非定义领域基础理论的开创性工作）\n\n核心观点：通过推导脉冲表示的Lipschitz常数，首次从理论上量化了脉冲神经网络(SNN)对抗攻击的脆弱性边界，并提出一种基于正则化对抗训练的低开销防御方案，能有效抵御基于强可微分近似方法生成的多种对抗攻击。",
+      "citations": 54
+    },
+    {
+      "title": "[Neural Networks] BackEISNN: A Deep Spiking Neural Network with Adaptive Self-Feedback and Balanced Excitatory-Inhibitory Neurons",
+      "published": "2021",
+      "link": "https://www.semanticscholar.org/paper/4d19b91d9356576a2bdf99a6d14174339d2375bf",
+      "summary": "Spiking neural networks (SNNs) transmit information through discrete spikes that perform well in processing spatial-temporal information. Owing to the...",
+      "ai_summary": "🔥 领域经典：  \n本文的核心创新点在于：通过引入自适应时延自反馈机制来调控脉冲发放的精确性，并设计兴奋-抑制平衡的神经元模型来动态控制输出，从而构建出兼具高效收敛与高精度的深度脉冲神经网络。",
+      "citations": 53
+    },
+    {
+      "title": "[IEEE International Joint Conference on Neural Network] PyCARL: A PyNN Interface for Hardware-Software Co-Simulation of Spiking Neural Network",
+      "published": "2020",
+      "link": "https://www.semanticscholar.org/paper/c5de269ff4978100eb6838d5d20a66be492241f4",
+      "summary": "We present PyCARL, a PyNN-based common Python programming interface for hardware-software cosimulation of spiking neural network (SNN). Through PyCARL...",
+      "ai_summary": "🔥 领域经典：否。这是一项针对特定仿真工具的接口与集成工作，旨在提升开发效率，而非提出新的基础理论或模型。\n\n核心观点：提出了一个名为PyCARL的PyNN接口，其核心创新点在于：1）将GPU加速的SNN模拟器CARLsim接入PyNN生态，实现了软件层面的高效协同仿真；2）集成了多款主流神经形态硬件（如TrueNorth、Loihi）的精确周期级模型，使开发者能在产品早期阶段评估硬件延迟对模型性能的影响并进行设计空间探索。",
+      "citations": 51
+    },
+    {
+      "title": "[arXiv.org] A Spiking Neural Network for Image Segmentation",
+      "published": "2021",
+      "link": "https://www.semanticscholar.org/paper/bcc16bfdccde09cb28ec569aa58f52be20fb05bd",
+      "summary": "We seek to investigate the scalability of neuromorphic computing for computer vision, with the objective of replicating non-neuromorphic performance o...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：本文提出了一种将U-Net架构转换为脉冲神经网络（SNN）的方法，通过基于百分位数的脉冲发放率正则化损失函数，在保持与ANN相近分割精度的同时，在英特尔Loihi神经形态芯片上实现了超过传统硬件（CPU、GPU）两倍以上的能效提升。",
+      "citations": 50
+    },
+    {
+      "title": "[IEEE Transactions on Neural Networks and Learning Systems] Spiking Neural Network for Ultralow-Latency and High-Accurate Object Detection",
+      "published": "2023",
+      "link": "https://www.semanticscholar.org/paper/83f0c700d210bf6e22168ce642cb798687f25eaf",
+      "summary": "Spiking Neural Networks (SNNs) have attracted significant attention for their energy-efficient and brain-inspired event-driven properties. Recent adva...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：针对脉冲神经网络（SNN）在目标检测中延迟高、精度低的问题，本文提出了**时间步压缩**和**脉冲时间依赖积分（STDI）编码**两种核心方法，并设计了专用的SNN空间金字塔池化（SPP）结构，从而在极低时间步长下实现了高精度、低延迟的目标检测模型SUHD。",
+      "citations": 46
+    },
+    {
+      "title": "[IEEE International Joint Conference on Neural Network] CARLsim 6: An Open Source Library for Large-Scale, Biologically Detailed Spiking Neural Network Simulation",
+      "published": "2022",
+      "link": "https://www.semanticscholar.org/paper/cc471d722538cbeb409a5ea9ed254e6d8f8cd370",
+      "summary": "Mature simulation systems for Spiking Neural Networks (SNNs) become more relevant than ever for understanding the brain and supporting neuromorphic co...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：CARLsim 6 是一个开源、大规模、生物细节化的脉冲神经网络模拟库，其核心创新在于通过支持多神经调质系统来模拟神经兴奋性和突触可塑性，从而增强网络在快速学习、重构和活动调节方面的生物合理性。",
+      "citations": 45
+    },
+    {
+      "title": "[IEEE Transactions on Neural Networks and Learning Systems] A Bio-Inspired Spiking Attentional Neural Network for Attentional Selection in the Listening Brain",
+      "published": "2023",
+      "link": "https://www.semanticscholar.org/paper/ec87d6ef74f8d5c230be5cd3b103ba769dc696a4",
+      "summary": "Humans show a remarkable ability in solving the cocktail party problem. Decoding auditory attention from the brain signals is a major step toward the ...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出一种受生物启发的脉冲注意力神经网络（BSAnet），首次将脉冲神经元与注意力机制结合，用于解码脑电信号中的听觉注意力，其生物可解释的时序编码能力优于传统深度学习方法。",
+      "citations": 38
+    },
+    {
+      "title": "[Neural Networks] Sparser spiking activity can be better: Feature Refine-and-Mask spiking neural network for event-based visual recognition",
+      "published": "2023",
+      "link": "https://www.semanticscholar.org/paper/68e3c4072f774c33d71f763411ea89cee03f28f1",
+      "summary": "Event-based visual, a new visual paradigm with bio-inspired dynamic perception and μs level temporal resolution, has prominent advantages in many spec...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：本文提出了一种特征“精炼-掩蔽”（RM）模块，通过数据自适应的方式，在时间和通道维度上动态抑制脉冲神经元的不重要特征响应，从而在降低网络整体脉冲发放率的同时，提升基于事件视觉任务的性能。",
+      "citations": 35
+    },
+    {
+      "title": "[Neural Networks] A neuroscience-inspired spiking neural network for EEG-based auditory spatial attention detection",
+      "published": "2022",
+      "link": "https://www.semanticscholar.org/paper/750e5d98f540c7beb024828954a739dacf24e6bd",
+      "summary": "Recent studies have shown that alpha oscillations (8-13 Hz) enable the decoding of auditory spatial attention. Inspired by sparse coding in cortical n...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：本文受大脑皮层神经元稀疏编码机制启发，提出了一种用于脑电（EEG）听觉空间注意力检测的脉冲神经网络模型，其核心创新在于设计了一种基于突触前后神经元发放率的新型学习规则，并利用网络层间的低连接率实现了高效的特征提取与分类。",
+      "citations": 32
+    },
+    {
+      "title": "[IEEE International Joint Conference on Neural Network] A Low Power and Low Latency FPGA-Based Spiking Neural Network Accelerator",
+      "published": "2023",
+      "link": "https://www.semanticscholar.org/paper/96dfddf9750228e36e6305212cbc59dbaae041ab",
+      "summary": "Spiking Neural Networks (SNNs), known as the third generation of the neural network, are famous for their biological plausibility and brain-like chara...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出一种基于FPGA的低功耗低延迟SNN加速器，其核心创新在于利用脉冲的离散特性，设计了卷积与池化层融合处理单元，并通过全连接层的输出内与输出间并行化来加速网络推理。",
+      "citations": 30
+    },
+    {
+      "title": "[Neural Computation] Dynamic Spatiotemporal Pattern Recognition With Recurrent Spiking Neural Network",
+      "published": "2021",
+      "link": "https://www.semanticscholar.org/paper/812a49d7f4e991ab8cb384baf11da43792efbb31",
+      "summary": "Abstract Our real-time actions in everyday life reflect a range of spatiotemporal dynamic brain activity patterns, the consequence of neuronal computa...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出一种基于脉冲潜伏期和时间差分反向传播训练的端到端递归脉冲神经网络，通过引入具有传输延迟的递归连接神经元层来编码输入的高维时空动态，并利用输出神经元的首个脉冲实现快速识别。",
+      "citations": 30
+    },
+    {
+      "title": "[Neural Networks] Efficient spiking neural network design via neural architecture search",
+      "published": "2024",
+      "link": "https://www.semanticscholar.org/paper/26eb83bee8c3c65c7a3819f613139d4b9fa56ba5",
+      "summary": "Spiking neural networks (SNNs) are brain-inspired models that utilize discrete and sparse spikes to transmit information, thus having the property of ...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出一种基于无分支脉冲超网的神经架构搜索方法，通过突触操作感知优化，自动搜索在有限计算预算下兼具高精度与低能耗的脉冲神经网络架构。",
+      "citations": 27
+    },
+    {
+      "title": "[Neural Networks] Memristor-based spiking neural network with online reinforcement learning",
+      "published": "2023",
+      "link": "https://www.semanticscholar.org/paper/89480856891585be344fc52ba2f8e185226a0733",
+      "summary": "Neural networks implemented in memristor-based hardware can provide fast and efficient in-memory computation, but traditional learning methods such as...",
+      "ai_summary": "🔥 领域经典：  \n核心观点：提出了一种适用于忆阻器脉冲神经网络的在线强化学习算法，其核心创新在于将基于真实忆阻器特性的类STDP学习规则与在线强化学习相结合，实现了在连续时间环境中仅通过局部权重调整即可完成控制任务。",
+      "citations": 25
+    }
+  ]
 }
