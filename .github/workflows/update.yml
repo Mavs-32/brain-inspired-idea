@@ -27,6 +27,7 @@ jobs:
     - name: Run scraper
       env:
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        S2_API_KEY: ${{ secrets.S2_API_KEY }}  # 新增这一行
       run: python scraper.py
 
     - name: Commit and push if changed
