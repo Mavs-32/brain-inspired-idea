@@ -6,24 +6,31 @@ import time
 from datetime import datetime
 from openai import OpenAI
 
-# DeepSeek 配置
+# 1. 配置 API
 API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 ai_client = None
 if API_KEY:
-    ai_client = OpenAI(api_key=API_KEY, base_url="https://api.deepseek.com")
+    ai_client = OpenAI(api_key=API_KEY.strip(), base_url="https://api.deepseek.com")
 
-# Semantic Scholar VIP 密钥
 S2_API_KEY = os.environ.get("S2_API_KEY")
+if S2_API_KEY:
+    S2_API_KEY = S2_API_KEY.strip()
 
-def generate_ai_summary(title, abstract):
+# 2. AI 总结函数
+def generate_ai_summary(title, abstract, mode):
     if not ai_client:
         return "AI 总结不可用。"
     
+    # 根据不同模式给予不同的 Prompt
+    if mode == "classic":
+        role_prompt = "1. 价值评估：如果这篇论文是该领域的开创性工作或高被引经典，请在开头加上“🔥 领域经典：”。\n2. 核心观点：用1-2句话精炼总结核心创新点或历史贡献。"
+    else:
+        role_prompt = "1. 前沿评估：这篇是一篇最新发布的论文，请在开头加上“🆕 最新速递：”。\n2. 核心观点：用1-2句话精炼总结它的研究方向或最新突破。"
+
     prompt = f"""
-    你是一个脉冲神经网络(SNN)领域的顶级评审专家。请阅读以下论文：
-    1. 价值评估：如果这篇论文是该领域的开创性工作、高被引经典，或提出了核心基础理论，请在开头加上“🔥 领域经典：”。
-    2. 核心观点：用 1-2 句话（中文）极其精炼地总结它的**核心创新点**。不要翻译原摘要。
-    
+    你是一个脉冲神经网络(SNN)领域的顶级专家。请阅读以下论文：
+    {role_prompt}
+    不要翻译原摘要。
     论文标题: {title}
     论文摘要: {abstract}
     """
@@ -43,69 +50,76 @@ def generate_ai_summary(title, abstract):
         print(f"AI 总结失败: {e}")
         return "AI 总结生成失败。"
 
-def fetch_papers():
-    # 纯净关键词，只抓 SNN
+# 3. 核心抓取逻辑 (增加 mode 参数)
+def fetch_papers(mode="classic"):
     query = 'spiking neural network CSNN'
-    fields = 'title,abstract,url,year,venue,citationCount'
+    fields = 'title,abstract,url,year,venue,citationCount,publicationDate'
     
-    # 直接拉取 100 篇相关论文进行海选
-    url = f'https://api.semanticscholar.org/graph/v1/paper/search?query={urllib.parse.quote(query)}&limit=100&fields={fields}'
+    # 如果是找最新论文，限制在近两年
+    if mode == "latest":
+        current_year = datetime.now().year
+        url = f'https://api.semanticscholar.org/graph/v1/paper/search?query={urllib.parse.quote(query)}&limit=100&year={current_year-1}-{current_year}&fields={fields}'
+    else:
+        url = f'https://api.semanticscholar.org/graph/v1/paper/search?query={urllib.parse.quote(query)}&limit=100&fields={fields}'
     
     headers = {}
     if S2_API_KEY:
         headers['x-api-key'] = S2_API_KEY
-        print("✅ 成功加载 Semantic Scholar VIP 密钥！")
-    else:
-        print("⚠️ 未检测到 S2_API_KEY，依然可能被拦截。")
 
     try:
         req = urllib.request.Request(url, headers=headers)
         response = urllib.request.urlopen(req, timeout=30)
         data = json.loads(response.read().decode('utf-8'))
         
-        raw_papers = []
-        for item in data.get('data', []):
-            if not item.get('abstract'):
-                continue
-            raw_papers.append(item)
+        raw_papers = [item for item in data.get('data', []) if item.get('abstract')]
             
-        # 核心：按引用量从高到低排序
-        raw_papers = sorted(raw_papers, key=lambda x: x.get('citationCount', 0), reverse=True)
+        # 根据模式进行排序
+        if mode == "classic":
+            raw_papers = sorted(raw_papers, key=lambda x: x.get('citationCount', 0), reverse=True)
+            print("--- 开始处理【经典名人堂】 ---")
+        else:
+            raw_papers = sorted(raw_papers, key=lambda x: x.get('publicationDate') or '1970-01-01', reverse=True)
+            print("--- 开始处理【每日新前沿】 ---")
         
-        # 选取引用量最高的 30 篇进行总结
+        # 为了不让请求时间太长，各取前 20 篇
         top_papers = raw_papers[:30]
         papers = []
         
         for i, item in enumerate(top_papers):
             title = item.get('title', 'Unknown Title')
-            year = str(item.get('year', 'Unknown'))
+            pub_date = item.get('publicationDate') or str(item.get('year', 'Unknown'))
             link = item.get('url', '#')
             citations = item.get('citationCount', 0)
             venue = item.get('venue') or "Journal/Conference"
             
-            print(f"[{i+1}/30] 正在处理: {title[:30]}... (⭐引用量: {citations})")
-            ai_viewpoint = generate_ai_summary(title, item.get('abstract'))
+            print(f"[{i+1}/20] 处理中: {title[:30]}...")
+            ai_viewpoint = generate_ai_summary(title, item.get('abstract'), mode)
             
             papers.append({
                 'title': f"[{venue}] {title}",
-                'published': year,
+                'published': pub_date,
                 'link': link,
                 'summary': item.get('abstract')[:150] + '...', 
                 'ai_summary': ai_viewpoint,
                 'citations': citations         
             })
             
-        print(f"🎉 成功抓取并总结了 {len(papers)} 篇 SNN 高被引神文！")
         return papers
     except Exception as e:
-        print(f"❌ 抓取发生错误: {e}")
+        print(f"❌ {mode} 抓取发生错误: {e}")
         return []
 
 if __name__ == '__main__':
-    papers = fetch_papers()
-    if papers:
+    # 分别抓取两波数据
+    classic_papers = fetch_papers(mode="classic")
+    latest_papers = fetch_papers(mode="latest")
+    
+    if classic_papers or latest_papers:
+        # 把两份数据存进同一个 JSON 文件中
         with open('papers.json', 'w', encoding='utf-8') as f:
             json.dump({
                 "updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 
-                "papers": papers
+                "classic_papers": classic_papers,
+                "latest_papers": latest_papers
             }, f, ensure_ascii=False, indent=2)
+        print("✅ 双频道数据更新完毕！")
