@@ -16,21 +16,23 @@ S2_API_KEY = os.environ.get("S2_API_KEY")
 if S2_API_KEY:
     S2_API_KEY = S2_API_KEY.strip()
 
-# 2. AI 总结函数
+# 2. AI 总结函数 (保留并强化)
 def generate_ai_summary(title, abstract, mode):
     if not ai_client:
         return "AI 总结不可用。"
     
-    # 根据不同模式给予不同的 Prompt
+    # 针对不同频道定制不同的专家身份和分析重点
     if mode == "classic":
-        role_prompt = "1. 价值评估：如果这篇论文是该领域的开创性工作或高被引经典，请在开头加上“🔥 领域经典：”。\n2. 核心观点：用1-2句话精炼总结核心创新点或历史贡献。"
+        role_prompt = "1. 价值评估：如果是该领域的开创性工作，请在开头加上“🔥 领域经典：”。\n2. 核心观点：用1-2句话精炼总结其历史地位或核心创新。"
+    elif mode == "multi_agent":
+        role_prompt = "1. 协作评估：这是一个关于多智能体(Multi-Agent)的研究，请在开头加上“🤖 多智协作：”。\n2. 核心观点：重点分析 SNN 如何应用于智能体协作、强化学习或通信优化。"
     else:
-        role_prompt = "1. 前沿评估：这篇是一篇最新发布的论文，请在开头加上“🆕 最新速递：”。\n2. 核心观点：用1-2句话精炼总结它的研究方向或最新突破。"
+        role_prompt = "1. 前沿评估：这篇是最新发布的论文，请在开头加上“🆕 最新速递：”。\n2. 核心观点：总结其在 CSNN 或 SNN 领域的最新突破。"
 
     prompt = f"""
-    你是一个脉冲神经网络(SNN)领域的顶级专家。请阅读以下论文：
+    你是一个脉冲神经网络(SNN)与群体智能领域的顶级专家。请阅读以下论文：
     {role_prompt}
-    不要翻译原摘要。
+    注意：直接给出总结，不要翻译原摘要，字数控制在 100 字以内。
     论文标题: {title}
     论文摘要: {abstract}
     """
@@ -42,29 +44,32 @@ def generate_ai_summary(title, abstract, mode):
                 {"role": "user", "content": prompt}
             ],
             temperature=0.3, 
-            max_tokens=150
+            max_tokens=200
         )
-        time.sleep(1.5) # 防止大模型并发限制
+        time.sleep(1.5) # 频率限制保护
         return response.choices[0].message.content.strip()
     except Exception as e:
         print(f"AI 总结失败: {e}")
         return "AI 总结生成失败。"
 
-# 3. 核心抓取逻辑 (增加 mode 参数)
+# 3. 核心抓取逻辑
 def fetch_papers(mode="classic"):
-    query = 'spiking neural network CSNN'
+    # 动态调整搜索词
+    if mode == "multi_agent":
+        query = 'spiking neural network "multi-agent" reinforcement learning'
+    else:
+        query = 'spiking neural network CSNN'
+        
     fields = 'title,abstract,url,year,venue,citationCount,publicationDate'
     
-    # 如果是找最新论文，限制在近两年
-    if mode == "latest":
-        current_year = datetime.now().year
-        url = f'https://api.semanticscholar.org/graph/v1/paper/search?query={urllib.parse.quote(query)}&limit=100&year={current_year-1}-{current_year}&fields={fields}'
-    else:
+    # 筛选时间：经典看历史，最新/多智能体看近三年
+    current_year = datetime.now().year
+    if mode == "classic":
         url = f'https://api.semanticscholar.org/graph/v1/paper/search?query={urllib.parse.quote(query)}&limit=100&fields={fields}'
+    else:
+        url = f'https://api.semanticscholar.org/graph/v1/paper/search?query={urllib.parse.quote(query)}&limit=100&year={current_year-2}-{current_year}&fields={fields}'
     
-    headers = {}
-    if S2_API_KEY:
-        headers['x-api-key'] = S2_API_KEY
+    headers = {'x-api-key': S2_API_KEY} if S2_API_KEY else {}
 
     try:
         req = urllib.request.Request(url, headers=headers)
@@ -73,53 +78,47 @@ def fetch_papers(mode="classic"):
         
         raw_papers = [item for item in data.get('data', []) if item.get('abstract')]
             
-        # 根据模式进行排序
+        # 排序逻辑
         if mode == "classic":
             raw_papers = sorted(raw_papers, key=lambda x: x.get('citationCount', 0), reverse=True)
-            print("--- 开始处理【经典名人堂】 ---")
+            print("--- 处理【经典名人堂】 ---")
+        elif mode == "multi_agent":
+            raw_papers = sorted(raw_papers, key=lambda x: (x.get('citationCount', 0), x.get('year', 0)), reverse=True)
+            print("--- 处理【多智能体前沿】 ---")
         else:
             raw_papers = sorted(raw_papers, key=lambda x: x.get('publicationDate') or '1970-01-01', reverse=True)
-            print("--- 开始处理【每日新前沿】 ---")
+            print("--- 处理【每日新前沿】 ---")
         
-        # 为了不让请求时间太长，各取前 20 篇
-        top_papers = raw_papers[:30]
+        top_papers = raw_papers[:20] # 每个频道取 20 篇
         papers = []
         
         for i, item in enumerate(top_papers):
             title = item.get('title', 'Unknown Title')
-            pub_date = item.get('publicationDate') or str(item.get('year', 'Unknown'))
-            link = item.get('url', '#')
-            citations = item.get('citationCount', 0)
-            venue = item.get('venue') or "Journal/Conference"
+            print(f"[{mode}][{i+1}/20] AI 总结中: {title[:30]}...")
             
-            print(f"[{i+1}/20] 处理中: {title[:30]}...")
             ai_viewpoint = generate_ai_summary(title, item.get('abstract'), mode)
             
             papers.append({
-                'title': f"[{venue}] {title}",
-                'published': pub_date,
-                'link': link,
-                'summary': item.get('abstract')[:150] + '...', 
+                'title': f"[{item.get('venue') or 'Journal'}] {title}",
+                'published': item.get('publicationDate') or str(item.get('year', 'Unknown')),
+                'link': item.get('url', '#'),
                 'ai_summary': ai_viewpoint,
-                'citations': citations         
+                'citations': item.get('citationCount', 0)
             })
             
         return papers
     except Exception as e:
-        print(f"❌ {mode} 抓取发生错误: {e}")
+        print(f"❌ {mode} 抓取错误: {e}")
         return []
 
 if __name__ == '__main__':
-    # 分别抓取两波数据
-    classic_papers = fetch_papers(mode="classic")
-    latest_papers = fetch_papers(mode="latest")
+    data_store = {
+        "updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        "classic_papers": fetch_papers(mode="classic"),
+        "latest_papers": fetch_papers(mode="latest"),
+        "multi_agent_papers": fetch_papers(mode="multi_agent") # 新频道
+    }
     
-    if classic_papers or latest_papers:
-        # 把两份数据存进同一个 JSON 文件中
-        with open('papers.json', 'w', encoding='utf-8') as f:
-            json.dump({
-                "updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 
-                "classic_papers": classic_papers,
-                "latest_papers": latest_papers
-            }, f, ensure_ascii=False, indent=2)
-        print("✅ 双频道数据更新完毕！")
+    with open('papers.json', 'w', encoding='utf-8') as f:
+        json.dump(data_store, f, ensure_ascii=False, indent=2)
+    print("✅ 全频道数据（含 AI Summary）更新完毕！")
