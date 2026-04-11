@@ -53,7 +53,19 @@
                 });
             })
             .catch(error => {
-                document.getElementById('papers-container').innerHTML = '<p class="text-red-500">加载失败，请检查数据。</p>';
+                const errorMsg = `
+                    <div class="bg-red-50 p-4 rounded-md border border-red-200">
+                        <h3 class="text-red-800 font-bold">🚨 致命错误抓获：</h3>
+                        <p class="text-red-600 mt-2 font-mono">${error.name}: ${error.message}</p>
+                        <ul class="text-red-500 text-sm mt-2 list-disc list-inside">
+                            <li>如果是 <b>Failed to fetch</b>：说明你是在本地双击打开的，触发了浏览器的跨域安全限制（CORS），或者加了 ?v= 导致找不到文件。</li>
+                            <li>如果是 <b>Unexpected token</b> 或 <b>JSON 解析错误</b>：说明你的 papers.json 文件格式坏了（比如少了个括号，或者没生成完）。</li>
+                            <li>如果是 <b>Cannot read properties of undefined</b>：说明 JSON 读取成功了，但里面还是没有 multi_agent_papers 这个数据。</li>
+                        </ul>
+                    </div>
+                `;
+                document.getElementById('papers-container').innerHTML = errorMsg;
+                console.error(error); // 同时输出到控制台
             });
     </script>
 </body>
