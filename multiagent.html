@@ -24,7 +24,7 @@
     </div>
 
     <script>
-        fetch('papers.json')
+        fetch('papers.json?v=' + new Date().getTime())
             .then(response => response.json())
             .then(data => {
                 document.getElementById('update-time').innerText = `最后更新: ${data.updated}`;
