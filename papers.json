@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-10 02:15:47",
+  "updated": "2026-04-11 02:05:08",
   "classic_papers": [
     {
       "title": "[AAAI Conference on Artificial Intelligence] Spiking-YOLO: Spiking Neural Network for Energy-Efficient Object Detection",
       "published": "2019-03-12",
       "link": "https://www.semanticscholar.org/paper/71b411d47ae7b9cf8f6ff26dc2eda8e5038ef94c",
       "summary": "Over the past decade, deep neural networks (DNNs) have demonstrated remarkable performance in a variety of applications. As we try to solve more advan...",
-      "ai_summary": "🔥 领域经典：\n\n**核心观点：** 本文首次将脉冲神经网络（SNN）成功应用于复杂的物体检测任务，通过提出**通道归一化**和**带符号的不平衡阈值神经元**两项关键技术，有效解决了深层SNN在回归任务中的性能退化问题，在保持高精度（可达原始Tiny YOLO的98%）的同时，实现了极低的能耗。",
+      "ai_summary": "🔥 领域经典：\n\n**核心观点：** 本文首次将脉冲神经网络（SNN）成功应用于复杂的物体检测任务，提出了Spiking-YOLO模型，通过引入通道归一化和带符号的不平衡阈值神经元两项关键技术，解决了深层SNN在回归任务中信息传输慢且不准确的问题，在保持高检测精度的同时，实现了极低的能耗。",
       "citations": 505
     },
     {
@@ -14,7 +14,7 @@
       "published": "2022-09-29",
       "link": "https://www.semanticscholar.org/paper/ffd91f85d6d19e75309ececfd190afa6bb562284",
       "summary": "We consider two biologically plausible structures, the Spiking Neural Network (SNN) and the self-attention mechanism. The former offers an energy-effi...",
-      "ai_summary": "🔥 领域经典：这篇论文是脉冲神经网络（SNN）与Transformer架构融合的开创性工作，为SNN引入强大的全局建模能力设立了新标杆。\n\n**核心观点：** 本文提出了**脉冲自注意力（SSA）**机制与**Spikformer**框架，其核心创新在于用脉冲形式的Query、Key和Value直接建模稀疏视觉特征，**摒弃了传统Transformer中耗能的softmax操作**，从而在保持SNN事件驱动、高能效特性的同时，首次成功为SNN注入了强大的自注意力全局依赖建模能力。",
+      "ai_summary": "🔥 领域经典：这篇论文是脉冲神经网络（SNN）与Transformer架构结合的开创性工作，为SNN引入了强大的长程依赖建模能力，并在多个基准上取得了当时直接训练SNN的最佳性能。\n\n**核心观点：**\n1.  论文提出了**脉冲自注意力（SSA）机制**，用脉冲形式的Query、Key和Value稀疏地建模视觉特征，并摒弃了传统Transformer中能耗较高的Softmax操作。\n2.  基于SSA，作者构建了**Spikformer框架**，首次成功将Transformer的全局注意力能力与SNN的事件驱动、高能效特性相结合，在图像分类任务上显著超越了之前的SNN模型。",
       "citations": 433
     },
     {
@@ -22,7 +22,7 @@
       "published": "2020-02-25",
       "link": "https://www.semanticscholar.org/paper/8aad18f5c474cd25e283a7b3c956894d94f82873",
       "summary": "Spiking Neural Networks (SNNs) have recently attracted significant research interest as the third generation of artificial neural networks that can en...",
-      "ai_summary": "🔥 领域经典：这篇论文是ANN-SNN转换领域的关键工作，显著提升了转换后SNN的性能上限。\n\n核心观点：论文揭示了传统基于“硬重置”脉冲神经元的ANN-SNN转换方法存在性能损失的根本原因——膜电位超过阈值后被强制重置导致信息丢失，并创新性地提出了“软重置”的残存膜电位神经元模型，在发放脉冲时保留超过阈值的残余电位，从而实现了近乎无损、高精度且低延迟（所需推理时间步长减少2-8倍）的深度SNN转换。",
+      "ai_summary": "🔥 领域经典：这篇论文是ANN-SNN转换领域的关键工作，通过引入一种新的神经元模型，显著提升了转换后SNN的性能和效率。\n\n核心观点：论文提出了一种名为“残余膜电位”（RMP）的“软复位”脉冲神经元模型，以替代传统转换方法中使用的“硬复位”神经元。该模型在神经元发放脉冲后保留超过阈值的残余膜电位，而非重置到固定电位，从而减少了信息损失，使得转换后的SNN能够在极少的推理时间步内，实现接近无损的精度，并超越传统硬复位SNN的性能。",
       "citations": 390
     },
     {
@@ -30,7 +30,7 @@
       "published": "2021-10-01",
       "link": "https://www.semanticscholar.org/paper/1921489a2801f053d0906079f0015ba6e68dd505",
       "summary": "Bioinspired spiking neural networks (SNNs), operating with asynchronous binary signals (or spikes) distributed over time, can potentially lead to grea...",
-      "ai_summary": "🔥 领域经典：这篇论文是SNN领域为降低推理延迟、提升计算效率而提出的标志性工作之一，其提出的直接编码与参数联合优化方法具有重要影响力。\n\n核心观点：提出DIET-SNN，通过端到端梯度下降联合优化神经元膜电位泄露和发放阈值等参数，并结合输入端直接处理模拟像素值（而非脉冲序列）的编码方式，在极低时间步长（如5步）内实现高精度图像分类，显著降低了SNN的推理延迟和计算能耗。",
+      "ai_summary": "🔥 领域经典：\n\n**核心观点：** 本文提出DIET-SNN，通过端到端梯度下降联合优化神经元的关键参数（膜泄露与发放阈值）以及网络权重，并采用直接输入编码，从而在极低的时间步长（推理延迟）下实现高精度，显著提升了脉冲神经网络的计算效率。",
       "citations": 329
     },
     {
@@ -38,7 +38,7 @@
       "published": "2021-04-09",
       "link": "https://www.semanticscholar.org/paper/28bf3b2499c1a77dc5e1a05bef3b26cb56d25483",
       "summary": "Spiking neural networks (SNNs) promise to bridge the gap between artificial neural networks (ANNs) and biological neural networks (BNNs) by exploiting...",
-      "ai_summary": "🔥 领域经典：这篇论文是神经形态计算硬件领域的一项关键硬件创新工作，为SNN的物理实现提供了重要的编码器解决方案。\n\n核心观点：该研究首创了一种基于双栅MoS₂场效应晶体管的仿生神经编码器硬件，能够以极低的能耗（≈1–5 pJ/spike）将模拟信号直接转换为遵循多种神经编码算法（如基于速率、时序和脉冲计数的编码）的随机脉冲序列，并成功演示了其在MNIST数据集快速编码及高精度SNN推理中的应用。",
+      "ai_summary": "🔥 领域经典：这篇论文是神经形态计算硬件领域的一项关键硬件创新工作，为SNN的物理实现提供了关键的编码器解决方案。\n\n核心观点：该研究首创了一种基于双栅MoS₂场效应晶体管的仿生神经编码器，能够以极低的能耗（≈1–5 pJ/spike）将模拟信号直接转换为遵循多种生物编码算法（如基于速率、时序和计数的编码）的随机脉冲序列，并成功演示了其在MNIST数据集快速编码和高精度推理中的应用。",
       "citations": 149
     },
     {
@@ -46,7 +46,7 @@
       "published": "2019-09-24",
       "link": "https://www.semanticscholar.org/paper/71962c8b35e1b8bb45ed874c61c447103f4a4688",
       "summary": "Spiking neural network (SNN) is promising but the development has fallen far behind conventional deep neural networks (DNNs) because of difficult trai...",
-      "ai_summary": "🔥 领域经典：该论文是脉冲神经网络（SNN）直接训练方法的重要里程碑，显著缩小了SNN与深度神经网络（DNN）在性能和训练效率上的差距。\n\n**核心观点：**\n1.  提出了一种基于闭式输入-输出响应表达式的抽象SNN模型，绕过了训练过程中对膜电位的复杂计算，使得深度SNN能够像DNN一样被高效、直接地训练。\n2.  论证了采用单脉冲时间编码的非泄漏积分发放（IF）神经元是构建可直接训练的深度SNN的最佳选择，并基于此构建了完整的训练框架，同时展示了该框架在权重量化下的鲁棒性。",
+      "ai_summary": "🔥 领域经典：该论文是脉冲神经网络（SNN）直接训练方法的重要里程碑，其提出的时间编码与无泄漏积分发放神经元模型，极大地简化了深度SNN的训练流程。\n\n**核心观点：**\n1.  提出了一种基于单脉冲时间编码的无泄漏积分发放神经元模型，通过推导其输入输出的闭式解，构建了可直接训练的抽象SNN模型，从而绕过了训练过程中对膜电位的复杂计算，使SNN能像传统深度神经网络一样高效训练。\n2.  基于此易训练的框架，论文首次系统性地研究了深度SNN在权重量化下的鲁棒性，证明了其对于低成本神经形态硬件实现的实用价值，并在CIFAR-10和ImageNet",
       "citations": 113
     },
     {
@@ -54,7 +54,7 @@
       "published": "2021-01-01",
       "link": "https://www.semanticscholar.org/paper/f11177822547ee2e23c62de2d50a81fc39ace6f3",
       "summary": "Abstract Heart disease is one of the top ten threats to global health in 2019 according to the WHO. Continuous monitoring of ECG on wearable devices c...",
-      "ai_summary": "🔥 领域经典：该论文是SNN在可穿戴医疗设备边缘计算应用中的代表性工作，将高效能SNN引入心电图分类领域。\n\n核心观点：提出一种将训练好的卷积神经网络（CNN）转换为脉冲神经网络（SNN）的两步法，在保证分类准确率下降小于1%的前提下，实现了极低的功耗（0.077 W），其能耗仅为先前神经网络方案的约千分之七，为可穿戴设备上的实时心电监测提供了高能效解决方案。",
+      "ai_summary": "🔥 领域经典：该论文是SNN在可穿戴医疗设备边缘计算应用中的代表性工作，将高效能SNN引入心电信号分类领域。\n\n**核心观点**：提出一种用于可穿戴设备心电分类的、无需复杂预处理的原始信号处理方法，其核心创新在于通过“两步法”训练CNN并将其高效转换为SNN，在精度损失小于1%的前提下，实现了相比传统神经网络方案高达两个数量级的能效提升（功耗降至0.077W）。",
       "citations": 110
     },
     {
@@ -62,7 +62,7 @@
       "published": "2020-05-16",
       "link": "https://www.semanticscholar.org/paper/0c6dfd1688f2422224ecae0bbcd30df4e36042a6",
       "summary": "Spiking Neural Networks (SNNs), the third generation NNs, have come under the spotlight for machine learning based applications due to their biologica...",
-      "ai_summary": "🔥 领域经典：这篇论文是脉冲神经网络（SNN）在神经形态处理器（Intel Loihi）上实现实际应用（动态视觉传感器手势识别）的早期代表性工作，展示了从深度神经网络（DNN）到SNN的完整转换流程及其在边缘设备上的高效部署。\n\n核心观点：本文提出了一套为Intel Loihi神经形态处理器量身定制的、从深度神经网络（DNN）到脉冲神经网络（SNN）的转换方法，并结合专门为DvsGesture数据集设计的事件数据预处理流程，最终在Loihi芯片上实现了高精度、低功耗的实时手势识别系统。",
+      "ai_summary": "🔥 领域经典：这篇论文是脉冲神经网络（SNN）在神经形态处理器（Intel Loihi）上实现实际应用（动态视觉传感器手势识别）的早期代表性工作，展示了从深度神经网络（DNN）到SNN的高效转换与部署流程。\n\n核心观点：本文提出了一套针对Intel Loihi神经形态处理器的完整方法，通过设计专门的预处理流程将事件相机（DVS）数据适配于DNN训练，再将训练好的DNN高精度转换为SNN，最终在Loihi上以极低的硬件资源（仅37个核心）实现了实时、高能效的手势识别。",
       "citations": 107
     },
     {
@@ -70,7 +70,7 @@
       "published": "2020-11-27",
       "link": "https://www.semanticscholar.org/paper/912258da41066ca84b3387ad10b4150680d8025f",
       "summary": "This work is aimed to study experimental and theoretical approaches for searching effective local training rules for unsupervised pattern recognition ...",
-      "ai_summary": "🔥 领域经典：\n\n**核心观点：** 本文为基于忆阻器的脉冲神经网络（SNN）利用STDP进行无监督模式识别学习，建立了关键的“相关性增长-反相关性衰减”原则，并以此作为确保学习收敛的必要条件和通用参数配置准则。",
+      "ai_summary": "🔥 领域经典：这篇论文是忆阻器脉冲神经网络（SNN）实现无监督模式识别学习的关键理论奠基工作之一，系统性地建立了基于STDP的学习收敛性必要条件。\n\n**核心观点**：该研究提出了“关联增长-反关联衰减”原则，作为基于群体发放率编码的单层SNN在无监督模式识别任务中实现学习收敛的普适性必要条件，并成功将其应用于忆阻器硬件SNN的参数配置与鲁棒性优化。",
       "citations": 107
     },
     {
@@ -78,7 +78,7 @@
       "published": "2020-07-16",
       "link": "https://www.semanticscholar.org/paper/529779e18cc62d2641350bafb8a28967b49faa5e",
       "summary": "We propose computing primitive for an all-optical spiking neural network (SNN) based on vertical-cavity surface-emitting lasers (VCSELs) for supervise...",
-      "ai_summary": "🔥 领域经典：这篇论文是首个提出并演示基于垂直腔面发射激光器（VCSEL）的全光脉冲神经网络（SNN）计算原型的开创性工作，为大规模、低功耗光子神经形态系统铺平了道路。\n\n**核心观点：**\n1.  首次构建了基于VCSEL和垂直腔半导体光放大器（VCSOA）的全光SNN统一模型，该模型能复现类神经元动力学，并利用双光脉冲注入实现了生物可信的脉冲时序依赖可塑性（STDP）学习机制。\n2.  成功演示了该全光SNN无需侧向抑制机制即可通过监督学习算法完成光学字符（0-9）的模式识别，证明了",
+      "ai_summary": "🔥 领域经典：这篇论文是首个提出并演示了完全基于垂直腔面发射激光器（VCSEL）的全光脉冲神经网络计算原型的开创性工作，为大规模、低功耗光子神经形态系统铺平了道路。\n\n**核心观点：**\n1.  首次构建了基于VCSEL和垂直腔半导体光放大器（VCSOA）的全光脉冲神经网络统一模型，该模型能复现类神经元动力学和基于双光脉冲注入的脉冲时序依赖可塑性（STDP）学习机制。\n2.  成功演示了该全光系统在无需侧向抑制的情况下，通过监督学习算法对光学字符数字进行识别与分类，实现了从器件物理到系统算法的协同设计与",
       "citations": 72
     },
     {
@@ -86,7 +86,7 @@
       "published": "2020-11-12",
       "link": "https://www.semanticscholar.org/paper/8a011d446e3fb12496a1adfa3c1fda138a852355",
       "summary": "Spiking Neural Networks (SNNs) are considered as the third generation of artificial neural networks, which are more closely with information processin...",
-      "ai_summary": "🔥 领域经典：  \n核心观点：该论文提出了一种结合全局随机反馈对齐与局部差分STDP可塑性的多层脉冲神经网络训练方法，通过模仿生物脑的全局自上而下连接结构与局部突触可调性，实现了对不可微脉冲信号的高效鲁棒训练。",
+      "ai_summary": "🔥 领域经典：该论文是脉冲神经网络（SNN）训练方法领域的重要工作，提出了一种结合全局反馈对齐与局部可塑性的高效生物启发式训练框架。\n\n核心观点：本文的核心创新在于提出了一种名为GLSNN的多层SNN训练方法，其通过引入全局随机反馈对齐机制，绕过了传统反向传播对可微性的依赖，直接将误差目标从输出层传递至前几层；同时，在局部采用差分STDP规则进行突触优化，从而实现了对深层SNN高效且鲁棒的生物可信训练。",
       "citations": 67
     },
     {
@@ -94,7 +94,7 @@
       "published": "2020-11-02",
       "link": "https://www.semanticscholar.org/paper/4f4ed1113990f3f14c5ebd3c576c6a93bfc59c40",
       "summary": "Spiking neural network (SNN) has drawn research interests as it mimics dynamic activities of human brain and has the potential to perform real-time co...",
-      "ai_summary": "🔥 领域经典：这篇论文是面向FPGA的脉冲神经网络（SNN）系统级设计与优化的开创性工作，提出了从编码、模型到硬件架构的端到端协同优化框架。\n\n**核心观点：**\n1.  提出了一种超越传统速率编码的高效神经编码与训练方案，通过优化编码器参数实现快速推理，解决了传统方法在精度和延迟上的低效问题。\n2.  创新性地将SNN建模为无限脉冲响应（IIR）滤波器网络，提出了一种兼顾生物特性与硬件友好性的灵活模型，避免了现有硬件因模型过度简化或过度复杂化带来的局限。\n3.  构建了一个从算法模型到FPGA部署的完整自动化优化框架，首次",
+      "ai_summary": "🔥 领域经典：这篇论文是脉冲神经网络（SNN）硬件实现领域的一篇系统性优化工作，因其提出的端到端协同优化框架，在FPGA上实现了精度、延迟和吞吐量的显著提升，成为该方向的重要参考文献。\n\n核心观点：本文提出了一种针对FPGA的脉冲神经网络（SNN）全栈优化框架，其核心创新在于将**神经编码、模型表示和硬件架构**三者进行系统性协同优化，具体包括：1）提出一种可优化编码参数的快速推理编码方案；2）将SNN建模为硬件友好的**无限脉冲响应（IIR）滤波器网络**，以平衡生物真实性与计算效率；3）开发了从模型到FPGA部署的",
       "citations": 66
     },
     {
@@ -102,7 +102,7 @@
       "published": "2023-02-22",
       "link": "https://www.semanticscholar.org/paper/147e306d10e8ee19caf3b84ffbda3a984cd5db8d",
       "summary": "Electroencephalography (EEG) signals classification is essential for the brain-computer interface (BCI). Recently, energy-efficient spiking neural net...",
-      "ai_summary": "🔥 领域经典：  \n核心观点：本文提出了一种名为SGLNet的新型脉冲神经网络模型，其核心创新在于将可学习的脉冲编码器、为SNN定制的多头自适应图卷积模块以及基于脉冲的LSTM单元相结合，首次系统性地解决了EEG信号分类中如何有效挖掘通道间特定空间拓扑关系与脉冲序列时间依赖性的关键问题。",
+      "ai_summary": "🔥 领域经典：否（这是一篇近期提出具体新模型、在特定任务上表现优异的应用研究论文，而非定义领域方向或引发广泛跟随的开创性工作。）\n\n核心观点：本文提出了一种名为SGLNet的新型脉冲神经网络模型，其核心创新在于为脑电信号分类定制了**脉冲驱动的自适应图卷积模块**以挖掘通道间的动态空间拓扑关系，并设计了**脉冲长短期记忆单元**以捕获脉冲序列的复杂时间依赖性。",
       "citations": 65
     },
     {
@@ -110,7 +110,7 @@
       "published": "2022-07-06",
       "link": "https://www.semanticscholar.org/paper/ffa70f147756c642669ab5b5298c48296c2ba1ca",
       "summary": "The backpropagation algorithm has promoted the rapid development of deep learning, but it relies on a large amount of labeled data and still has a lar...",
-      "ai_summary": "🔥 领域经典：这篇论文是脉冲神经网络（SNN）无监督学习方向的重要前沿工作，首次将基于STDP的SNN成功应用于CIFAR10等复杂数据集，并取得了该范式下的最佳性能。\n\n**核心观点：**\n1.  通过引入自适应突触滤波器、自适应发放阈值和自适应侧向抑制连接这三种生物可塑性机制，显著增强了SNN在无监督学习中的表征能力与特征丰富性。\n2.  设计了基于多样本多时刻的“样本时序批量STDP”更新规则，有效加速并稳定了无监督SNN的训练过程，使其在少量样本学习场景下能超越同结构的监督人工神经网络。",
+      "ai_summary": "🔥 领域经典：\n\n核心观点：本文通过整合短期突触可塑性、自适应发放阈值和自适应侧向抑制连接这三种自适应机制，并设计了基于多样本多时刻更新的STB-STDP学习规则，显著加速了无监督脉冲神经网络的训练，并使其在复杂数据集上取得了当时基于STDP的无监督SNN的最佳性能。",
       "citations": 62
     },
     {
@@ -118,7 +118,7 @@
       "published": "2021-04-16",
       "link": "https://www.semanticscholar.org/paper/53306dd7203c08605f6c5c322a46b14dc5b2c4bb",
       "summary": "The outbreak of a global pandemic called coronavirus has created unprecedented circumstances resulting into a large number of deaths and risk of commu...",
-      "ai_summary": "🔥 领域经典：否。这是一篇应用导向的研究论文，旨在解决特定时期（COVID-19）的实际问题，而非提出开创性的SNN理论或通用方法。\n\n核心观点：本研究提出了一种基于脉冲神经网络（SNN）的COVID-19 CT图像分类方法，其核心创新在于利用深度学习库模拟SNN，以探索在医疗图像分析中应用更节能的神经形态计算的潜力，并在特定数据集上取得了优异的分类性能（F1分数0.99）。",
+      "ai_summary": "🔥 领域经典：否。这是一篇将现有SNN方法应用于特定医学图像分类任务的应用型论文，并非该领域的开创性工作。\n\n核心观点：本文提出了一种使用脉冲神经网络（SNN）对胸部CT扫描图像进行COVID-19检测的方法，其核心创新在于通过模拟生物模型并利用深度学习库实现SNN，旨在探索比传统深度学习模型更经济、高效的替代方案，并在特定数据集上取得了高分类准确率。",
       "citations": 58
     },
     {
@@ -126,7 +126,7 @@
       "published": "2021-07-01",
       "link": "https://www.semanticscholar.org/paper/c1cc9d133afee2320c311b3e1ce8d9dd6aa3e3be",
       "summary": "Autonomous Driving (AD) related features provide new forms of mobility that are also beneficial for other kind of intelligent and autonomous systems l...",
-      "ai_summary": "🔥 领域经典：  \n核心观点：该论文首次在英特尔Loihi神经形态研究芯片上实现了基于事件相机的脉冲神经网络汽车分类器，通过结合事件视觉传感器与专用硬件，在保证较高识别准确率（离线86%，芯片部署83%）的同时，实现了极低的单样本推理延迟（≤0.72 ms）与功耗（310 mW），为自动驾驶等实时低功耗场景提供了可行的神经形态计算方案。",
+      "ai_summary": "🔥 领域经典：  \n核心观点：该论文首次在英特尔Loihi神经形态研究芯片上实现了基于事件相机的脉冲神经网络汽车分类器，通过将离线训练的SNN模型映射到专用硬件，在保证较高识别准确率的同时，实现了极低的单样本推理延迟（0.72毫秒）与功耗（310毫瓦），为自动驾驶等实时低功耗场景提供了可行的神经形态计算方案。",
       "citations": 55
     },
     {
@@ -134,7 +134,7 @@
       "published": "2022",
       "link": "https://www.semanticscholar.org/paper/0484f95ef6a6ee544e0a9f9eb5dfe35f7166c09f",
       "summary": "Spiking neural networks (SNNs) are promising to be widely deployed in real-time and safety-critical applications with the advance of neuromorphic comp...",
-      "ai_summary": "🔥 领域经典：否（这是一篇针对特定安全问题的前沿研究，提出了增强鲁棒性的新方法，但尚未成为定义领域的奠基性经典）。\n\n核心观点：本文通过为脉冲表示推导李普希茨常数，首次从理论上量化了脉冲神经网络（SNN）固有的对抗鲁棒性程度，并在此基础上提出了一种计算开销低的、正则化的对抗训练方案，该方案通过约束扰动脉冲距离的放大和在多个对抗邻域上提升泛化能力，有效防御了基于强可微分近似方法生成的对抗攻击。",
+      "ai_summary": "🔥 领域经典：否（这是一篇针对特定问题提出新防御方法的近期研究论文，而非定义领域或具有广泛范式影响的奠基性工作。）\n\n核心观点：本文通过为脉冲表示推导一个李普希茨常数，首次从理论上量化了脉冲神经网络（SNN）对抗攻击的脆弱性边界，并基于此提出了一种计算开销低的、通过约束扰动脉冲距离放大并在多个对抗邻域上进行泛化的正则化对抗训练方案，以增强SNN的鲁棒性。",
       "citations": 54
     },
     {
@@ -142,7 +142,7 @@
       "published": "2021-05-27",
       "link": "https://www.semanticscholar.org/paper/4d19b91d9356576a2bdf99a6d14174339d2375bf",
       "summary": "Spiking neural networks (SNNs) transmit information through discrete spikes that perform well in processing spatial-temporal information. Owing to the...",
-      "ai_summary": "🔥 领域经典：\n\n核心观点：该论文通过引入自适应时延自反馈机制来调节脉冲发放的精确度，并结合兴奋性与抑制性神经元的动态平衡机制来控制神经元输出，从而构建了一个在多个标准数据集上达到当时最先进性能的深度脉冲神经网络。",
+      "ai_summary": "🔥 领域经典：\n\n核心观点：该论文通过引入自适应时延自反馈机制来调节脉冲发放的精确度，并结合兴奋性与抑制性神经元的动态平衡机制来控制神经元输出，从而构建了一个性能优越的深度脉冲神经网络（BackEISNN）。这两个机制协同作用，显著加速了网络收敛并提升了在多个标准数据集上的分类准确率，尤其在相对轻量结构下于CIFAR10等复杂任务上取得了具有竞争力的先进性能。",
       "citations": 53
     },
     {
@@ -150,7 +150,7 @@
       "published": "2020-03-21",
       "link": "https://www.semanticscholar.org/paper/c5de269ff4978100eb6838d5d20a66be492241f4",
       "summary": "We present PyCARL, a PyNN-based common Python programming interface for hardware-software cosimulation of spiking neural network (SNN). Through PyCARL...",
-      "ai_summary": "🔥 领域经典：否（这是一篇聚焦于工具集成与接口开发的应用型论文，旨在提升开发效率，而非提出新的理论或模型。）\n\n核心观点：该论文提出了PyCARL，一个基于PyNN的通用Python接口，其主要贡献在于：1）将高效、GPU加速的SNN模拟器CARLsim接入PyNN生态，促进了代码共享与社区整合；2）集成了TrueNorth、Loihi等神经形态硬件的周期精确模型，使开发者能在软件仿真阶段准确模拟硬件延迟，从而分析和优化模型在目标硬件上的性能差异，辅助进行早期设计空间探索。",
+      "ai_summary": "🔥 领域经典：否（这是一篇聚焦于工具集成与接口创新的工程性论文，旨在提升开发效率，而非提出新的SNN理论或学习算法。）\n\n核心观点：该论文提出了PyCARL，一个基于PyNN的接口，其核心贡献在于：1）将高效的GPU加速SNN模拟器CARLsim接入PyNN生态，促进了代码共享与社区融合；2）集成了TrueNorth、Loihi等主流神经形态硬件的精确周期级模型，使开发者能在软件仿真阶段就准确评估硬件延迟对模型性能的影响，并进行设计空间探索。",
       "citations": 51
     },
     {
@@ -158,7 +158,7 @@
       "published": "2021-06-16",
       "link": "https://www.semanticscholar.org/paper/bcc16bfdccde09cb28ec569aa58f52be20fb05bd",
       "summary": "We seek to investigate the scalability of neuromorphic computing for computer vision, with the objective of replicating non-neuromorphic performance o...",
-      "ai_summary": "🔥 领域经典：这篇论文是脉冲神经网络（SNN）在计算机视觉具体应用（图像分割）中的一项重要工程实践与基准研究，因其首次将经典的U-Net架构成功转换为SNN并在英特尔Loihi神经形态芯片上实现了能效优势，而被广泛引用。\n\n**核心观点：**\n1.  提出了一套完整的、以能效为导向的ANN-to-SNN转换流程，通过创新的基于百分位数的脉冲发放率正则化方法，在将U-Net转换为SNN时，在最小化精度损失的同时优化了能量消耗。\n2.  在英特尔Loihi神经形态芯片上验证了SNN的能效优势，证明其在线推理（逐图处理）的能",
+      "ai_summary": "🔥 领域经典：这篇论文是脉冲神经网络（SNN）在计算机视觉具体应用（图像分割）中的一项重要工程实践与基准研究，因其首次将经典的U-Net架构成功转换为SNN并在英特尔Loihi神经形态芯片上实现了能效优势，而成为该领域被广泛引用的关键文献之一。\n\n**核心观点：**\n1.  提出了一套完整的、以能效为导向的ANN-to-SNN转换与部署方法论，包括基于Nengo框架的转换、用于控制脉冲发放率的百分位数正则化损失函数，以及针对多芯片Loihi系统的分区优化策略。\n2.  实证表明，转换后的SNN在保持与原始ANN相当分割精度的同时，在Loihi",
       "citations": 50
     },
     {
@@ -166,7 +166,7 @@
       "published": "2023-06-21",
       "link": "https://www.semanticscholar.org/paper/83f0c700d210bf6e22168ce642cb798687f25eaf",
       "summary": "Spiking Neural Networks (SNNs) have attracted significant attention for their energy-efficient and brain-inspired event-driven properties. Recent adva...",
-      "ai_summary": "🔥 领域经典：这篇论文是该领域针对脉冲神经网络（SNN）在目标检测任务中面临的关键瓶颈——高延迟与低精度——提出的标志性解决方案，其提出的SUHD模型是当前最深、性能最优的脉冲目标检测模型之一，具有重要影响力。\n\n核心观点：本文通过提出**时间步压缩**和**脉冲时间依赖积分（STDI）编码**两大核心技术，在保持网络结构完整性的前提下，极大地减少了ANN-to-SNN转换所需的时间步长，从而实现了超低延迟和高精度的脉冲目标检测。",
+      "ai_summary": "🔥 领域经典：这篇论文是脉冲神经网络（SNN）在目标检测领域实现超低延迟和高精度的重要里程碑工作。\n\n**核心观点：** 针对SNN目标检测模型存在的延迟高、精度损失大以及ANN转换时结构失真等问题，本文提出了**时间步压缩**和**脉冲时间依赖积分（STDI）编码**两大核心创新，并设计了专用的SNN空间金字塔池化（SPP）结构，从而构建了当时最深、性能最优的超低延迟脉冲目标检测模型SUHD。",
       "citations": 47
     },
     {
@@ -182,7 +182,7 @@
       "published": "2023-08-16",
       "link": "https://www.semanticscholar.org/paper/ec87d6ef74f8d5c230be5cd3b103ba769dc696a4",
       "summary": "Humans show a remarkable ability in solving the cocktail party problem. Decoding auditory attention from the brain signals is a major step toward the ...",
-      "ai_summary": "🔥 领域经典：这篇论文是SNN在听觉注意解码（AAD）这一具体脑机接口应用中的开创性工作，首次将脉冲神经网络与生物启发的注意力机制结合，为解决“鸡尾酒会问题”提供了新的类脑计算范式。\n\n**核心观点：**\n1.  首次提出了一种生物启发的脉冲注意力神经网络（BSAnet），它利用具有生物合理性的脉冲神经元和注意力机制，来有效挖掘脑电信号中的时序动态特征，从而解码听觉注意。\n2.  该工作不仅在多场景下取得了优于当时主流方法的性能，更重要的是，它通过模仿真实的大脑信息处理方式，展示了类脑计算模型在解决复杂时序感知问题上的独特优势。",
+      "ai_summary": "🔥 领域经典：这篇论文是SNN在听觉注意解码（AAD）这一特定脑机接口应用中的开创性工作，首次将脉冲神经网络与生物启发的注意力机制结合，为解决“鸡尾酒会问题”提供了新的类脑计算范式。\n\n**核心观点：**\n1.  首次提出了一种生物启发的脉冲注意力神经网络（BSAnet），其核心创新在于利用具有生物合理性的脉冲神经元和注意力机制，来有效捕捉和处理脑电图（EEG）信号中固有的复杂时序动态信息。\n2.  这项工作不仅通过实验验证了BSAnet在多种评估条件下优于当时最先进的AAD解码器，更重要的是，它展示了受大脑启发的计算模型在模仿真实大脑",
       "citations": 38
     },
     {
@@ -190,7 +190,7 @@
       "published": "2023-07-01",
       "link": "https://www.semanticscholar.org/paper/68e3c4072f774c33d71f763411ea89cee03f28f1",
       "summary": "Event-based visual, a new visual paradigm with bio-inspired dynamic perception and μs level temporal resolution, has prominent advantages in many spec...",
-      "ai_summary": "🔥 领域经典：否（这是一篇近期提出的、针对特定问题优化的方法学论文，尚未成为广泛引用的基础性经典）\n\n核心观点：本文提出了一种特征“精炼-掩码”（Refine-and-Mask）模块，使脉冲神经网络（SNN）能够以数据驱动的方式自适应地抑制不重要的时空特征，从而在降低网络整体脉冲发放率的同时，提升其在事件视觉任务上的识别性能。其核心创新在于首次明确利用事件流固有的时空稀疏性与非均匀性，通过优化神经元膜电位来主动实现更稀疏、更高效的脉冲计算。",
+      "ai_summary": "🔥 领域经典：否\n\n**核心观点：** 本文提出了一种特征“精炼与掩蔽”（Refine-and-Mask）模块，该模块能根据输入数据自适应地优化脉冲神经元的膜电位，从而抑制不重要的脉冲发放，在提升事件视觉任务性能的同时，显著降低了网络的平均脉冲发放率。",
       "citations": 35
     },
     {
@@ -198,7 +198,7 @@
       "published": "2022-05-01",
       "link": "https://www.semanticscholar.org/paper/750e5d98f540c7beb024828954a739dacf24e6bd",
       "summary": "Recent studies have shown that alpha oscillations (8-13 Hz) enable the decoding of auditory spatial attention. Inspired by sparse coding in cortical n...",
-      "ai_summary": "🔥 领域经典：  \n核心观点：该研究受大脑皮层神经元稀疏编码机制启发，构建了一个用于脑电（EEG）听觉空间注意力检测的脉冲神经网络（SNN）模型，其创新在于提出了一种基于突触前后神经元发放率的新型学习规则，并利用网络层间的低连接率实现高效学习，仅需10%的训练数据即可达到90%的平均检测准确率。",
+      "ai_summary": "🔥 领域经典：这篇论文是脑机接口与脉冲神经网络交叉领域的重要应用型研究，其提出的基于脉冲神经网络的解码模型在方法学上具有显著创新性。\n\n核心观点：该研究受大脑皮层神经元稀疏编码机制启发，构建了一个用于解码听觉空间注意力的三层脉冲神经网络模型，并提出了一种基于突触前后神经元发放率的新型学习规则，仅需10%的脑电数据即可实现90%的平均分类准确率。",
       "citations": 32
     },
     {
@@ -222,7 +222,7 @@
       "published": "2024-02-01",
       "link": "https://www.semanticscholar.org/paper/26eb83bee8c3c65c7a3819f613139d4b9fa56ba5",
       "summary": "Spiking neural networks (SNNs) are brain-inspired models that utilize discrete and sparse spikes to transmit information, thus having the property of ...",
-      "ai_summary": "🔥 领域经典：这篇论文是脉冲神经网络（SNN）架构自动设计领域的开创性工作，首次将神经架构搜索（NAS）系统性地引入SNN领域，解决了该领域长期依赖手动设计架构的瓶颈。\n\n核心观点：本文提出了一种基于无分支脉冲超网的神经架构搜索方法，通过编码候选架构大幅降低了搜索过程的计算需求；同时，创新性地引入突触操作（SynOps）感知优化，使搜索能自动在有限计算预算下找到精度与效率最优的SNN架构。",
+      "ai_summary": "🔥 领域经典：该论文是首个将神经架构搜索（NAS）系统性地引入脉冲神经网络（SNN）设计的工作，解决了该领域长期依赖人工设计架构的瓶颈。\n\n**核心观点：**\n1.  提出了一种基于无分支脉冲超网的神经架构搜索方法，通过权重共享大幅降低了SNN架构搜索的计算成本和时间。\n2.  引入了突触操作（SynOps）感知的优化目标，使搜索过程能自动在计算预算约束下，找到精度与能效最优平衡的SNN架构。",
       "citations": 27
     },
     {
@@ -230,7 +230,7 @@
       "published": "2023-07-01",
       "link": "https://www.semanticscholar.org/paper/89480856891585be344fc52ba2f8e185226a0733",
       "summary": "Neural networks implemented in memristor-based hardware can provide fast and efficient in-memory computation, but traditional learning methods such as...",
-      "ai_summary": "🔥 领域经典：\n\n**核心观点：** 本文提出了一种适用于忆阻器脉冲神经网络的在线强化学习算法，其核心创新在于将基于真实忆阻器特性的类STDP学习规则与在线、逐状态更新的强化学习过程相结合，首次在忆阻器SNN上成功解决了Cart-Pole控制任务，为在连续时间环境中运行的神经形态系统实现实时智能体学习迈出了关键一步。",
+      "ai_summary": "🔥 领域经典：\n\n**核心观点：** 本文提出了一种适用于忆阻器脉冲神经网络的在线强化学习算法，其核心创新在于将基于真实忆阻器特性的类STDP学习规则与在线、逐状态更新的强化学习过程相结合，成功解决了Cart-Pole控制任务，为在连续时间环境中运行的神经形态系统实现实时智能体学习提供了关键路径。",
       "citations": 25
     },
     {
@@ -238,7 +238,7 @@
       "published": "2021-03-01",
       "link": "https://www.semanticscholar.org/paper/1dbe971285b08dda77f39543b641cde3e1dd11a6",
       "summary": "Hybrid electrical/optical (E/O) switching data center network (DCN) has recently emerged as a promising paradigm for future DCN architectures. However...",
-      "ai_summary": "🔥 领域经典：否（这是一篇针对特定工程问题的应用型研究，非该领域奠基性或广泛引用的理论经典）\n\n核心观点：本文提出了一种基于误差反馈脉冲神经网络(SNN)的突发流量预测框架，并将其与一种预测辅助调度算法相结合，以解决混合电/光交换数据中心网络中动态突发流量导致的拥塞问题。其核心创新在于模仿生物神经元系统来增强突发流量特征提取，并利用预测结果通过全局评估因子和流量缩放因子进行动态调度。",
+      "ai_summary": "🔥 领域经典：否（该论文聚焦于一个具体工程问题的创新解决方案，尚未成为广泛引用的基础理论或范式转变工作）。\n\n核心观点：本文提出了一种基于误差反馈脉冲神经网络(SNN)的突发流量预测框架，并将其预测结果用于辅助混合电/光交换数据中心的动态调度算法，以解决传统静态算法无法应对混合流量与复杂网络结构所导致的突发拥塞问题。其核心创新在于将模仿生物神经元系统的SNN用于增强突发流量特征提取，并结合全局评估因子和流量缩放因子进行预测辅助的调度决策。",
       "citations": 25
     }
   ],
@@ -248,7 +248,7 @@
       "published": "2026-03-14",
       "link": "https://www.semanticscholar.org/paper/5e8db61bb876e8be0f5f26f47e45abb2472c8e52",
       "summary": "The inherent bottleneck of the von Neumann architecture and the limited power budget of edge devices necessitate energy-efficient hardware solutions f...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种面向边缘智能的混合CMOS-SDC忆阻器卷积脉冲神经网络架构，其核心突破在于通过1比特读出电路和强度-延迟时间编码，在保证高识别精度的同时，大幅降低了系统功耗并缓解了忆阻器的耐久性问题。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种面向边缘智能的混合CMOS-SDC忆阻器卷积脉冲神经网络架构，其核心突破在于通过1比特读出电路和强度-延迟时间编码，在保证高识别精度的同时，大幅降低了系统功耗并缓解了忆阻器的耐久性退化问题。",
       "citations": 0
     },
     {
@@ -264,15 +264,23 @@
       "published": "2025-12-25",
       "link": "https://www.semanticscholar.org/paper/b7088e8693c16979ca68c277cbe0b4fa6ab6dfec",
       "summary": "Spiking neural networks (SNNs) are the third generation of artificial neural networks, which, thanks to their energy efficiency and sparsity, are idea...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文系统性地实证研究了量化与剪枝的初始参数设置对脉冲神经网络最终性能的影响，指出在低压缩参数下模型精度损失不显著，但在复杂数据集或极端压缩设置下性能会急剧恶化。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文系统研究了量化与剪枝的初始参数设置对脉冲神经网络（SNN）最终性能的影响，指出在低压缩参数下SNN能保持精度并显著降低模型规模与能耗，但在复杂数据集或极端压缩设置下性能会急剧下降。",
       "citations": 0
+    },
+    {
+      "title": "[2025 5th International Conference on Computational Modeling, Simulation and Data Analysis (CMSDA)] Evaluation of Spiking Neural Network Architecture for Image Classification Using Binary Encoding",
+      "published": "2025-12-12",
+      "link": "https://www.semanticscholar.org/paper/332f317335d1e417b7a8221b456e58ab5c581514",
+      "summary": "The growing energy cost of high-precision artificial intelligence motivates a shift toward low-precision, event-driven computation inspired by biologi...",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本研究探索了在脉冲神经网络（SNN）中使用极端的1比特二值化图像作为输入的可行性。通过系统性的超参数扫描，研究发现，只要网络架构设计得当，仅使用二值脉冲序列就能在MNIST分类任务上达到97.0%的竞争性准确率，为构建超低功耗的边缘AI系统提供了编码与架构协同设计的清晰指南。",
+      "citations": 1
     },
     {
       "title": "[Nano letters (Print)] One-Step Annealing-Configured Hf0.2Zr0.8O2 Memristive-Antiferroelectric Devices for Bioinspired CSNN Neuromorphic Computing.",
       "published": "2025-12-04",
       "link": "https://www.semanticscholar.org/paper/1253d2377796996933db361709cf84761085eaa9",
       "summary": "Traditional computing systems are limited by separated architectures, inspiring the development of compatible artificial neuron and synaptic devices f...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本研究提出了一种基于单一材料平台（Hf₀.₂Zr₀.₈O₂）的CMOS兼容工艺，通过一步退火的后处理步骤，将相同的初始薄膜结构分化为两种功能器件：未经退火的薄膜用作模拟阻变突触，而经过退火的薄膜则表现出反铁电特性，用于实现生物启发的脉冲神经元。这一突破在于利用完全相同的材料和前道工艺，仅通过一个可选择的后续步骤，就在单一芯片上集成了功能互补的神经形态计算核心单元（突触与神经元），并成功构建了用于动态手势识别的高精度卷积脉冲神经网络。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本研究提出了一种基于单一材料（Hf₀.₂Zr₀.₈O₂）和CMOS兼容工艺的平台，通过一步退火后处理，将同一薄膜结构分化为忆阻突触和反铁电神经元两种器件。这一突破实现了工艺兼容的神经元与突触集成，为构建紧凑的混合神经形态计算硬件提供了新路径。",
       "citations": 0
     },
     {
@@ -280,7 +288,7 @@
       "published": "2025-12-01",
       "link": "https://www.semanticscholar.org/paper/f0a02f668336a5577fe6d12b494a608713d1c973",
       "summary": "The morphology of neurons plays a crucial role in identifying their types and investigating the structure and function of the brain. While existing me...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种新颖的浅层多分支脉冲神经网络（SNN）架构，通过将复杂神经元树状结构分解为多个子树并显式投影到时域，结合新设计的时空增强模块，从时空维度全面刻画神经元形态特征及其分支间关系，从而实现对复杂形态神经元的高精度分类。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种新颖的浅层多分支脉冲神经网络（SNN）架构，通过将复杂神经元树分解为多个子树并显式投影到时域，从时空维度全面刻画神经元形态特征，并引入可插拔的时空增强模块来提升脉冲活性和表征学习能力，从而实现对具有复杂分支结构神经元的高精度分类。",
       "citations": 2
     },
     {
@@ -288,7 +296,7 @@
       "published": "2025-11-29",
       "link": "https://www.semanticscholar.org/paper/1d6c06ba93e5b0c9255b9884799bc0eff921bd76",
       "summary": "There exists a significant scale gap between photonic neural network integrated chips and neural networks, which hinders the deployment and applicatio...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：** 本文提出了一种面向光子神经形态芯片的硬件感知轻量化脉冲神经网络架构，通过硬件-软件协同计算解决了光子芯片与神经网络规模不匹配的关键挑战，并进行了端到端的实验验证。其核心突破在于利用离散余弦变换降低输入维度以匹配芯片端口，并成功在自研的MZI线性计算芯片和DFB-SA非线性脉冲激活芯片上完成了完整的单层网络推理。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：** 本文提出了一种面向光子神经形态芯片的硬件感知轻量化脉冲神经网络架构，通过硬件-软件协同计算解决了光子芯片与神经网络规模不匹配的关键挑战，并进行了端到端的实验验证。其核心突破在于利用离散余弦变换降低输入维度以匹配芯片端口，并成功在自研的MZI干涉仪线性计算芯片和DFB-SA激光器非线性脉冲激活芯片上完成了完整的单层网络推理。",
       "citations": 1
     },
     {
@@ -296,7 +304,7 @@
       "published": "2025-11-28",
       "link": "https://www.semanticscholar.org/paper/769b4867293ad59c4f5d50c273c39c0719e4c00a",
       "summary": "This paper proposes an efficient, event-driven hardware-software co-design framework. The core of this framework is an In-Sensor Synchronous Spatial-T...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种在传感器端同步进行时空编码的软硬件协同设计框架，其核心是通过帧差法将传统视频帧实时转换为稀疏的ON/OFF事件流，从而在源头显著抑制静态背景冗余并捕获运动相关的时空动态。该框架在神经形态处理器上的部署验证了其为资源受限系统提供实时、超低功耗视频流识别解决方案的潜力。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种在传感器端同步进行时空编码的软硬件协同设计框架，其核心是通过帧差法将传统视频帧实时转换为稀疏的ON/OFF事件流，从而在源头显式捕获运动信息并抑制静态背景冗余。该框架结合脉冲神经网络，在部署于神经形态处理器后，为资源受限系统提供了高精度、低功耗的实时视频识别解决方案。",
       "citations": 0
     },
     {
@@ -304,7 +312,7 @@
       "published": "2025-11-01",
       "link": "https://www.semanticscholar.org/paper/0f43a14895b974831a5ba621a148e12b5489ecea",
       "summary": "Depression detection via wearable Electroencephalogram (EEG) sensor-assisted diagnosis system demands computationally efficient models compatible with...",
-      "ai_summary": "🆕 最新速递：LSNN Model: A Lightweight Spiking Neural Network-Based Depression Classification Model for Wearable EEG Sensors\n\n**核心观点：**\n本研究创新性地提出了一种专为可穿戴脑电传感器设计的超轻量脉冲神经网络模型LSNNet，其核心突破在于以极低的计算开销（7.18K参数）和内存占用（RAM 246.88KB）实现了高精度的抑郁症分类，并成功在资源受限的微控制器上完成部署与验证。",
+      "ai_summary": "🆕 最新速递：LSNN Model: A Lightweight Spiking Neural Network-Based Depression Classification Model for Wearable EEG Sensors\n\n**核心观点：**\n本研究提出了一种专为可穿戴脑电传感器设计的超轻量脉冲神经网络模型LSNNet，其核心突破在于以极低的计算开销（仅7.18K参数）和内存占用（RAM < 250KB）实现了高精度的抑郁症分类，并成功在资源受限的微控制器上完成部署与验证，为在物联网边缘设备上进行实时、低功耗的神经精神疾病监测提供了可行的技术方案。",
       "citations": 12
     },
     {
@@ -312,7 +320,7 @@
       "published": "2025-10-19",
       "link": "https://www.semanticscholar.org/paper/8e0406b4b0e1225f72bdc02205bec71f43fbf961",
       "summary": "In robotics applications, event cameras provide low-latency and high-dynamic-range sensing by asynchronously detecting brightness changes, making them...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种新颖的3D小波脉冲神经网络（3DWSNet），其核心创新在于将3D小波变换与级联小波脉冲卷积模块相结合，以显式建模事件流中的高频细节与低频运动表征，从而在基于事件的动作识别任务中实现了显著的性能提升。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种新颖的3D小波脉冲神经网络（3DWSNet），其核心创新在于将3D小波变换与级联小波脉冲卷积模块相结合，以显式建模事件流中的高频细节与低频运动信息，从而在基于事件的动态视觉任务中实现更优的时空特征提取。",
       "citations": 1
     },
     {
@@ -320,7 +328,7 @@
       "published": "2025-10-17",
       "link": "https://www.semanticscholar.org/paper/dedb1867ef5e5c4d46e6012168cc5487cea9d042",
       "summary": "Advanced large-scale neural interfaces call for efficient algorithms to automatically process and optimally exploit the richness of their heavy contin...",
-      "ai_summary": "🆕 最新速递：  \n**核心观点**：本文提出了一种极其精简的单层脉冲神经网络（SNN）架构，能够在连续数据流中以完全无监督的方式识别和分类多变量时间模式，尤其适用于多通道神经信号中的尖峰排序任务。该方法的低功耗与高能效特性，使其有望直接嵌入未来神经植入设备等超低功耗硬件平台进行实时处理。",
+      "ai_summary": "🆕 最新速递：  \n**核心观点**：本文提出了一种极其精简的通用单层脉冲神经网络（SNN），能够在连续数据流中以完全无监督的方式识别和分类多元时间模式，尤其适用于高维神经数据（如多通道神经记录）的实时处理。该网络的低功耗与简单架构使其有望直接嵌入未来的超低功耗硬件平台（如主动神经植入体）中，实现高效的在线数据处理。",
       "citations": 2
     },
     {
@@ -328,7 +336,7 @@
       "published": "2025-09-23",
       "link": "https://www.semanticscholar.org/paper/e8b8e8c2c56a1638bd561a7a951241f11701db20",
       "summary": "This work introduces two architectures for electrocardiogram (ECG) recognition based on Convolutional Spiking Neural Networks (CSNN), both trained on ...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：** 本研究提出了两种基于卷积脉冲神经网络（CSNN）的心电图识别架构，通过引入稀疏编码和跳跃连接，在MIT-BIH心律失常数据库上实现了对五类心律失常的实时高精度检测，最高F1分数超过94%。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本研究提出了两种基于卷积脉冲神经网络（CSNN）的心电图（ECG）识别架构，通过引入稀疏编码和跳跃连接，在MIT-BIH心律失常数据库上实现了对五类心律失常的高精度实时检测。其核心突破在于利用反正切替代梯度解决了脉冲发放函数的不可微问题，使Spiking-ResNet模型取得了94.25%的最高F1分数。",
       "citations": 0
     },
     {
@@ -336,7 +344,7 @@
       "published": "2025-09-01",
       "link": "https://www.semanticscholar.org/paper/de88e6e0c3f8ea9a041f7582326276a4ca8c7086",
       "summary": "Spiking Neural Networks (SNNs) have drawn attention due to their biological behaviour and low energy consumption compared to conventional neural netwo...",
-      "ai_summary": "🆕 最新速递：FPGA-Based Adaptive LIF Neuron for High-Speed, Energy-Efficient Spiking Neural Network\n\n核心观点：本文提出了一种基于FPGA的自适应LIF神经元模型，通过引入自适应阈值和自适应泄漏率，在保持低发放率的同时，显著提升了硬件资源利用率和处理速度。基于该神经元构建的SNN在MNIST分类任务中实现了高精度、低延迟和高能效。",
+      "ai_summary": "🆕 最新速递：FPGA-Based Adaptive LIF Neuron for High-Speed, Energy-Efficient Spiking Neural Network\n\n核心观点：本文提出了一种在FPGA上实现的自适应LIF神经元模型，其核心创新在于引入了自适应阈值和自适应泄漏率机制，通过降低神经元发放频率，在硬件层面显著减少了计算开销和浮点运算。该设计在资源利用率（触发器、LUT）和延迟方面相比现有最佳方案实现了数倍的提升，并成功构建了能高效处理MNIST分类任务的SNN硬件系统。",
       "citations": 10
     },
     {
@@ -352,7 +360,7 @@
       "published": "2025-09-01",
       "link": "https://www.semanticscholar.org/paper/d88d0c58ed39c60de8199bb5028bb7427a92daf7",
       "summary": "Spiking neural networks (SNNs) replace the multiply-and-accumulate operations in traditional artificial neural networks (ANNs) with lightweight mask-a...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文首次提出了一种专为Transformer脉冲神经网络（TSNN）设计的异构硬件加速器SpikeTA，通过参数化硬件引擎、DSP高效的加法树和深度感知的缓冲区管理策略，解决了TSNN因计算模式多样和结构复杂而难以高效部署的难题，在FPGA上实现了显著的性能提升。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文首次提出了一种专为Transformer脉冲神经网络（TSNN）设计的异构硬件加速器SpikeTA，通过参数化硬件引擎、DSP高效的加法树和深度感知的缓存管理策略，解决了TSNN计算模式多样、结构复杂导致的高效部署难题，在FPGA上实现了显著的性能提升。",
       "citations": 3
     },
     {
@@ -360,7 +368,7 @@
       "published": "2025-08-24",
       "link": "https://www.semanticscholar.org/paper/991cee38f9f8ea97dbda3d3ac9dfc7b89bb07d2d",
       "summary": "Electrocardiogram (ECG) and phonocardiogram (PCG) signals are widely used in the early prevention and diagnosis of cardiovascular diseases (CVDs) due ...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：** 本研究提出了一种基于脉冲神经网络（SNN）的多模态心血管疾病检测框架，通过融合心电（ECG）与心音（PCG）信号，并采用置信度动态决策融合策略，在保持高诊断准确率的同时，显著降低了模型能耗，为实现低功耗、高性能的医疗诊断系统提供了新思路。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本研究提出了一种基于脉冲神经网络（SNN）的多模态心血管疾病检测框架，通过融合心电（ECG）与心音（PCG）信号，并采用一种基于置信度的动态决策融合策略，在保持高诊断准确率的同时，显著降低了模型能耗，为实现低功耗、高性能的医疗诊断系统提供了新思路。",
       "citations": 1
     },
     {
@@ -368,7 +376,7 @@
       "published": "2025-08-20",
       "link": "https://www.semanticscholar.org/paper/757218c61be570fa329e44061f3e527b5ea7d8aa",
       "summary": "This study investigates the application of Spiking Neural Networks (SNNs) in Magnetic Resonance Imaging (MRI) classification to explore their potentia...",
-      "ai_summary": "🆕 最新速递：The Brain Watching Itself: Identifying Brain Tumors with Spiking Neural Networks\n\n核心观点：本研究探索了使用基于泄漏积分发放（LIF）神经元的卷积脉冲神经网络（CSNN）进行脑肿瘤MRI分类，发现其时域编码方案在保持与传统CNN相当准确率的同时，能显著降低内存消耗并大幅提升推理速度。",
+      "ai_summary": "🆕 最新速递：  \n**核心观点：** 本研究探索了脉冲神经网络在脑肿瘤MRI分类中的应用，通过比较两种脉冲编码策略，证明了基于时序编码的卷积脉冲神经网络能在保持与传统CNN相当精度的同时，显著降低内存消耗并大幅提升推理速度。",
       "citations": 0
     },
     {
@@ -376,7 +384,7 @@
       "published": "2025-08-19",
       "link": "https://www.semanticscholar.org/paper/5ecd33890e96cac0f9369f79e0c11f0f1fe94d30",
       "summary": "Brain-inspired neuromorphic computing offers significant potential for efficient and adaptive computational platforms. Emerging ferroelectric and anti...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本研究通过元素掺杂工程，利用铁电/反铁电HfZrOx器件分别实现了人工突触和神经元的功能，并首次构建了一个基于该器件的混合CNN-SNN框架。该混合网络突破了纯SNN在三维图像识别上的局限，在心脏MRI分类任务中，其准确率较纯CNN从82.3%提升至92.7%，展示了其在高效神经形态计算中的潜力。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本研究通过元素掺杂工程，利用铁电/反铁电HfZrOx器件分别实现了人工突触和神经元的功能，并首次构建了一个基于该互补器件的混合CNN-SNN框架。该混合网络突破了纯SNN在三维图像识别上的局限，在心脏MRI分类任务中，其准确率较纯CNN从82.3%提升至92.7%，展示了其在高效神经形态计算中的潜力。",
       "citations": 7
     },
     {
@@ -384,7 +392,7 @@
       "published": "2025-08-14",
       "link": "https://www.semanticscholar.org/paper/a68913c38d3caeff53c960052a9c07df414b27ff",
       "summary": "In modern surveillance systems, ensuring public safety while preserving individual privacy is critical. Traditional video-based action recognition met...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种将深度可分离卷积（DSC）与脉冲神经网络（SNN）相结合的新型架构DSC-SNN，旨在利用事件相机（DVS）数据进行高效且保护隐私的行为识别。其核心突破在于，该模型仅需64个通道即可达到98%的准确率，在显著降低卷积层计算成本（高达80%）的同时，超越了传统神经网络的性能。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种将深度可分离卷积（DSC）与脉冲神经网络（SNN）相结合的新型架构DSC-SNN，旨在利用事件相机（DVS）数据进行高效且保护隐私的行为识别。其核心突破在于，该模型仅用64个通道即可达到98%的准确率，同时将卷积层的计算成本降低了高达80%，在计算效率和识别性能之间取得了显著优于传统方法的平衡。",
       "citations": 1
     },
     {
@@ -392,15 +400,7 @@
       "published": "2025-08-04",
       "link": "https://www.semanticscholar.org/paper/4958505f33e306b91841d01233fb552450423e61",
       "summary": "This study introduces a novel Quantized Convolutional Spiking Neural Network (QCSNN) architecture for real-time arrhythmia detection from electrocardi...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：** 本研究提出了一种名为QCSNN的新型量化卷积脉冲神经网络架构，旨在通过两阶段、全量化的网络设计，在内存受限的可穿戴设备上实现基于心电图的实时心律失常检测。该工作通过量化感知训练和脉冲神经元，在显著降低内存占用的同时，实现了优于现有基准的检测准确率，推动了可扩展的边缘人工智能在数字健康领域的应用。",
-      "citations": 1
-    },
-    {
-      "title": "[Biomimetics] Auto Deep Spiking Neural Network Design Based on an Evolutionary Membrane Algorithm",
-      "published": "2025-08-01",
-      "link": "https://www.semanticscholar.org/paper/f4f266b7e9bfeebe4631dd84597445080f7a0325",
-      "summary": "In scientific research and engineering practice, the design of deep spiking neural network (DSNN) architectures remains a complex task that heavily re...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种创新的进化膜算法，用于自动化设计和优化深度脉冲神经网络（DSNN）的架构，旨在减少对人工调参的依赖。该算法通过将网络架构转换为搜索空间，并结合早期停止策略，在CIFAR-10和CIFAR-100数据集上实现了比现有先进方法更高的准确率，为DSNN的自动化参数优化提供了一种高效新途径。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：** 本研究提出了一种名为QCSNN的新型量化卷积脉冲神经网络架构，旨在通过两阶段全量化设计和替代梯度下降训练，在内存受限的可穿戴设备上实现基于心电图的实时心律失常检测。该模型在显著降低内存占用（减少76.2%）的同时，在四个关键心律类别上实现了优于现有基准的检测性能，推动了面向数字健康的可扩展边缘人工智能发展。",
       "citations": 1
     },
     {
@@ -408,15 +408,23 @@
       "published": "2025-08-01",
       "link": "https://www.semanticscholar.org/paper/adba7ca371e5c9ea4b5e4f828d59f66c2fc768d7",
       "summary": "Spiking neural networks (SNNs) have been recently highlighted as an attractive approach for implementing artificial intelligence models in resource-co...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本研究提出了一种名为BCRNet-SNN的脉冲神经网络模型，其核心创新在于利用人体电通道响应（BCR）这一生物特征进行用户识别，并通过知识蒸馏和网络轻量化技术，在保持高识别准确率（最高达98.11%）的同时，将网络参数量大幅压缩至原始卷积神经网络的约1%，使其非常适合在资源受限的边缘设备上部署。",
-      "citations": 2
+      "ai_summary": "🆕 最新速递：\n**核心观点**：本研究提出了一种名为BCRNet-SNN的脉冲神经网络模型，其核心创新在于利用人体电通道响应（BCR）这一生物特征进行用户识别，并通过知识蒸馏和网络轻量化技术，在保持高识别准确率（最高达98.11%）的同时，将网络参数量大幅压缩至原始卷积神经网络的约5.1%，从而使其非常适合在资源受限的边缘设备上部署。",
+      "citations": 3
+    },
+    {
+      "title": "[Biomimetics] Auto Deep Spiking Neural Network Design Based on an Evolutionary Membrane Algorithm",
+      "published": "2025-08-01",
+      "link": "https://www.semanticscholar.org/paper/f4f266b7e9bfeebe4631dd84597445080f7a0325",
+      "summary": "In scientific research and engineering practice, the design of deep spiking neural network (DSNN) architectures remains a complex task that heavily re...",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：** 本文提出了一种创新的进化膜算法，用于自动化设计和优化深度脉冲神经网络（DSNN）的架构，旨在减少对人工调参的依赖。该算法通过将网络架构转化为搜索空间，并结合早期停止策略，在CIFAR-10/100数据集上取得了优于现有方法的准确率，为DSNN的自动化参数优化提供了高效新途径。",
+      "citations": 1
     },
     {
       "title": "[Laser &amp; Photonics Reviews] Four‐Channel Full‐Function Photonic Spiking Neural Network Chips for Gene Analysis",
       "published": "2025-07-22",
       "link": "https://www.semanticscholar.org/paper/e59e692be8e5483bf49495ad07f3fdb16f823bea",
       "summary": "Brain‐inspired computing is essential for a range of critical computing tasks, including image processing, speech recognition, and applications of art...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种集成了硅光子马赫-曾德尔干涉仪（MZI）网络作为突触、磷化铟（InP）分布式反馈激光器阵列作为神经元的新型四通道全功能光子脉冲神经网络芯片架构。该工作通过硬件与算法的协同设计，成功在光域内直接完成了基于HIV和Splice数据集的基因分析任务，展示了全光神经形态计算系统处理复杂任务的潜力。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种四通道全功能光子脉冲神经网络芯片架构，利用硅光子马赫-曾德尔干涉仪网络作为执行线性计算的突触，基于磷化铟的分布式反馈激光器阵列作为执行非线性计算的脉冲神经元。该工作通过硬件与算法的协同设计，成功在光域内直接完成了基因分析任务，展示了全光神经形态计算处理复杂问题的潜力。",
       "citations": 4
     },
     {
@@ -424,7 +432,7 @@
       "published": "2025-07-15",
       "link": "https://www.semanticscholar.org/paper/448446c2e8c4cf7cf7565874eb73182fdc9dfcbb",
       "summary": "Electroencephalogram (EEG) signals provide rich spatiotemporal brain features crucial for epilepsy diagnosis. Though traditional deep neural networks ...",
-      "ai_summary": "🆕 最新速递：DAFF-SNN: Dual Attention-Driven and Feature Fusion-Based Spiking Neural Network for Epilepsy Detection Based on Electroencephalogram\n\n核心观点：本研究提出了一种融合时空注意力机制与脉冲神经网络（SNN）固有时间处理能力的模型，旨在通过脉冲驱动的自适应特征融合策略，更高效地利用脑电图（EEG）的时空动态特性，以提升癫痫检测的精度与效率。",
+      "ai_summary": "🆕 最新速递：DAFF-SNN: 基于脑电图的癫痫检测双注意力驱动与特征融合脉冲神经网络\n\n核心观点：本研究提出了一种融合时空注意力机制与脉冲神经网络（SNN）固有时间处理能力的DAFF-SNN模型，通过一个自适应的脉冲融合模块（ASFM）来优化脑电图（EEG）数据的特征融合过程，旨在以更接近大脑神经处理效率的方式，提升癫痫检测的精度与效率。",
       "citations": 3
     },
     {
@@ -432,7 +440,7 @@
       "published": "2025-06-30",
       "link": "https://www.semanticscholar.org/paper/dedd8d82af56269d945662bc229606ea982a22f3",
       "summary": "Spike sorting is a crucial step in decoding multichannel extracellular neural signals, enabling the identification of individual neuronal activity. A ...",
-      "ai_summary": "🆕 最新速递：\n**核心观点：** 本研究提出了一种名为“神经形态稀疏分类器”的紧凑型脉冲神经网络，它利用稀疏编码原理，在神经形态芯片上实现了完全无监督、实时的在线尖峰信号分类。其核心突破在于通过定制支持多比特脉冲编码的神经元模型，在英特尔Loihi 2芯片上实现了性能与功耗的灵活权衡，并在存在生物信号漂移的真实数据上超越了传统方法。",
+      "ai_summary": "🆕 最新速递：\n**核心观点：** 本研究提出了一种名为“神经形态稀疏分类器”的紧凑型脉冲神经网络，它利用稀疏编码原理，在无监督和在线学习的方式下，实现了对含噪声和生物漂移的神经信号进行实时、低功耗的脉冲分类。其创新点在于通过定制支持多比特脉冲编码的神经元模型，在神经形态芯片上实现了性能与功耗的灵活权衡。",
       "citations": 1
     },
     {
@@ -440,7 +448,7 @@
       "published": "2025-06-24",
       "link": "https://www.semanticscholar.org/paper/4ee9b1a627204b5ad6c1317e79f92b8ca5c001c1",
       "summary": "Spiking neural networks (SNNs) aim to simulate the human brain neural network, using sparse spike event streams for effective and energy-efficient spa...",
-      "ai_summary": "🆕 最新速递：  \n**核心观点**：  \n本文提出了一种用于脑电运动想象分类的轻量化脉冲神经网络模型，其核心突破在于构建了一个兼具类脑架构、高能效特性及强数据集泛化能力的网络，在跨被试实验中性能超越了传统的卷积神经网络模型。",
+      "ai_summary": "🆕 最新速递：  \n**核心观点**：  \n本文提出了一种用于脑电运动想象分类的轻量化脉冲神经网络模型，其核心突破在于构建了一个兼具类脑架构、高能效特性及强数据集泛化能力的SNN，并在跨数据集和跨被试实验中验证了其性能优于传统的卷积神经网络方法。",
       "citations": 2
     },
     {
@@ -448,7 +456,7 @@
       "published": "2025-06-15",
       "link": "https://www.semanticscholar.org/paper/411a54fe818664efdff313f7bf1b0316916e66bc",
       "summary": "In recent years, the application of deep learning in intelligent fault diagnosis has seen rapid growth and demonstrated remarkable success. However, m...",
-      "ai_summary": "🆕 最新速递：  \n**核心观点：** 本文提出了一种结合稀疏注意力编码与时间步收缩的脉冲神经网络（SAC-TSSNN），用于齿轮箱故障诊断。其核心突破在于通过稀疏卷积增强的编码方法使模型具备物理可解释性，并利用时间步收缩层显著提升了训练速度与网络效率。",
+      "ai_summary": "🆕 最新速递：Sparse Attention Coding-Timestep Shrinking Spiking Neural Network for Gearbox Fault Diagnosis\n\n核心观点：本文提出了一种结合稀疏注意力编码（SAC）和时间步收缩（TSS）的脉冲神经网络（SNN）模型，用于齿轮箱故障诊断。其核心突破在于通过物理可解释的稀疏编码方法匹配故障信号的稀疏特性，并利用时间步收缩层在保留有效信息的同时显著加速了SNN的训练过程。",
       "citations": 1
     },
     {
@@ -456,7 +464,7 @@
       "published": "2025-06-13",
       "link": "https://www.semanticscholar.org/paper/d845683ba475503d0edb9bcb955deac6fbd9aaf1",
       "summary": "Near-eye pupil tracking is essential for Virtual and Augmented Reality applications but poses challenges in resource-constrained environments due to t...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种名为SEEN的轻量级卷积脉冲神经网络，专门用于处理事件相机数据，以实现高效、低功耗的近眼瞳孔坐标预测。其核心突破在于通过架构设计和参数优化（如上层的可学习β参数），在极少的参数量下，在事件驱动的瞳孔追踪任务上取得了高精度，为实时眼动追踪的SNN硬件部署提供了新方案。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种名为SEEN的轻量级卷积脉冲神经网络，专门用于处理基于事件相机的瞳孔坐标预测任务。其核心突破在于，通过利用事件数据的稀疏性与SNN的高效性，在极少的参数量下实现了高精度的实时眼动追踪，并通过消融研究揭示了可学习参数在SNN不同层级放置对性能的影响规律。",
       "citations": 2
     },
     {
@@ -464,23 +472,15 @@
       "published": "2025-06-10",
       "link": "https://www.semanticscholar.org/paper/9ff4004ca9a82fdb76a97c1447953da234553623",
       "summary": "The Spiking Neural Network (SNN) is a third-generation neural network recognized for its energy efficiency and ability to process spatiotemporal infor...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本研究提出了一种融合罗马支配理论的脉冲神经网络（RDSNN），通过识别脑电信号中相关性最强的通道来优化脉冲生成阈值，从而显著提升了四分类运动想象任务的分类性能与计算效率。该方法在保持高精度的同时，大幅降低了计算时间。",
+      "ai_summary": "🆕 最新速递：Roman domination-based spiking neural network for optimized EEG signal classification of four class motor imagery\n\n核心观点：本研究提出了一种将图论中的“罗马支配”概念引入脉冲神经网络（SNN）的新模型（RDSNN），旨在解决SNN在运动想象脑电信号分类中特征提取能力不足的结构性局限。该模型利用罗马支配算法自动识别脑电通道中最相关的节点并生成脉冲发放阈值，从而在提升分类精度的同时，显著降低了计算时间。",
       "citations": 8
-    },
-    {
-      "title": "[IEEE Transactions on Emerging Topics in Computational Intelligence] Modeling of Spiking Neural Network With Optimal Hidden Layer via Spatiotemporal Orthogonal Encoding for Patterns Recognition",
-      "published": "2025-06-01",
-      "link": "https://www.semanticscholar.org/paper/625bc19f6339c8cf5ace80c66966fa11d6bf1fb6",
-      "summary": "The Spiking Neural Network (SNN) diverges from conventional rate-based network models by showcasing remarkable biological fidelity and advanced spatio...",
-      "ai_summary": "🆕 最新速递：\n**核心观点：** 本文提出了一种名为SONN的脉冲神经网络模型，其核心创新在于将时空正交多项式编码与神经元动态过程深度融合，旨在通过动态优化网络隐藏层结构和编码方法，在保证网络可扩展性的同时提升模式识别的准确率。实验表明，该模型能以更小的网络规模在多个基准数据集上达到与其他SNN模型相当的精度。",
-      "citations": 5
     },
     {
       "title": "[IEEE Robotics and Automation Letters] Evetac Meets Sparse Probabilistic Spiking Neural Network: Enhancing Snap-Fit Recognition Efficiency and Performance",
       "published": "2025-06-01",
       "link": "https://www.semanticscholar.org/paper/74a10c99c9772bca8cd580763c3ee5063f8ef460",
       "summary": "Snap-fit peg-in-hole assembly is common in industrial robotics, particularly for 3 C electronics, where fast and accurate tactile recognition is cruci...",
-      "ai_summary": "🆕 最新速递：\n\n**核心观点：**\n本文提出了一种稀疏概率脉冲神经网络（SPSNN），通过稀疏卷积直接处理事件触觉传感器（Evetac）的稀疏数据，并结合创新的前向-后向概率传播（FBPTP）算法与时间权重预测（TWP）方法，在实现高精度卡扣装配识别的同时，将推理时间降低了90%以上，显著提升了事件驱动触觉感知系统的效率与性能。",
+      "ai_summary": "🆕 最新速递：\n\n**核心观点：** 本研究提出了一种稀疏概率脉冲神经网络（SPSNN），通过稀疏卷积直接处理事件触觉传感器（Evetac）的稀疏数据，并结合创新的前向与反向概率传播（FBPTP）算法，实现了在保持高识别性能的同时，将推理时间相比传统方法降低90%以上，为机器人精密装配中的快速触觉识别提供了高效的解决方案。",
       "citations": 4
     }
   ]
