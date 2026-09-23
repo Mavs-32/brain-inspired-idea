@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-22 03:06:57",
+  "updated": "2026-09-23 03:06:44",
   "classic_papers": [
     {
       "title": "[International Conference on Learning Representations] Spikformer: When Spiking Neural Network Meets Transformer",
       "published": "2022-09-29",
       "link": "https://www.semanticscholar.org/paper/ffd91f85d6d19e75309ececfd190afa6bb562284",
-      "ai_summary": "🔥 领域经典：首次将脉冲神经网络与Transformer自注意力机制融合，提出脉冲自注意力（SSA）与Spikformer框架，在ImageNet上以4时间步达74.81%精度，开创SNN-Transformer交叉方向。",
-      "citations": 569
+      "ai_summary": "🔥 领域经典：首次将脉冲神经网络与Transformer自注意力机制融合，提出脉冲自注意力（SSA），构建Spikformer框架。在ImageNet上以4时间步达74.81% Top-1，为直接训练SNN的当时最优，开创SNN-Transformer交叉方向。",
+      "citations": 570
     },
     {
       "title": "[AAAI Conference on Artificial Intelligence] Spiking-YOLO: Spiking Neural Network for Energy-Efficient Object Detection",
@@ -19,49 +19,49 @@
       "title": "[Computer Vision and Pattern Recognition] RMP-SNN: Residual Membrane Potential Neuron for Enabling Deeper High-Accuracy and Low-Latency Spiking Neural Network",
       "published": "2020-02-25",
       "link": "https://www.semanticscholar.org/paper/8aad18f5c474cd25e283a7b3c956894d94f82873",
-      "ai_summary": "🔥 领域经典：提出RMP神经元，用软重置保留阈值以上残余膜电位，解决ANN-SNN转换中硬重置的信息损失问题，实现更深、低延迟、高精度SNN。",
+      "ai_summary": "🔥 领域经典：RMP-SNN提出残差膜电位神经元，解决ANN转SNN中硬重置导致的信息损失，实现近乎无损转换，显著降低推理延迟。",
       "citations": 427
     },
     {
       "title": "[IEEE Transactions on Neural Networks and Learning Systems] DIET-SNN: A Low-Latency Spiking Neural Network With Direct Input Encoding and Leakage and Threshold Optimization",
       "published": "2021-10-01",
       "link": "https://www.semanticscholar.org/paper/1921489a2801f053d0906079f0015ba6e68dd505",
-      "ai_summary": "🔥 领域经典：DIET-SNN提出直接输入编码与可学习泄漏/阈值，大幅降低SNN推理延迟。",
-      "citations": 374
+      "ai_summary": "DIET-SNN提出直接输入编码与可学习泄漏/阈值，将ImageNet推理降至5步，能效比ANN高12倍，推理速度提升20–500倍，推动低延迟SNN实用化。",
+      "citations": 375
     },
     {
       "title": "[Nature Communications] A biomimetic neural encoder for spiking neural network",
       "published": "2021-04-09",
       "link": "https://www.semanticscholar.org/paper/28bf3b2499c1a77dc5e1a05bef3b26cb56d25483",
-      "ai_summary": "🔥 领域经典：首次用双栅MoS₂ FET实现仿生神经编码器，将模拟信号转为随机脉冲序列，能耗仅1–5 pJ/spike，为神经形态硬件提供关键感知前端。",
+      "ai_summary": "🔥 领域经典：首次用双栅MoS₂ FET实现仿生神经编码器，将模拟信号转为随机脉冲序列，能耗仅1–5 pJ/spike，为神经形态硬件提供关键前端器件。",
       "citations": 161
     },
     {
       "title": "[IEEE Transactions on Pattern Analysis and Machine Intelligence] Fast-SNN: Fast Spiking Neural Network by Converting Quantized ANN",
       "published": "2023-05-31",
       "link": "https://www.semanticscholar.org/paper/8fa44efea525b8bd930440221c334ff7646efa98",
-      "ai_summary": "Fast-SNN通过将SNN时间量化等效为ANN空间量化，把量化误差最小化转移至量化ANN训练，并引入带符号IF神经元与逐层微调解决累积误差，实现低延迟高性能，在分类、检测、分割任务上达SOTA。",
+      "ai_summary": "Fast-SNN通过将SNN时间量化等效为ANN空间量化，把量化误差最小化转移至量化ANN训练，并用带符号IF神经元与逐层微调解决累积误差，实现低延迟高性能。",
       "citations": 133
     },
     {
       "title": "[Biomedical Signal Processing and Control] Energy efficient ECG classification with spiking neural network",
       "published": "2021-01-01",
       "link": "https://www.semanticscholar.org/paper/f11177822547ee2e23c62de2d50a81fc39ace6f3",
-      "ai_summary": "提出跨患者心电分类的CNN与SNN方法，将训练好的CNN转为SNN，精度损失不足1%，功耗仅为先前方案的0.0074倍，实现超低功耗可穿戴监测。",
+      "ai_summary": "提出跨患者ECG分类的CNN转SNN方法，精度损失<1%，功耗仅为先前方案的0.74%，推动可穿戴设备低功耗心脏监测。",
       "citations": 124
     },
     {
       "title": "[IEEE International Joint Conference on Neural Network] An Efficient Spiking Neural Network for Recognizing Gestures with a DVS Camera on the Loihi Neuromorphic Processor",
       "published": "2020-05-16",
       "link": "https://www.semanticscholar.org/paper/0c6dfd1688f2422224ecae0bbcd30df4e36042a6",
-      "ai_summary": "🔥 领域经典：首次在Loihi芯片上实现DVS手势识别的DNN转SNN方案，精度近无损且仅占37核。",
+      "ai_summary": "🔥 领域经典：首个在Loihi芯片上实现DVS手势识别的SNN部署方案。核心创新：提出DNN到SNN的转换方法及事件数据预处理，以37核达89.64%精度，实现实时识别。",
       "citations": 112
     },
     {
       "title": "[IEEE transactions on neural systems and rehabilitation engineering] A Spiking Neural Network With Adaptive Graph Convolution and LSTM for EEG-Based Brain-Computer Interfaces",
       "published": "2023-02-22",
       "link": "https://www.semanticscholar.org/paper/147e306d10e8ee19caf3b84ffbda3a984cd5db8d",
-      "ai_summary": "该工作将自适应图卷积与LSTM引入SNN，有效挖掘EEG通道空间拓扑与时序依赖，在情绪识别和运动想象任务上超越现有方法，为高性能SNN-BCI提供新思路。",
+      "ai_summary": "该工作提出SGLNet，将自适应图卷积与LSTM引入SNN，有效挖掘EEG通道空间拓扑与时序依赖，在情绪识别和运动想象任务上超越现有方法，为高性能SNN-BCI提供新思路。",
       "citations": 85
     },
     {
@@ -75,35 +75,35 @@
       "title": "[Neural Information Processing Systems] SNN-RAT: Robustness-enhanced Spiking Neural Network through Regularized Adversarial Training",
       "published": "2022",
       "link": "https://www.semanticscholar.org/paper/0484f95ef6a6ee544e0a9f9eb5dfe35f7166c09f",
-      "ai_summary": "🔥 领域经典：首次从Lipschitz常数理论刻画SNN脉冲表示的对抗脆弱性，并提出低开销正则化对抗训练，显著增强鲁棒性。",
+      "ai_summary": "🔥 领域经典：首次理论量化SNN脉冲表示的Lipschitz常数，揭示其对抗脆弱性，并提出低开销正则化对抗训练，显著提升鲁棒性。",
       "citations": 68
     },
     {
       "title": "[IEEE International Joint Conference on Neural Network] CarSNN: An Efficient Spiking Neural Network for Event-Based Autonomous Cars on the Loihi Neuromorphic Research Processor",
       "published": "2021-07-01",
       "link": "https://www.semanticscholar.org/paper/c1cc9d133afee2320c311b3e1ce8d9dd6aa3e3be",
-      "ai_summary": "🔥 领域经典：首个在神经形态芯片上实现事件相机汽车分类的SNN。",
+      "ai_summary": "🔥 领域经典：首个在神经形态芯片上实现事件相机汽车分类的工作。将SNN部署于Loihi，实现低延迟（0.72ms）、低功耗（310mW）的实时AD感知。",
       "citations": 63
     },
     {
       "title": "[IEEE Transactions on Neural Networks and Learning Systems] Spiking Neural Network for Ultralow-Latency and High-Accurate Object Detection",
       "published": "2023-06-21",
       "link": "https://www.semanticscholar.org/paper/83f0c700d210bf6e22168ce642cb798687f25eaf",
-      "ai_summary": "🔥 领域经典：SUHD通过时间步压缩与STDI编码，实现ANN到SNN无损转换，将检测延迟降低约750倍，mAP提升30%，是目前最深的脉冲目标检测模型。",
+      "ai_summary": "🔥 领域经典：SUHD通过时间步压缩与STDI编码，实现ANN到SNN无损转换，将时间步减少约750倍，mAP提升30%，是当时最深的脉冲目标检测模型。",
       "citations": 62
-    },
-    {
-      "title": "[Neural computing & applications (Print)] Detection of COVID-19 from CT scan images: A spiking neural network-based approach",
-      "published": "2021-04-16",
-      "link": "https://www.semanticscholar.org/paper/53306dd7203c08605f6c5c322a46b14dc5b2c4bb",
-      "ai_summary": "该工作将SNN应用于COVID-19 CT影像分类，探索神经形态计算在医学图像分析中的可行性，F1达0.99，属SNN医学应用的早期实践，非领域开创性经典。",
-      "citations": 59
     },
     {
       "title": "[Neural Networks] BackEISNN: A Deep Spiking Neural Network with Adaptive Self-Feedback and Balanced Excitatory-Inhibitory Neurons",
       "published": "2021-05-27",
       "link": "https://www.semanticscholar.org/paper/4d19b91d9356576a2bdf99a6d14174339d2375bf",
-      "ai_summary": "BackEISNN借鉴大脑自突触，引入自适应时延自反馈与兴奋-抑制平衡机制，提升SNN精度与收敛速度，在多个数据集达SOTA。",
+      "ai_summary": "受大脑自突触启发，提出自适应时延自反馈与兴奋-抑制平衡机制，提升SNN精度与收敛速度，在多个数据集达SOTA。",
+      "citations": 59
+    },
+    {
+      "title": "[Neural computing & applications (Print)] Detection of COVID-19 from CT scan images: A spiking neural network-based approach",
+      "published": "2021-04-16",
+      "link": "https://www.semanticscholar.org/paper/53306dd7203c08605f6c5c322a46b14dc5b2c4bb",
+      "ai_summary": "该工作将SNN用于COVID-19 CT影像分类，探索神经形态计算在医学图像分析中的应用，取得0.99的F1分数，属SNN医学诊断的早期应用探索，非领域开创性经典。",
       "citations": 59
     },
     {
@@ -111,20 +111,20 @@
       "published": "2021-06-16",
       "link": "https://www.semanticscholar.org/paper/bcc16bfdccde09cb28ec569aa58f52be20fb05bd",
       "ai_summary": "将U-Net ANN转为SNN，提出基于百分位正则化控制脉冲率，并在Loihi芯片上实现多芯片分区优化，能效超CPU/GPU两倍且精度无损。",
-      "citations": 56
+      "citations": 57
     },
     {
       "title": "[IEEE International Joint Conference on Neural Network] CARLsim 6: An Open Source Library for Large-Scale, Biologically Detailed Spiking Neural Network Simulation",
       "published": "2022-07-18",
       "link": "https://www.semanticscholar.org/paper/cc471d722538cbeb409a5ea9ed254e6d8f8cd370",
-      "ai_summary": "🔥 领域经典：CARLsim是首批基于CUDA GPU的开源SNN仿真平台之一，历经近十年演进。CARLsim 6支持多神经调质、长短时程突触可塑性，可扩展至DGX-A100超算，用于海马体与新皮层生物仿真。",
+      "ai_summary": "🔥 领域经典：CARLsim 6是首批利用CUDA GPU的开源SNN仿真平台之一，历经近十年演进。核心创新在于支持四种神经调质、长短期突触可塑性，并适配从笔记本到DGX-A100的超大规模生物仿真。",
       "citations": 53
     },
     {
       "title": "[IEEE Transactions on Neural Networks and Learning Systems] A Bio-Inspired Spiking Attentional Neural Network for Attentional Selection in the Listening Brain",
       "published": "2023-08-16",
       "link": "https://www.semanticscholar.org/paper/ec87d6ef74f8d5c230be5cd3b103ba769dc696a4",
-      "ai_summary": "🔥 领域经典：首次将脉冲神经网络与注意力机制结合用于听觉注意力解码，实现低延迟下超越传统DNN解码器，推动类脑听觉计算发展。",
+      "ai_summary": "🔥 领域经典：首次将脉冲神经网络与注意力机制结合用于听觉注意力解码，实现低延迟下超越传统DNN的脑电解码性能，推动类脑听觉计算发展。",
       "citations": 46
     },
     {
@@ -138,7 +138,7 @@
       "title": "[Neural Networks] Sparser spiking activity can be better: Feature Refine-and-Mask spiking neural network for event-based visual recognition",
       "published": "2023-07-01",
       "link": "https://www.semanticscholar.org/paper/68e3c4072f774c33d71f763411ea89cee03f28f1",
-      "ai_summary": "🔥 领域经典：提出RM-SNN，首次自适应精炼并掩蔽时空与通道特征以降低脉冲活动，证明更稀疏脉冲反可提升事件视觉识别性能。",
+      "ai_summary": "🔥 领域经典：首次提出RM-SNN，通过时空与通道维度的Refine-and-Mask模块自适应抑制冗余脉冲，证明更稀疏的脉冲活动反而能提升事件视觉识别性能。",
       "citations": 40
     }
   ],
@@ -147,7 +147,7 @@
       "title": "[Italian National Conference on Sensors] A Lightweight Keyword Spotting Method Using a Convolutional Spiking Neural Network with Learnable Synaptic Delays",
       "published": "2026-07-01",
       "link": "https://www.semanticscholar.org/paper/2382c1155543b172b812027dae02c98bc581153a",
-      "ai_summary": "🆕 最新速递：该研究提出轻量级CSNN关键词识别方法，核心突破在于引入可学习突触延迟的延迟感知分类模块，联合优化权重与时序延迟以增强时空证据聚合。仅用约64K–68K参数即在GSC、HD、CMK数据集上分别达94.37%、92.87%、99.10%、95.60%准确率，兼顾紧凑性、精度与噪声鲁棒性。",
+      "ai_summary": "🆕 最新速递：该研究提出轻量级CSNN关键词识别方法，核心突破在于引入可学习突触延迟的延迟感知分类模块，联合优化权重与时序延迟，增强时空证据聚合。仅用约6.4万参数即在多数据集达94%以上准确率，兼顾紧凑性与噪声鲁棒性。",
       "citations": 0
     },
     {
@@ -161,36 +161,43 @@
       "title": "[2026 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops)] An Energy Efficient Convolutional SNN for EEG Analytics towards Wearable BCI Applications",
       "published": "2026-03-16",
       "link": "https://www.semanticscholar.org/paper/007cdff6b095672292961612c6c0ad8ed967e4d4",
-      "ai_summary": "🆕 最新速递：提出轻量卷积脉冲神经网络CSNN，融合时序卷积与脉冲神经元处理头皮及耳部EEG，支持膜电位与脉冲计数两种读出。精度接近EEGNet（差3%内），计算量降低40–80倍，运动伪影鲁棒性更强，适于可穿戴BCI边缘推理。",
+      "ai_summary": "🆕 最新速递：该研究提出轻量级卷积脉冲神经网络（CSNN），融合时序卷积与脉冲神经元处理头皮及耳部EEG。支持膜电位与脉冲计数两种读出方案，实现事件驱动处理。性能接近EEGNet（差距3%内），计算成本降低40–80倍，运动伪影鲁棒性更强，适用于可穿戴BCI边缘部署。",
       "citations": 0
     },
     {
       "title": "[Electronics] An Energy- and Endurance-Aware Hybrid CMOS–SDC Memristor Convolutional Spiking Neural Network for Edge Intelligence",
       "published": "2026-03-14",
       "link": "https://www.semanticscholar.org/paper/5e8db61bb876e8be0f5f26f47e45abb2472c8e52",
-      "ai_summary": "🆕 最新速递：该工作提出混合CMOS–SDC忆阻器CSNN架构，以1-bit CSA读出替代高精度ADC，结合强度-延迟编码降低脉冲活动与写入损耗，MNIST达97.8%，功耗仅为8-bit ADC方案的18.4%。",
+      "ai_summary": "🆕 最新速递：该工作提出混合CMOS–SDC忆阻器CSNN架构，以1-bit CSA读出替代8-bit ADC，能耗仅18.4%；采用强度-延迟单脉冲编码降低写入应力，MNIST达97.8%，兼顾能效与耐久性。",
       "citations": 1
     },
     {
       "title": "[International Conference on Computing, Networking and Communications] Energy-Efficient Drowsiness Detection with Spiking Neural Networks",
       "published": "2026-02-16",
       "link": "https://www.semanticscholar.org/paper/a43fd30bfae376d11ebcc67d330072d7eade08f4",
-      "ai_summary": "🆕 最新速递：该研究提出基于事件驱动的卷积脉冲神经网络（CSNN）用于驾驶员疲劳检测，自建眼嘴数据集。CSNN测试精度达97.94%，略超CNN基线（97.79%），能耗降低约61%，证明脉冲计算在资源受限边缘设备上实现实时疲劳监测的潜力。",
+      "ai_summary": "🆕 最新速递：该研究提出基于事件驱动的卷积脉冲神经网络（CSNN）用于驾驶员疲劳检测，自建眼嘴数据集上以97.94%准确率略超CNN基线，能耗降低约61%，验证了脉冲计算在资源受限边缘设备上实时视觉识别的优势。",
       "citations": 0
     },
     {
       "title": "[Bionics of Intelligence] Inference optimization parameters influence spiking neural network efficiency",
       "published": "2025-12-25",
       "link": "https://www.semanticscholar.org/paper/b7088e8693c16979ca68c277cbe0b4fa6ab6dfec",
-      "ai_summary": "🆕 最新速递：该研究系统探究了量化与剪枝参数对CSNN效率的影响。基于LIF神经元的CSNN在MNIST、FMNIST、CIFAR10上测试表明：低压缩参数下SNN精度损失极小，同时显著降低模型尺寸与能耗；但复杂数据集、次优模型及极端压缩设置会导致分类性能急剧恶化。",
+      "ai_summary": "🆕 最新速递：该研究系统探究了量化与剪枝参数对CSNN效率的影响。发现低压缩下SNN精度损失小且显著降低能耗；但复杂数据集、次优模型或极端压缩时精度骤降，为SNN部署提供参数选择依据。",
       "citations": 0
     },
     {
       "title": "[Nano letters (Print)] One-Step Annealing-Configured Hf0.2Zr0.8O2 Memristive-Antiferroelectric Devices for Bioinspired CSNN Neuromorphic Computing.",
       "published": "2025-12-04",
       "link": "https://www.semanticscholar.org/paper/1253d2377796996933db361709cf84761085eaa9",
-      "ai_summary": "🆕 最新速递：该工作基于同一HZO叠层，经一步退火分化为忆阻突触与反铁电神经元，构建CMOS兼容卷积脉冲神经网络，动态手势识别达97.9%，实现单材料平台混合神经形态计算。",
+      "ai_summary": "🆕 最新速递：该工作用同源HZO单叠层，经一步退火分化为忆阻突触与反铁电神经元，构建CSNN，动态手势识别达97.9%，实现CMOS兼容混合神经形态计算。",
       "citations": 6
+    },
+    {
+      "title": "[Opto-Electronic Advances] Hardware-aware lightweight photonic spiking neural network for pattern classification",
+      "published": "2025-11-29",
+      "link": "https://www.semanticscholar.org/paper/1d6c06ba93e5b0c9255b9884799bc0eff921bd76",
+      "ai_summary": "🆕 最新速递：该工作提出硬件感知轻量级光子SNN，用简化MZI网格做线性计算、DFB-SA阵列实现非线性脉冲激活，并以DCT降低输入维度匹配芯片端口。实现端到端整层推理，MNIST/Fashion-MNIST精度达90%/80.5%，能效1.39 TOPS/W与987.65 GOPS/W，缓解芯片与网络规模失配。",
+      "citations": 4
     },
     {
       "title": "[2025 4th International Conference on Artificial Intelligence, Human-Computer Interaction and Robotics (AIHCIR)] In-Sensor Synchronous Spatial-Temporal Encoding for Spiking Neural Networks on Human Action Recognition",
@@ -210,7 +217,7 @@
       "title": "[IEEE Transactions on Mobile Computing] LSNN Model: A Lightweight Spiking Neural Network-Based Depression Classification Model for Wearable EEG Sensors",
       "published": "2025-11-01",
       "link": "https://www.semanticscholar.org/paper/0f43a14895b974831a5ba621a148e12b5489ecea",
-      "ai_summary": "🆕 最新速递：LSNNet是面向可穿戴EEG的轻量SNN抑郁分类模型，仅7.18K参数、67.68M FLOPs，在STM32与GAP8上验证，准确率89.2%，GAP8功耗21.43mW、推理0.63s，实现边缘端高效抑郁检测。",
+      "ai_summary": "🆕 最新速递：LSNNet是面向可穿戴EEG的轻量SNN抑郁分类模型，仅7.18K参数、246.88KB RAM，在STM32与GAP8上验证，准确率达89.2%，GAP8上功耗仅21.43mW，实现边缘端高效抑郁检测。",
       "citations": 17
     },
     {
@@ -221,52 +228,45 @@
       "citations": 4
     },
     {
-      "title": "[Neural Networks] BioMotion-SNN: Spiking neural network modeling for visual motion processing",
-      "published": "2025-10-01",
-      "link": "https://www.semanticscholar.org/paper/a70008a0bdd42b4b774ad86a66354e54364f67b4",
-      "ai_summary": "🆕 最新速递：BioMotion-SNN 受 MT-MST 通路启发，用事件驱动输入替代静态数据集，结合运动感知对比自监督损失与 L1 突触剪枝模拟稀疏连接，分类准确率达 93%，架起计算建模与实验神经科学的桥梁。",
-      "citations": 1
-    },
-    {
       "title": "[Global Conference on Consumer Electronics] Real-Time ECG Recognition Using Convolutional Spiking Neural Networks with Sparse Encoding for Arrhythmia Detection",
       "published": "2025-09-23",
       "link": "https://www.semanticscholar.org/paper/e8b8e8c2c56a1638bd561a7a951241f11701db20",
-      "ai_summary": "🆕 最新速递：该研究提出Spiking-FusionNet与Spiking-ResNet两种CSNN架构，在MIT-BIH数据集上实现五类心律失常实时检测，F1最高达94.25%。核心突破在于引入稀疏编码与跳跃连接提升训练效率，并用反正切替代梯度解决脉冲不可微问题。",
+      "ai_summary": "🆕 最新速递：该研究提出Spiking-FusionNet与Spiking-ResNet两种CSNN架构，在MIT-BIH数据集上实现五类心律失常实时检测，F1最高达94.25%。核心突破在于引入稀疏编码、跳跃连接与反正切替代梯度，兼顾实时性与训练效率。",
       "citations": 0
     },
     {
       "title": "[Journal] Fully Integrated Memristive Spiking Neural Network with Analog Neurons for High-Speed Event-Based Data Processing",
       "published": "2025-09-05",
       "link": "https://www.semanticscholar.org/paper/7e11a9669a8edb8976d9c7d20bc6a7cbb32e6be6",
-      "ai_summary": "🆕 最新速递：该工作实验演示了全集成忆阻脉冲神经网络，采用128×24忆阻阵列与定制模拟神经元。核心突破在于利用模拟神经元的比例时间缩放特性，仅需紧凑片上电容即可直接训练时空数据，无需特殊编码，克服了速度、可扩展性与精度瓶颈。在DVS128手势数据集上加速5万倍，精度达93.06%，能效101.05 TSOPS/W。",
+      "ai_summary": "🆕 最新速递：该工作实验演示了全集成忆阻SNN，采用128×24忆阻阵列与定制模拟神经元，利用模拟神经元的时间比例缩放特性，仅需紧凑片上电容即可直接训练时空数据。在DVS128手势数据集上加速5万倍，精度93.06%，能效101.05 TSOPS/W，突破速度、可扩展性与精度瓶颈。",
       "citations": 4
-    },
-    {
-      "title": "[IEEE Transactions on Circuits and Systems for Artificial Intelligence] FPGA-Based Adaptive LIF Neuron for High-Speed, Energy-Efficient Spiking Neural Network",
-      "published": "2025-09-01",
-      "link": "https://www.semanticscholar.org/paper/de88e6e0c3f8ea9a041f7582326276a4ca8c7086",
-      "ai_summary": "🆕 最新速递：该工作提出基于FPGA的自适应LIF神经元，引入自适应阈值与自适应泄漏率，显著降低发放率与浮点运算。相比最优同类神经元，触发器、LUT与延迟分别优化2.5×、5.7×、2.0×；在MNIST上达95%精度，单图延迟仅0.9ms，能效提升68%。",
-      "citations": 15
     },
     {
       "title": "[IEEE transactions on circuits and systems for video technology (Print)] Event-Based Video Reconstruction Via Spatial–Temporal Heterogeneous Spiking Neural Network",
       "published": "2025-09-01",
       "link": "https://www.semanticscholar.org/paper/6ce0fab2e3142069f13fcb27535570f08411d20a",
-      "ai_summary": "🆕 最新速递：该论文提出时空异构(STH)脉冲神经元，自适应调节膜衰减系数以适配异步事件流，并设计基于傅里叶变换的时频校准模块(TFCM)提升对比度，构建STHSNN与TFCSNN两个模型，分别抑制伪影闪烁与增强对比度，能耗较以往SNN降低3.48倍与12.40倍。",
+      "ai_summary": "🆕 最新速递：该研究提出时空异构（STH）脉冲神经元，自适应调节膜衰减系数以匹配事件流异步性，并设计基于傅里叶变换的时频校准模块（TFCM）提升对比度。构建的STHSNN与TFCSNN分别抑制伪影闪烁、增强对比度，在SNN类方法中性能居前二，能耗分别降低3.48倍与12.40倍。",
+      "citations": 15
+    },
+    {
+      "title": "[IEEE Transactions on Circuits and Systems for Artificial Intelligence] FPGA-Based Adaptive LIF Neuron for High-Speed, Energy-Efficient Spiking Neural Network",
+      "published": "2025-09-01",
+      "link": "https://www.semanticscholar.org/paper/de88e6e0c3f8ea9a041f7582326276a4ca8c7086",
+      "ai_summary": "🆕 最新速递：该工作提出基于FPGA的自适应LIF神经元，引入突触前脉冲输入、自适应阈值与自适应泄漏率，降低放电率与计算开销。相比最优同类神经元，触发器、LUT和延迟分别优化2.5×、5.7×、2.0×；在MNIST上达95%精度，单图延迟0.9ms，能效提升68%。",
       "citations": 15
     },
     {
       "title": "[IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems] Advancing Neuromorphic Architecture Toward Emerging Spiking Neural Network on FPGA",
       "published": "2025-09-01",
       "link": "https://www.semanticscholar.org/paper/d88d0c58ed39c60de8199bb5028bb7427a92daf7",
-      "ai_summary": "🆕 最新速递：提出SpikeTA，首个面向Transformer SNN（TSNN）的FPGA神经形态加速器。通过参数化硬件引擎、DSP高效加法树、深度感知缓冲管理及流式/分引擎数据流映射，解决TSNN高计算与内存开销难题，峰值性能达28.99 TOPS，较CPU/GPU及SOTA SNN、Transformer加速器显著提速。",
+      "ai_summary": "🆕 最新速递：该工作提出SpikeTA，首个面向Transformer SNN（TSNN）的FPGA神经形态加速器。核心突破：通过参数化硬件引擎、DSP高效加法树、深度感知缓冲管理与流式/分引擎数据流映射，解决TSNN异构计算与高访存难题，峰值性能达28.99 TOPS，较CPU/GPU及SOTA SNN、Transformer加速器显著提速。",
       "citations": 7
     },
     {
       "title": "[Italian National Conference on Sensors] Balancing Energy Consumption and Detection Accuracy in Cardiovascular Disease Diagnosis: A Spiking Neural Network-Based Approach with ECG and PCG Signals",
       "published": "2025-08-24",
       "link": "https://www.semanticscholar.org/paper/991cee38f9f8ea97dbda3d3ac9dfc7b89bb07d2d",
-      "ai_summary": "🆕 最新速递：该研究提出基于SNN的ECG+PCG多模态CVD检测框架，采用差分融合生成EPCG信号、ASLT提取时频特征，并用置信度动态决策融合两个SCNN。在2016数据集上达89.74%准确率、209.6μJ能耗，实现精度与能耗的有效平衡。",
+      "ai_summary": "🆕 最新速递：该研究提出基于SNN的多模态CVD检测框架，融合ECG与PCG信号，采用差分融合生成EPCG信号，结合ASLT时频特征提取与双SCNN模型，并通过置信度动态决策级融合，在2016数据集上实现89.74%准确率与209.6μJ低能耗，有效平衡能耗与精度。",
       "citations": 6
     },
     {
@@ -280,7 +280,7 @@
       "title": "[Nano letters (Print)] Ferroelectric/Antiferroelectric HfZrOx Artificial Synapses/Neurons for Convolutional Neural Network-Spiking Neural Network Neuromorphic Computing.",
       "published": "2025-08-19",
       "link": "https://www.semanticscholar.org/paper/5ecd33890e96cac0f9369f79e0c11f0f1fe94d30",
-      "ai_summary": "🆕 最新速递：该研究通过元素掺杂工程，首次构建铁电/反铁电HfZrOx人工突触/神经元混合CNN-SNN框架，实现心脏MRI分类，突破纯SNN三维图像识别局限，准确率从82.3%提升至92.7%，耐久性达10⁹次循环。",
+      "ai_summary": "🆕 最新速递：该研究通过元素掺杂调控HfZrOx的铁电/反铁电特性，首次构建铁电人工突触与反铁电人工神经元互补的混合CNN-SNN框架，用于心脏MRI分类，突破纯SNN三维图像识别局限，准确率由纯CNN的82.3%提升至92.7%。",
       "citations": 17
     }
   ],
@@ -289,280 +289,280 @@
       "title": "[IEEE Transactions on Intelligent Vehicles] UAV Swarm Cooperative Target Search: A Multi-Agent Reinforcement Learning Approach",
       "published": "2024-01-01",
       "link": "https://www.semanticscholar.org/paper/f002a79ea4516d4dfa8a8d05808e5063b33b4163",
-      "ai_summary": "🐝 群智决策：该研究用多智能体强化学习实现无人机群分布式协同搜索，将大场景拆分提供局部与全局信息，以CNN处理高维地图数据，使智能体在未知动态环境中自适应决策，实现协同搜索、避碰去重并更快找到全部目标。",
-      "citations": 125
+      "ai_summary": "🐝 群智决策：该研究用多智能体强化学习实现无人机集群分布式协同搜索，将大场景拆分提供局部与全局信息，以CNN处理高维地图数据，支持动态未知环境下的自适应决策，实现协同搜索、避碰去重并更快找到全部目标。",
+      "citations": 126
     },
     {
       "title": "[International Journal of Science and Technology Research Archive] Theoretical approaches to AI in supply chain optimization: Pathways to efficiency and resilience",
       "published": "2024-03-30",
       "link": "https://www.semanticscholar.org/paper/42258b105bdad2bc0a9358c5c4a89534a8395a24",
-      "ai_summary": "🐝 群智决策：本文综述AI供应链优化理论，未涉及SNN。群智与多智能体系统用于复杂生态中的协调协作，强化学习支持实时动态决策，混合方法整合多种AI以增强效率与韧性。",
+      "ai_summary": "🐝 群智决策：本文综述AI供应链优化理论，未涉及SNN。群智与多智能体系统用于复杂供应链的协调协作，强化学习支持实时动态决策，混合方法整合多种AI技术提升效率与韧性。",
       "citations": 120
     },
     {
       "title": "[IEEE Access] DermCDSM: Clinical Decision Support Model for Dermatosis Using Systematic Approaches of Machine Learning and Deep Learning",
       "published": "2024",
       "link": "https://www.semanticscholar.org/paper/1d8c606517a17faefe353f751899333b3a50f690",
-      "ai_summary": "🐝 群智决策：本文提出DermCDSM皮肤病诊断模型，采用改进变色龙群优化（ICSO）进行病灶分割，多策略寻优（MSSO）做特征选择，并利用卷积深度脉冲神经网络（CD-SNN）提升多类分类精度。SNN以脉冲时序编码特征，支撑分布式协同决策，在ISIC 2017上验证了优越性。",
+      "ai_summary": "🐝 群智决策：本文实为皮肤病诊断模型，非SNN群体智能研究。其CD-SNN仅用于图像分类，未涉及智能体交互协同或分布式决策。ICSO与MSSO属特征优化，与群智决策无关。",
       "citations": 36
     },
     {
       "title": "[Journal of King Saud University: Computer and Information Sciences] A survey on autonomous navigation for mobile robots: From traditional techniques to deep learning and large language models",
       "published": "2025-08-21",
       "link": "https://www.semanticscholar.org/paper/f4bcf903dd2843a1367ce0e8420785a872b88017",
-      "ai_summary": "🐝 群智决策：该综述未涉及SNN，仅涵盖PSO、ACO等群智算法及LLM导航。SNN对智能体交互协同与分布式决策的支撑作用未被讨论，无法提炼相关核心观点。",
+      "ai_summary": "🐝 群智决策：该综述未涉及SNN，仅涵盖传统、群智优化（PSO/ACO）及LLM导航。群智交互依赖PSO/ACO分布式寻优，多智能体协同通过LLM与RL实现，SNN决策机制缺失。",
       "citations": 28
     },
     {
       "title": "[IEEE Transactions on Mobile Computing] Symmetry-Informed MARL: A Decentralized and Cooperative UAV Swarm Control Approach for Communication Coverage",
       "published": "2025-09-01",
       "link": "https://www.semanticscholar.org/paper/c68ef987429f50c986b44c0744b2c2ea3f7a8a05",
-      "ai_summary": "🐝 群智决策：该研究将无人机群通信覆盖建模为对称性约束的分散式部分可观测马尔可夫决策过程，提出SiGNN网络，将空间旋转对称嵌入策略/价值网络结构，实现分布式协同决策，提升样本效率与大规模集群扩展性。",
+      "ai_summary": "🐝 群智决策：该研究虽未用SNN，但以对称性嵌入图神经网络实现分布式协同决策。SiGNN将空间旋转对称性融入策略网络，使各无人机在部分观测下高效协同覆盖通信，提升样本效率与大规模集群扩展性。",
       "citations": 20
     },
     {
       "title": "[International Journal of Communication Systems] AI‐Enabled Zero Trust Model for Cyberattack Mitigation in Decentralized 6G Network",
       "published": "2026-03-09",
       "link": "https://www.semanticscholar.org/paper/0cc1b05b3c677c0c72217963aebd070e13d25a01",
-      "ai_summary": "🐝 群智决策：SNN用于分布式节点低功耗快速缓解攻击，支持多智能体DDPG协同决策，实现边缘端实时独立响应。",
+      "ai_summary": "🐝 群智决策：SNN用于分布式节点低功耗快速威胁缓解，配合多智能体强化学习实现独立又协同的决策，支撑去中心化6G零信任防御。",
       "citations": 13
     },
     {
       "title": "[IEEE transactions on computers] JCSRC: Joint Client Selection and Resource Configuration for Energy-Efficient Multi-Task Federated Learning",
       "published": "2025-12-01",
       "link": "https://www.semanticscholar.org/paper/80c8581006a6fa1c5574886b7a9f041335ccc862",
-      "ai_summary": "🐝 群智决策：该研究用MARL做多任务FL的客户端选择，PSO配置计算与带宽资源，二者联合优化能效。SNN未直接涉及，但分布式决策与群体优化思想可迁移至SNN智能体协同。",
+      "ai_summary": "🐝 群智决策：本文用MARL做客户端选择、PSO做资源分配，二者协同实现多任务联邦学习能效优化。SNN未涉及，决策依赖群体智能与强化学习分布式搜索。",
       "citations": 13
     },
     {
       "title": "[Drones] Variations in Multi-Agent Actor–Critic Frameworks for Joint Optimizations in UAV Swarm Networks: Recent Evolution, Challenges, and Directions",
       "published": "2025-02-19",
       "link": "https://www.semanticscholar.org/paper/b155696c3b49cce59acc026810a200d96d367110",
-      "ai_summary": "🐝 群智决策：该文综述多智能体Actor-Critic框架，通过智能体交互提取隐藏特征、在不确定性下生成混合动作，实现UAV集群轨迹、卸载与资源的分布式联合优化。",
+      "ai_summary": "🐝 群智决策：该文综述多智能体Actor-Critic框架用于UAV集群联合优化。智能体通过交互提取隐藏特征、在不确定下生成混合动作，实现分布式协同决策与自适应学习。",
       "citations": 12
     },
     {
       "title": "[Iran Journal of Computer Science] Quantum computing and neuromorphic computing for safe, reliable, and explainable multi-agent reinforcement learning: optimal control in autonomous robotics",
       "published": "2024-07-29",
       "link": "https://www.semanticscholar.org/paper/73fc348edc6f9b467b6a0c385bdd973321a3c9a9",
-      "ai_summary": "🐝 群智决策：SNN以脉冲形式实现低延迟、低能耗的分布式运动控制，与量子策略协同，在集中训练-分散执行下支持多智能体安全协同决策，脉冲熵揭示控制信号的时间多样性。",
+      "ai_summary": "🐝 群智决策：SNN以脉冲编码实现低延迟、低能耗的分布式运动控制，智能体在集中训练、分散执行下协同决策；脉冲熵分析提供可解释决策轨迹，保障安全约束下的群体协同。",
       "citations": 11
     },
     {
       "title": "[2025 IEEE International Conference on Communications Workshops (ICC Workshops)] Graph Based Deep Reinforcement Learning Aided by Transformers for Multi-Agent Cooperation",
       "published": "2025-04-11",
       "link": "https://www.semanticscholar.org/paper/df3666cd46b61c476f33fa7c6d27d6f3806baa9e",
-      "ai_summary": "🐝 群智决策：该研究用GNN建模智能体与目标交互，Transformer注意力增强消息传递，Double DQN优化部分可观测下的策略，实现分布式协同决策。",
+      "ai_summary": "🐝 群智决策：该研究用GNN建模智能体交互，Transformer注意力增强消息传递，Double DQN优化部分可观测下的策略，实现分布式协同决策，提升多智能体导航效率与覆盖。",
       "citations": 9
     },
     {
       "title": "[AAAI Conference on Artificial Intelligence] GRSN: Gated Recurrent Spiking Neurons for POMDPs and MARL",
       "published": "2024-04-24",
       "link": "https://www.semanticscholar.org/paper/747d5ea59ccbfac5df05fc0a4e9f74c342f22260",
-      "ai_summary": "🐝 群智决策：GRSN用脉冲神经元单步更新对齐RL时序，引入门控增强记忆，使智能体在POMDP与多智能体协作中高效累积历史状态、协同决策，性能媲美RNN而功耗仅约50%。",
+      "ai_summary": "🐝 群智决策：GRSN用门控循环脉冲神经元实现脉冲时序与RL单步决策对齐，借单步更新累积历史状态增强记忆，使多智能体在POMDP中协同决策，性能媲美RNN而功耗仅约50%。",
       "citations": 5
     },
     {
       "title": "[International Journal on Information Technologies and Security] Modeling of neural network monitoring agent to predict traffic spikes and agent training",
       "published": "2024-09-01",
       "link": "https://www.semanticscholar.org/paper/d815e4e7c510d7d1b218987c5ba8da0ec79cf69b",
-      "ai_summary": "🐝 群智决策：该研究用多智能体架构做IoT分布式QoS监控，以LSTM网络预测流量尖峰。训练过程建模为马尔可夫决策，用值迭代动态规划确定单轮训练时长与再训练时机，为动态配置网络参数奠定基础。",
+      "ai_summary": "🐝 群智决策：该研究用多智能体架构做IoT分布式QoS监控，将LSTM训练建模为马尔可夫决策过程，用值迭代动态配置网络参数，实现流量尖峰预测与在线重训练。",
       "citations": 4
     },
     {
       "title": "[2025 IEEE 19th International Conference on Control & Automation (ICCA)] Engineering Application Progress of Multi-Agent Deep Reinforcement Learning",
       "published": "2025-06-30",
       "link": "https://www.semanticscholar.org/paper/f86b61a8065c931bac2ed72e786c3dbb07259977",
-      "ai_summary": "🐝 群智决策：该文综述多智能体深度强化学习（MADRL）工程应用，未涉及SNN。其协同决策依赖深度神经网络与强化学习，通过集中训练分布执行实现分布式决策，但SNN的脉冲时序与稀疏计算优势尚未融入。",
+      "ai_summary": "🐝 群智决策：该文综述MADRL工程应用，未涉及SNN。SNN通过脉冲时序编码与事件驱动，可实现多智能体低功耗分布式协同决策，但本文未讨论。",
       "citations": 2
     },
     {
       "title": "[arXiv.org] Autonomous Oil Spill Response Through Liquid Neural Trajectory Modeling and Coordinated Marine Robotics",
       "published": "2025-08-17",
       "link": "https://www.semanticscholar.org/paper/172822054f7f772726c48d00e5db9abbe27b477f",
-      "ai_summary": "🐝 群智决策：LTCN实现高精度轨迹预测，群体智能支撑分布式协同决策，多智能体在MOOS-IvP下自主协作，完成溢油动态追踪与围控。",
+      "ai_summary": "🐝 群智决策：LTCN实现溢油轨迹实时高精度预测，群体智能使机器人分布式协同决策，去中心化监测围堵，空间精度0.96。",
       "citations": 2
     },
     {
       "title": "[International Workshop on Ant Colony Optimization and Swarm Intelligence] Adaptive Graph-Based Federated Multi-Agent DRL for 6G UAV Swarm Efficiency",
       "published": "2024-12-15",
       "link": "https://www.semanticscholar.org/paper/f8b0f67f2bd9ad8e36bd8b925e185308f7299af8",
-      "ai_summary": "🐝 群智决策：该研究未用SNN，而用GNN+多智能体DRL实现无人机群的分布式协同决策。GNN建模智能体间拓扑关系，支撑去中心化自主决策与负载均衡；VAE增强异常检测与任务优先级，异步联邦学习实现高效协同训练。",
+      "ai_summary": "🐝 群智决策：该研究未用SNN，而是以GNN多智能体DRL实现无人机群的分布式协同决策，VAE增强异步联邦学习支持去中心化自主决策与任务资源分配。",
       "citations": 2
     },
     {
       "title": "[Journal of Dynamic Systems Measurement, and Control] Learning Scalable Decentralized Controllers for Heterogeneous Robot Swarms with Graph Neural Networks",
       "published": "2024-06-19",
       "link": "https://www.semanticscholar.org/paper/c3d8a7dfa8c8397672b402bbda374f07caf303b3",
-      "ai_summary": "🐝 群智决策：该研究用聚合图神经网络参数化分散控制器，通过监督学习模仿集中式专家行为，仅凭局部信息整合远端邻居状态，实现异构机器人集群的分布式协同决策，可扩展至100个机器人。",
+      "ai_summary": "🐝 群智决策：该研究用聚合图神经网络参数化分散控制器，通过模仿集中式专家行为，仅凭局部信息实现异构机器人集群的分离与聚集。GNN整合远端邻居信息，支持分布式协同决策，可扩展至100个机器人，性能接近集中式且优于纯局部控制。",
       "citations": 2
     },
     {
       "title": "[Scientific Reports] A hierarchical neuromorphic multi agent framework for energy aware and secure 6G resource optimization using Neuro6G agent",
       "published": "2026-05-24",
       "link": "https://www.semanticscholar.org/paper/1ec612c335ce72cf6876c7400a61f27d7d47bba8",
-      "ai_summary": "🐝 群智决策：EA-SNN以事件驱动脉冲计算支撑云边端三层智能体自主决策，结合多智能体强化学习与分布式信任机制实现节能、低时延且安全的协同资源优化。",
+      "ai_summary": "🐝 群智决策：EA-SNN以事件驱动稀疏脉冲实现云边端三层智能体低能耗感知与决策，结合多智能体强化学习与分布式信任机制，支撑安全协同的6G资源优化。",
       "citations": 1
     },
     {
       "title": "[Journal of Intelligent Manufacturing and Special Equipment] Explainable federated learning-based fault diagnosis framework for safety assurance in multi-agent autonomous systems",
       "published": "2026-01-15",
       "link": "https://www.semanticscholar.org/paper/8ca2610d2cee46f13854aa247804e2ff5a3961e1",
-      "ai_summary": "🐝 群智决策：该研究未使用SNN，而是以联邦平均实现多智能体分布式协同训练，各智能体本地轻量网络含注意力机制，无需集中数据即可实时故障诊断，SHAP保障可解释性，提升群体决策的鲁棒性与透明度。",
+      "ai_summary": "🐝 群智决策：该研究未用SNN，而用可解释联邦学习实现多智能体协同故障诊断。智能体通过FedAvg分布式训练轻量注意力网络，无需集中数据，实现实时决策；SHAP增强透明度与鲁棒性，支撑无人机集群等安全协同。",
       "citations": 1
     },
     {
       "title": "[Axioms] A Hybrid Particle Swarm Optimization Approach for Flexible Job Shop Scheduling Problem with Transportation and Setup Times",
       "published": "2026-02-07",
       "link": "https://www.semanticscholar.org/paper/a7a22733893468fd9c853bd99bd997f0ec2ad959",
-      "ai_summary": "🐝 群智决策：该研究用DPSO全局优化工序序列，MAS分布式处理机器选择，实现解耦协同决策。HGNN结合多头注意力为机器智能体提取调度环境特征，增强其状态表征与决策能力，从而提升群体协同求解质量。",
+      "ai_summary": "🐝 群智决策：该研究用DPSO全局优化工序序列，MAS分布式处理机器选择，实现解耦协同决策。HGNN结合多头注意力为机器智能体提取调度环境特征，增强其状态表征与决策能力，从而提升整体调度质量。",
       "citations": 1
     },
     {
       "title": "[Journal of King Saud University: Computer and Information Sciences] STAGE: spatio-temporal attention graph-enhanced policy optimization for area defense in UAV swarm confrontations",
       "published": "2026-02-16",
       "link": "https://www.semanticscholar.org/paper/61a64e2c2fe40a098684f9d27b97b4ec9e6c0e2a",
-      "ai_summary": "🐝 群智决策：STAGE用可学习动态邻接矩阵与多跳聚合建模异构时空依赖，替代固定图结构；双路径意图识别融合图注意力簇特征与战术指标，显式判别敌方意图，并在MAPPO中端到端优化多目标奖励，实现分布式协同防御决策。",
+      "ai_summary": "🐝 群智决策：STAGE用可学习动态邻接矩阵与多跳聚合建模异构 swarm 拓扑，借图注意力提取集群特征并融合战术指标识别敌方意图，在MAPPO框架下端到端优化多智能体协同防御策略。",
       "citations": 1
     },
     {
       "title": "[Herald of Khmelnytskyi National University. Technical sciences] МОДЕЛЬ САМОАДАПТИВНОЇ РОЗПОДІЛЕНОЇ СИСТЕМИ КЕРУВАННЯ РЕСУРСАМИ У ХМАРНИХ ОБЧИСЛЕННЯХ",
       "published": "2026-03-26",
       "link": "https://www.semanticscholar.org/paper/ec6c74536727b25a0051c277d8ffa929f464ffa0",
-      "ai_summary": "🐝 群智决策：该研究用神经网络预测负载，各节点智能体通过P2P共识协议实现分布式协同决策，无需中心控制器。SNN支撑本地预测与全局一致性，提升弹性伸缩的响应速度与容错性。",
+      "ai_summary": "🐝 群智决策：该研究提出基于多智能体P2P网络的去中心化云资源自管理架构，智能体通过神经网络预测负载、交换状态并达成共识，实现分布式MAPE闭环与协同扩缩容，无需中心控制器，在负载突变、节点故障与网络分区下响应更快、恢复更稳。",
       "citations": 1
     },
     {
       "title": "[PeerJ Computer Science] A hybrid ABC-based online evolving spiking neural network for unsupervised anomaly detection in streaming data",
       "published": "2025-10-14",
       "link": "https://www.semanticscholar.org/paper/1bb45a34ab910da372f46a3cb7917f2c078f353c",
-      "ai_summary": "🐝 群智决策：ABC蜂群算法为OeSNN自动寻优五个超参数，替代人工调参。SNN以脉冲神经元在线演化、无需重训，实现流数据分布式异常决策；蜂群全局搜索提升精度与稳定性。",
+      "ai_summary": "🐝 群智决策：ABC群智优化OeSNN关键超参数，使脉冲神经元动态自适应流数据，实现分布式实时无监督异常检测，提升协同决策精度与稳定性。",
       "citations": 1
     },
     {
       "title": "[2025 IEEE 4th International Conference for Advancement in Technology (ICONAT)] Neuro-Symbolic Swarm Intelligence for Autonomous UAV Coordination in Adversarial Environments",
       "published": "2025-09-19",
       "link": "https://www.semanticscholar.org/paper/86337f42926d1054128b62e2f985eb58821d70e0",
-      "ai_summary": "🐝 群智决策：SNN以事件驱动实时处理感知与协同，符号模块负责逻辑推理与高层决策，二者结合实现分布式快速响应与可解释决策，提升轨迹精度、降低能耗与威胁协调时间。",
+      "ai_summary": "🐝 群智决策：SNN以事件驱动实时处理感知与协同，符号模块负责逻辑决策；二者结合使无人机群在对抗环境中分布式快速响应，提升轨迹精度、降低能耗与威胁消解时间。",
       "citations": 1
     },
     {
       "title": "[arXiv.org] Energy-Efficient Deep Reinforcement Learning with Spiking Transformers",
       "published": "2025-05-20",
       "link": "https://www.semanticscholar.org/paper/669c7493ff525a7da53f228cb671f2e4217be101",
-      "ai_summary": "🐝 群智决策：SNN以多步LIF神经元与注意力机制处理时空模式，结合状态、动作、奖励编码构建类Transformer结构，使智能体在强化学习中高效协同决策，兼顾能效与策略最优性。",
+      "ai_summary": "🐝 群智决策：SNN以多步LIF神经元与注意力机制处理时空模式，结合状态、动作与奖励编码构建类Transformer结构，使智能体在强化学习中高效协同决策，兼顾能效与策略最优性。",
       "citations": 1
     },
     {
       "title": "[2025 10th International Conference on Smart Structures and Systems (ICSSS)] Swarm Robotics in Search and Rescue Operations: Challenges, Strategies, and Future Directions",
       "published": "2025-12-12",
       "link": "https://www.semanticscholar.org/paper/c36cd0fd0574c3f56ddbbdcedd186173466473bc",
-      "ai_summary": "🐝 群智决策：本文综述群体机器人搜救，未涉及SNN。核心协同靠行为模糊控制、分布式粒子群优化(DPSO)及蚁群、多智能体强化学习，实现去中心化快速收敛决策，但受局部最优与通信建模限制。",
+      "ai_summary": "🐝 群智决策：本文综述SAR群体机器人，未涉及SNN。核心在于DPSO实现分布式协同决策，模糊逻辑应对感知不确定性，混合蚁群与多智能体强化学习提升自适应决策，未来趋向图神经网络协调与学习型决策策略。",
+      "citations": 1
+    },
+    {
+      "title": "[ICC 2025 - IEEE International Conference on Communications] LE-MHAPPO-Enhanced DNN Task Partitioning in Energy-Harvesting Heterogeneous UAV Swarms",
+      "published": "2025-06-08",
+      "link": "https://www.semanticscholar.org/paper/f17aa37eb39da8362b2182376f876e7f46e1a97a",
+      "ai_summary": "🐝 群智决策：该研究未采用SNN，而是用LSTM增强的多智能体混合动作PPO，通过集中训练分布式执行，让各无人机基于当前状态预测未来动作，协同完成DNN任务分割，降低时延与能耗。",
       "citations": 1
     },
     {
       "title": "[2026 IEEE Wireless Communications and Networking Conference Workshops (WCNCW)] Quantum-Neuromorphic Hybrid Architecture for Energy-Efficient Multi-Agent Coordination in Distributed Healthcare Networks",
       "published": "2026-04-13",
       "link": "https://www.semanticscholar.org/paper/4db1b7e07ee78af386a5b5c0ebb662450b079c49",
-      "ai_summary": "🐝 群智决策：SNN在神经形态硬件上执行超低功耗本地决策，通过STDP学习实现分布式策略执行；QSTP将量子关联结构转为脉冲时序，以事件驱动协调减少通信开销，实现多智能体高效协同。",
+      "ai_summary": "🐝 群智决策：VQC负责全局协调优化，SNN在神经形态硬件上执行超低功耗本地决策；QSTP将量子关联结构转为脉冲时序，实现事件驱动协同，大幅降低通信与能耗。",
       "citations": 0
     },
     {
       "title": "[Drones] A2C-LLM: An Actor-Critic-Enhanced Large Language Model for UAV Swarm Multi-Target Task Allocation",
       "published": "2026-05-22",
       "link": "https://www.semanticscholar.org/paper/33b9c33f12db75661c07a20bd892f4d8b931d09f",
-      "ai_summary": "🐝 群智决策：LLM作Actor生成协同策略，轻量网络作Critic估回报算TD优势以微调，实现无人机群分布式单步宏观分配，提升任务完成率与鲁棒性。",
+      "ai_summary": "🐝 群智决策：LLM作Actor生成协同策略，轻量网络作Critic估回报算TD优势以微调，单步宏观分配替代顺序跟踪，实现无人机群分布式快速决策。",
       "citations": 0
     },
     {
       "title": "[2026 Second International Conference on Multi-Agent Systems for Collaborative Intelligence (ICMSCI)] Hybrid Neural and Agent Ecosystems for Multimodal Learning and Adaptive Intelligence in Complex Environments",
       "published": "2026-03-02",
       "link": "https://www.semanticscholar.org/paper/ba5aac75e20ca2631d293d49f44986ed683183c0",
-      "ai_summary": "🐝 群智决策：该研究融合深度神经网络与群体智能体系统，SNN支撑分布式协同决策。智能体借脉冲机制实现实时交互与任务分配，任务耗时降28%，协作效率升15%，且跨数据集稳定（标准差1.2秒），适用于资源分配与动态优化。",
+      "ai_summary": "🐝 群智决策：该研究融合深度神经网络与群体智能体系统，SNN支撑分布式协同决策。智能体通过脉冲神经机制实现实时交互与任务分配，协作效率提升15%，任务耗时降28%，系统鲁棒性强。",
       "citations": 0
     },
     {
       "title": "[IEEE Open Journal of the Communications Society] A Multi-Agent Hybrid Transfer Learning and Monte Carlo Tree Search Framework for Energy Efficient UAV Communication in 6G Aerial Networks",
       "published": "2026",
       "link": "https://www.semanticscholar.org/paper/098e7f10eff5e28b11be9096243bf86516a8a931",
-      "ai_summary": "🐝 群智决策：该框架用迁移学习预训练网络预测链路质量与能耗，MCTS据此分布式搜索最优通信策略，实现轻量协同决策。",
+      "ai_summary": "🐝 群智决策：该框架用预训练神经网络预测链路质量与能耗，MCTS据此分布式搜索最优通信策略，实现轻量级多无人机协同决策。",
       "citations": 0
     },
     {
       "title": "[arXiv.org] Formal Verification of Learned Multi-Agent Communication Policies via Decision Tree Distillation",
       "published": "2026-06-17",
       "link": "https://www.semanticscholar.org/paper/0fa878b44df0341bb28dcf800025bf953c771cf1",
-      "ai_summary": "🐝 群智决策：该研究将MARL神经策略蒸馏为决策树，再经PRISM形式化验证PCTL安全属性。VQ-VIB离散消息提升保真度并加速验证，使多无人机协同策略具备可迁移的安全保证。",
+      "ai_summary": "🐝 群智决策：该研究将MARL神经策略蒸馏为决策树，再经PRISM形式化验证PCTL安全属性。VQ-VIB离散消息提升保真度11.6–13.6个百分点，验证速度加快3–4倍，5–7无人机协同中碰撞概率降至0.3%，实现可验证的分布式协同决策。",
       "citations": 0
     },
     {
       "title": "[2026 6th International Conference on Electronics, Circuits and Information Engineering (ECIE)] FPGA-Accelerated Space-Temporal Graph Neural Networks for Adaptive Communication Optimization in Multi-Robot and UAV Swarms",
       "published": "2026-05-08",
       "link": "https://www.semanticscholar.org/paper/f3e60766c2a7ca57828221066a4fcd7996b693ad",
-      "ai_summary": "🐝 群智决策：该研究用FPGA加速的时空图神经网络，将机器人/UAV集群建模为动态图，通过图注意力与时序卷积捕捉空间依赖和时间动态，实现去中心化的通信拓扑、功率与路由自适应决策，INT8量化与稀疏加速满足边缘实时低功耗需求。",
+      "ai_summary": "🐝 群智决策：ST-GNN将机器人/UAV集群建模为动态图，以智能体为节点、通信质量为边，结合图注意力与时序卷积捕捉时空依赖，实现去中心化的拓扑选择、功率分配与路由决策；FPGA的INT8量化与稀疏加速保障了边缘端实时低功耗协同。",
       "citations": 0
     },
     {
       "title": "[2026 International Conference on Emerging Trends in Information, Communication & Systems (ICETICS)] AI-Driven Swarm Robotics for Autonomous Exploration",
       "published": "2026-07-01",
       "link": "https://www.semanticscholar.org/paper/42aaf4645b6c53d4532bb6a1a9fdf9c71fc6a6c3",
-      "ai_summary": "🐝 群智决策：HM-DESS分层架构中，决策层用轻量深度强化学习实现个体局部决策，图神经网络全局规划任务分配，协同层以进化神经网络优化通信与能量，实现分布式协同探索。",
+      "ai_summary": "🐝 群智决策：HM-DESS分层架构中，决策层用轻量深度强化学习实现个体局部决策，图神经网络全局规划任务分配；协调层以进化神经网络动态优化通信与能量，实现分布式协同与容错探索。",
       "citations": 0
     },
     {
       "title": "[Scientific Reports] LiWO-SRDN-based EV charging coordination for stable smart grid systems using a single-switch high step-up zeta converter",
       "published": "2026-06-18",
       "link": "https://www.semanticscholar.org/paper/5dae7ee24320e579fb19ef84244723133e2594d0",
-      "ai_summary": "🐝 群智决策：LiWO负责群体寻优调参，SDRN以脉冲残差网络预测最优运行参数，二者协同实现EV充电分布式协调，提升电网稳定与效率。",
+      "ai_summary": "🐝 群智决策：SDRN以脉冲残差网络预测最优运行参数，LiWO仿叶随风优化PI增益，二者协同实现分布式EV充电调度与电网稳定决策。",
       "citations": 0
     },
     {
       "title": "[International Research Journal on Advanced Engineering Hub (IRJAEH)] A Comprehensive Review of Energy Optimization Strategies for Sustainable Green Computing",
       "published": "2026-07-23",
       "link": "https://www.semanticscholar.org/paper/c19be241a8935c9ec7d1a6103fef1bbb81284a77",
-      "ai_summary": "🐝 群智决策：该综述未涉及SNN，仅用ACO、PSO等群智算法优化云能耗调度，结合LSTM与深度强化学习做分布式预测与实时决策，属多智能体协同优化，非脉冲神经机制。",
+      "ai_summary": "🐝 群智决策：该综述未涉及SNN，仅用ACO、PSO等群智算法优化容器调度与冷却，并靠多智能体强化学习做分布式决策；SNN的脉冲协同机制缺失，属明显研究空白。",
       "citations": 0
     },
     {
       "title": "[arXiv.org] Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue",
       "published": "2026-04-09",
       "link": "https://www.semanticscholar.org/paper/c57e9d4744cec293adfb6e6f102a8778ffff450b",
-      "ai_summary": "🐝 群智决策：该架构以Hebbian神经可塑性支撑个体SNN自适应，GNN-MARL与行为树实现战术协同，元学习与BDI完成战略决策，三层契约保障安全与一致性，并催生群体元认知以切换策略。",
+      "ai_summary": "🐝 群智决策：该架构以Hebbian神经可塑性支撑个体SNN自适应，GNN-MARL与行为树实现战术协同，元学习加BDI做战略决策，三层契约保障安全与一致性，并催生群体元认知以动态切换策略。",
       "citations": 0
     },
     {
       "title": "[International Journal of Scientific Research in Engineering and Management] Real-Time Disaster Response and Recovery by using Neuromorphic Computing-Enabled Autonomous Agents",
       "published": "2026-03-17",
       "link": "https://www.semanticscholar.org/paper/f4afb520372f371312d51c8cc832a27b26ed4e9c",
-      "ai_summary": "🐝 群智决策：SNN以脉冲事件驱动实现超低功耗实时感知，多智能体通过STDP在线协同与自适应决策，无需联网即可分布式独立运作，提升灾后响应韧性。",
+      "ai_summary": "🐝 群智决策：SNN以脉冲稀疏计算实现超低功耗实时感知，多智能体通过STDP在线自适应协同，无需联网即可分布式决策，提升灾区自主响应与恢复效率。",
       "citations": 0
     },
     {
       "title": "[Electronics] Sparse Ergodic Control with Control-Dependent Noise via Physics-Informed Neural Networks",
       "published": "2026-07-13",
       "link": "https://www.semanticscholar.org/paper/bf81cca0a2f47f6535065f58a6990f8cdd752b1d",
-      "ai_summary": "🐝 群智决策：PINN求解稀疏遍历HJB方程，实现控制依赖噪声下的分布式多智能体协同。通过自适应采样与单调迭代，智能体在资源约束下生成稀疏策略，完成群体导航与电网调度。",
+      "ai_summary": "🐝 群智决策：PINN求解稀疏遍历HJB方程，实现控制依赖噪声下的分布式多智能体协同。通过自适应采样与单调迭代，智能体在随机扰动中形成稀疏反馈策略，兼顾长期稳定与资源约束。",
       "citations": 0
     },
     {
       "title": "[Social Science Research Network] Soft Computing In AI Agents",
       "published": "2026",
       "link": "https://www.semanticscholar.org/paper/2631164cb5fae730aad93c2a548192b5fa17d759",
-      "ai_summary": "🐝 群智决策：该文提出软计算融合模糊逻辑、神经网络与进化算法，支撑AI智能体在不确定环境中自主决策。SNN通过神经学习与模糊推理结合，实现分布式协同与群体智能，优化多智能体策略与拓扑，提升自适应与鲁棒性。",
+      "ai_summary": "🐝 群智决策：本文提出软计算融合架构，以模糊逻辑、神经网络、进化算法与概率推理支撑智能体在不确定环境中的分布式决策。其中SNN借神经学习与模糊规则结合，实现群体协同、自适应优化与多目标涌现决策。",
       "citations": 0
     },
     {
       "title": "[2026 7th International Conference on Mobile Computing and Sustainable Informatics (ICMCSI)] Cognitive IoT Networks with Bio-Inspired Embedded AI for Predictive Maintenance and Sustainable Energy Optimization",
       "published": "2026-01-07",
       "link": "https://www.semanticscholar.org/paper/f5cf8ae8ff73993d10f01a82f83e6b6bde697f51",
-      "ai_summary": "🐝 群智决策：SNN以脉冲时序编码实现多智能体去中心化协同，通过神经自适应与自组织反馈，在边缘节点分布式学习故障预测与能源调度，支撑实时决策。",
-      "citations": 0
-    },
-    {
-      "title": "[2025 OITS International Conference on Information Technology (OCIT)] Design of an Improved Model Using Hybrid Swarm Optimization Capsule Networks and Quantum Inspired Spiking Neural Networks for Multi-Modal Prostate Cancer Diagnosis",
-      "published": "2025-12-18",
-      "link": "https://www.semanticscholar.org/paper/c5d553104651a403366d2298d6254c926e9ae9c8",
-      "ai_summary": "🐝 群智决策：QiSNN以量子小波变换分层提取特征，并用量子启发式突触权重初始化增强脉冲网络，实现活检图像高效分布式计算，降低45%算力，支撑多模态融合决策达98.2%准确率。",
+      "ai_summary": "🐝 群智决策：SNN以脉冲神经适应支撑多智能体协同，在边缘节点实现分布式实时故障预测与能量调度，通过自组织反馈与神经符号学习达成去中心化决策。",
       "citations": 0
     }
   ]
