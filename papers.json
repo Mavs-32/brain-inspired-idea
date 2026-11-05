@@ -1,123 +1,123 @@
 {
-  "updated": "2026-11-04 04:41:05",
+  "updated": "2026-11-05 04:55:59",
   "classic_papers": [
     {
       "title": "[International Conference on Learning Representations] Spikformer: When Spiking Neural Network Meets Transformer",
       "published": "2022-09-29",
       "link": "https://www.semanticscholar.org/paper/ffd91f85d6d19e75309ececfd190afa6bb562284",
-      "ai_summary": "🔥 领域经典：首次将脉冲神经网络与Transformer自注意力机制融合，提出无softmax的脉冲自注意力（SSA），构建Spikformer框架，在ImageNet上以4时间步达74.81%准确率，创直接训练SNN的SOTA，开辟SNN-Transformer新方向。",
-      "citations": 621
+      "ai_summary": "AI 总结生成失败。",
+      "citations": 623
     },
     {
       "title": "[AAAI Conference on Artificial Intelligence] Spiking-YOLO: Spiking Neural Network for Energy-Efficient Object Detection",
       "published": "2019-03-12",
       "link": "https://www.semanticscholar.org/paper/71b411d47ae7b9cf8f6ff26dc2eda8e5038ef94c",
-      "ai_summary": "🔥 领域经典：首个将SNN成功应用于目标检测的开创性工作。提出通道归一化与带不平衡阈值的符号神经元两项方法，解决深度SNN回归任务的信息传输难题，实现与Tiny YOLO相当精度且能耗降低约280倍。",
-      "citations": 577
+      "ai_summary": "AI 总结生成失败。",
+      "citations": 578
     },
     {
       "title": "[Computer Vision and Pattern Recognition] RMP-SNN: Residual Membrane Potential Neuron for Enabling Deeper High-Accuracy and Low-Latency Spiking Neural Network",
       "published": "2020-02-25",
       "link": "https://www.semanticscholar.org/paper/8aad18f5c474cd25e283a7b3c956894d94f82873",
-      "ai_summary": "🔥 领域经典：提出RMP（残差膜电位）脉冲神经元，用\"软重置\"替代\"硬重置\"以保留阈值以上残余膜电位，实现近乎无损的ANN-SNN转换，在CIFAR与ImageNet上以更少时间步取得更高精度，是低延迟高精度SNN转换的代表性工作。",
-      "citations": 439
+      "ai_summary": "AI 总结生成失败。",
+      "citations": 440
     },
     {
       "title": "[IEEE Transactions on Neural Networks and Learning Systems] DIET-SNN: A Low-Latency Spiking Neural Network With Direct Input Encoding and Leakage and Threshold Optimization",
       "published": "2021-10-01",
       "link": "https://www.semanticscholar.org/paper/1921489a2801f053d0906079f0015ba6e68dd505",
-      "ai_summary": "🔥 领域经典：DIET-SNN通过直接输入编码与端到端优化泄漏和阈值，显著降低SNN推理延迟，是该领域低延迟高效SNN的代表性工作。",
-      "citations": 389
+      "ai_summary": "AI 总结生成失败。",
+      "citations": 390
     },
     {
       "title": "[Nature Communications] A biomimetic neural encoder for spiking neural network",
       "published": "2021-04-09",
       "link": "https://www.semanticscholar.org/paper/28bf3b2499c1a77dc5e1a05bef3b26cb56d25483",
-      "ai_summary": "🔥 领域经典：首次实现基于双栅MoS2 FET的生物仿生神经编码器，可将模拟信号按多种神经编码算法转为随机脉冲序列，能耗仅1–5 pJ/spike，并完成MNIST快速编码与91%以上SNN推理，为神经形态硬件补齐关键感知编码环节。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 167
     },
     {
       "title": "[IEEE Transactions on Pattern Analysis and Machine Intelligence] Fast-SNN: Fast Spiking Neural Network by Converting Quantized ANN",
       "published": "2023-05-31",
       "link": "https://www.semanticscholar.org/paper/8fa44efea525b8bd930440221c334ff7646efa98",
-      "ai_summary": "Fast-SNN提出时序量化与空间量化的等价映射，将量化误差最小化转移至量化ANN训练，并用带符号IF神经元与逐层微调解决累积误差，实现低延迟高性能SNN转换。",
-      "citations": 143
+      "ai_summary": "AI 总结生成失败。",
+      "citations": 144
     },
     {
       "title": "[Computer Vision and Pattern Recognition] Event-based Video Reconstruction via Potential-assisted Spiking Neural Network",
       "published": "2022-01-25",
       "link": "https://www.semanticscholar.org/paper/f40739ad93807944ce9b9816b25cdabb407308a0",
-      "ai_summary": "🔥 领域经典：首个用深度脉冲神经网络实现事件相机视频重建的工作，提出EVSNN与膜电位辅助的PAEVSNN框架，能效比ANN高7.75–19.36倍。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 142
     },
     {
       "title": "[Biomedical Signal Processing and Control] Energy efficient ECG classification with spiking neural network",
       "published": "2021-01-01",
       "link": "https://www.semanticscholar.org/paper/f11177822547ee2e23c62de2d50a81fc39ace6f3",
-      "ai_summary": "提出面向可穿戴设备的跨患者心电分类方法，将训练好的CNN转换为SNN，精度损失不足1%，功耗仅为先前方案的0.0074倍，显著提升能效。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 128
     },
     {
       "title": "[IEEE transactions on neural systems and rehabilitation engineering] A Spiking Neural Network With Adaptive Graph Convolution and LSTM for EEG-Based Brain-Computer Interfaces",
       "published": "2023-02-22",
       "link": "https://www.semanticscholar.org/paper/147e306d10e8ee19caf3b84ffbda3a984cd5db8d",
-      "ai_summary": "提出面向EEG-BCI的自适应图卷积与脉冲LSTM融合SNN模型SGLNet，有效挖掘通道空间拓扑与脉冲时序依赖，跨任务验证优于现有方法。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 88
     },
     {
       "title": "[Neural Networks] An unsupervised STDP-based spiking neural network inspired by biologically plausible learning rules and connections",
       "published": "2022-07-06",
       "link": "https://www.semanticscholar.org/paper/ffa70f147756c642669ab5b5298c48296c2ba1ca",
-      "ai_summary": "🔥 领域经典：首次将无监督STDP-SNN成功应用于CIFAR10，为该方向树立里程碑。\n\n核心创新：融合自适应突触滤波、自适应脉冲阈值与侧抑制连接，并提出STB-STDP，大幅提升无监督SNN训练效率与性能。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 77
     },
     {
       "title": "[Neural Information Processing Systems] SNN-RAT: Robustness-enhanced Spiking Neural Network through Regularized Adversarial Training",
       "published": "2022",
       "link": "https://www.semanticscholar.org/paper/0484f95ef6a6ee544e0a9f9eb5dfe35f7166c09f",
-      "ai_summary": "提出脉冲表示专属Lipschitz常数，理论量化SNN对抗脆弱性，并设计低开销正则化对抗训练，兼顾多扰动邻域泛化，显著提升SNN鲁棒性。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 73
     },
     {
       "title": "[IEEE Transactions on Neural Networks and Learning Systems] Spiking Neural Network for Ultralow-Latency and High-Accurate Object Detection",
       "published": "2023-06-21",
       "link": "https://www.semanticscholar.org/paper/83f0c700d210bf6e22168ce642cb798687f25eaf",
-      "ai_summary": "🔥 领域经典：提出SUHD，通过时间步压缩与STDI编码实现ANN到SNN无损转换，是当时最深的脉冲目标检测模型，在MS COCO上较Spiking-YOLO时间步减少约750倍、mAP提升30%。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 68
     },
     {
       "title": "[IEEE International Joint Conference on Neural Network] CarSNN: An Efficient Spiking Neural Network for Event-Based Autonomous Cars on the Loihi Neuromorphic Research Processor",
       "published": "2021-07-01",
       "link": "https://www.semanticscholar.org/paper/c1cc9d133afee2320c311b3e1ce8d9dd6aa3e3be",
-      "ai_summary": "🔥 领域经典：首个在神经形态芯片上实现的事件相机车辆分类器，验证了SNN在自动驾驶中低延迟低功耗部署的可行性。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 67
     },
     {
       "title": "[Neural Networks] BackEISNN: A Deep Spiking Neural Network with Adaptive Self-Feedback and Balanced Excitatory-Inhibitory Neurons",
       "published": "2021-05-27",
       "link": "https://www.semanticscholar.org/paper/4d19b91d9356576a2bdf99a6d14174339d2375bf",
-      "ai_summary": "提出自适应时延自反馈与兴奋-抑制平衡机制，加速SNN收敛并提升精度，在多个数据集达SOTA。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 60
     },
     {
       "title": "[Neural computing & applications (Print)] Detection of COVID-19 from CT scan images: A spiking neural network-based approach",
       "published": "2021-04-16",
       "link": "https://www.semanticscholar.org/paper/53306dd7203c08605f6c5c322a46b14dc5b2c4bb",
-      "ai_summary": "该工作将脉冲神经网络用于COVID-19 CT影像分类，探索神经形态计算在医学图像分析中的可行性，取得F1=0.99，属SNN医学应用的早期实践，但非领域开创性工作。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 59
     },
     {
       "title": "[arXiv.org] A Spiking Neural Network for Image Segmentation",
       "published": "2021-06-16",
       "link": "https://www.semanticscholar.org/paper/bcc16bfdccde09cb28ec569aa58f52be20fb05bd",
-      "ai_summary": "将U-Net ANN转换为SNN并部署于Loihi芯片，提出基于百分位的脉冲率正则化损失以最小化精度损失，实现能效超CPU/GPU两倍以上的图像分割。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 59
     },
     {
       "title": "[IEEE International Joint Conference on Neural Network] CARLsim 6: An Open Source Library for Large-Scale, Biologically Detailed Spiking Neural Network Simulation",
       "published": "2022-07-18",
       "link": "https://www.semanticscholar.org/paper/cc471d722538cbeb409a5ea9ed254e6d8f8cd370",
-      "ai_summary": "CARLsim 6是GPU加速SNN仿真的成熟开源平台，支持多神经调质与长短时程突触可塑性，可在笔记本至DGX-A100上实现大规模生物可信模拟。",
+      "ai_summary": "AI 总结生成失败。",
       "citations": 54
     },
     {
@@ -214,13 +214,6 @@
       "citations": 20
     },
     {
-      "title": "[IEEE Transactions on Parallel and Distributed Systems] Mapping Large-Scale Spiking Neural Network on Arbitrary Meshed Neuromorphic Hardware",
-      "published": "2025-11-01",
-      "link": "https://www.semanticscholar.org/paper/680df4fc926fdfc4b83d93c1bbe182bc0fc8150a",
-      "ai_summary": "AI 总结生成失败。",
-      "citations": 5
-    },
-    {
       "title": "[Nature Communications] A frugal Spiking Neural Network for unsupervised multivariate temporal pattern classification and multichannel spike sorting",
       "published": "2025-10-17",
       "link": "https://www.semanticscholar.org/paper/dedb1867ef5e5c4d46e6012168cc5487cea9d042",
@@ -242,16 +235,16 @@
       "citations": 6
     },
     {
-      "title": "[IEEE transactions on circuits and systems for video technology (Print)] Event-Based Video Reconstruction Via Spatial–Temporal Heterogeneous Spiking Neural Network",
+      "title": "[IEEE Transactions on Circuits and Systems for Artificial Intelligence] FPGA-Based Adaptive LIF Neuron for High-Speed, Energy-Efficient Spiking Neural Network",
       "published": "2025-09-01",
-      "link": "https://www.semanticscholar.org/paper/6ce0fab2e3142069f13fcb27535570f08411d20a",
+      "link": "https://www.semanticscholar.org/paper/de88e6e0c3f8ea9a041f7582326276a4ca8c7086",
       "ai_summary": "AI 总结生成失败。",
       "citations": 18
     },
     {
-      "title": "[IEEE Transactions on Circuits and Systems for Artificial Intelligence] FPGA-Based Adaptive LIF Neuron for High-Speed, Energy-Efficient Spiking Neural Network",
+      "title": "[IEEE transactions on circuits and systems for video technology (Print)] Event-Based Video Reconstruction Via Spatial–Temporal Heterogeneous Spiking Neural Network",
       "published": "2025-09-01",
-      "link": "https://www.semanticscholar.org/paper/de88e6e0c3f8ea9a041f7582326276a4ca8c7086",
+      "link": "https://www.semanticscholar.org/paper/6ce0fab2e3142069f13fcb27535570f08411d20a",
       "ai_summary": "AI 总结生成失败。",
       "citations": 18
     },
@@ -282,6 +275,13 @@
       "link": "https://www.semanticscholar.org/paper/48d5153a552d747bc2e1542cfd6ce27d2605acde",
       "ai_summary": "AI 总结生成失败。",
       "citations": 8
+    },
+    {
+      "title": "[Laser &amp; Photonics Reviews] Four‐Channel Full‐Function Photonic Spiking Neural Network Chips for Gene Analysis",
+      "published": "2025-07-22",
+      "link": "https://www.semanticscholar.org/paper/e59e692be8e5483bf49495ad07f3fdb16f823bea",
+      "ai_summary": "AI 总结生成失败。",
+      "citations": 7
     }
   ],
   "multi_agent_papers": [
@@ -290,7 +290,7 @@
       "published": "2024-01-01",
       "link": "https://www.semanticscholar.org/paper/f002a79ea4516d4dfa8a8d05808e5063b33b4163",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 134
+      "citations": 135
     },
     {
       "title": "[International Journal of Science and Technology Research Archive] Theoretical approaches to AI in supply chain optimization: Pathways to efficiency and resilience",
@@ -552,16 +552,16 @@
       "citations": 0
     },
     {
-      "title": "[International Journal of Scientific Research in Engineering and Management] Real-Time Disaster Response and Recovery by using Neuromorphic Computing-Enabled Autonomous Agents",
-      "published": "2026-03-17",
-      "link": "https://www.semanticscholar.org/paper/f4afb520372f371312d51c8cc832a27b26ed4e9c",
+      "title": "[International Research Journal on Advanced Engineering Hub (IRJAEH)] A Comprehensive Review of Energy Optimization Strategies for Sustainable Green Computing",
+      "published": "2026-07-23",
+      "link": "https://www.semanticscholar.org/paper/c19be241a8935c9ec7d1a6103fef1bbb81284a77",
       "ai_summary": "AI 总结生成失败。",
       "citations": 0
     },
     {
-      "title": "[International Research Journal on Advanced Engineering Hub (IRJAEH)] A Comprehensive Review of Energy Optimization Strategies for Sustainable Green Computing",
-      "published": "2026-07-23",
-      "link": "https://www.semanticscholar.org/paper/c19be241a8935c9ec7d1a6103fef1bbb81284a77",
+      "title": "[International Journal of Scientific Research in Engineering and Management] Real-Time Disaster Response and Recovery by using Neuromorphic Computing-Enabled Autonomous Agents",
+      "published": "2026-03-17",
+      "link": "https://www.semanticscholar.org/paper/f4afb520372f371312d51c8cc832a27b26ed4e9c",
       "ai_summary": "AI 总结生成失败。",
       "citations": 0
     }
