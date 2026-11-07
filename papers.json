@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-06 04:55:33",
+  "updated": "2026-11-07 04:28:01",
   "classic_papers": [
     {
       "title": "[International Conference on Learning Representations] Spikformer: When Spiking Neural Network Meets Transformer",
       "published": "2022-09-29",
       "link": "https://www.semanticscholar.org/paper/ffd91f85d6d19e75309ececfd190afa6bb562284",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 624
+      "citations": 625
     },
     {
       "title": "[AAAI Conference on Artificial Intelligence] Spiking-YOLO: Spiking Neural Network for Energy-Efficient Object Detection",
@@ -69,7 +69,7 @@
       "published": "2023-02-22",
       "link": "https://www.semanticscholar.org/paper/147e306d10e8ee19caf3b84ffbda3a984cd5db8d",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 88
+      "citations": 89
     },
     {
       "title": "[Neural Networks] An unsupervised STDP-based spiking neural network inspired by biologically plausible learning rules and connections",
@@ -214,6 +214,13 @@
       "citations": 20
     },
     {
+      "title": "[IEEE Transactions on Parallel and Distributed Systems] Mapping Large-Scale Spiking Neural Network on Arbitrary Meshed Neuromorphic Hardware",
+      "published": "2025-11-01",
+      "link": "https://www.semanticscholar.org/paper/680df4fc926fdfc4b83d93c1bbe182bc0fc8150a",
+      "ai_summary": "AI 总结生成失败。",
+      "citations": 5
+    },
+    {
       "title": "[Nature Communications] A frugal Spiking Neural Network for unsupervised multivariate temporal pattern classification and multichannel spike sorting",
       "published": "2025-10-17",
       "link": "https://www.semanticscholar.org/paper/dedb1867ef5e5c4d46e6012168cc5487cea9d042",
@@ -275,13 +282,6 @@
       "link": "https://www.semanticscholar.org/paper/48d5153a552d747bc2e1542cfd6ce27d2605acde",
       "ai_summary": "AI 总结生成失败。",
       "citations": 8
-    },
-    {
-      "title": "[Laser &amp; Photonics Reviews] Four‐Channel Full‐Function Photonic Spiking Neural Network Chips for Gene Analysis",
-      "published": "2025-07-22",
-      "link": "https://www.semanticscholar.org/paper/e59e692be8e5483bf49495ad07f3fdb16f823bea",
-      "ai_summary": "AI 总结生成失败。",
-      "citations": 7
     }
   ],
   "multi_agent_papers": [
@@ -391,16 +391,16 @@
       "citations": 2
     },
     {
-      "title": "[2025 IEEE 19th International Conference on Control & Automation (ICCA)] Engineering Application Progress of Multi-Agent Deep Reinforcement Learning",
-      "published": "2025-06-30",
-      "link": "https://www.semanticscholar.org/paper/f86b61a8065c931bac2ed72e786c3dbb07259977",
+      "title": "[2025 6th International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS)] A Next-Generation Cyber-Physical Architecture with Multi-Agent AI, IoT Sensing, and Autonomous Robotic Swarms",
+      "published": "2025-12-15",
+      "link": "https://www.semanticscholar.org/paper/bfdf48120e1d14dbc2defe7a8926631b77462929",
       "ai_summary": "AI 总结生成失败。",
       "citations": 2
     },
     {
-      "title": "[2025 6th International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS)] A Next-Generation Cyber-Physical Architecture with Multi-Agent AI, IoT Sensing, and Autonomous Robotic Swarms",
-      "published": "2025-12-15",
-      "link": "https://www.semanticscholar.org/paper/bfdf48120e1d14dbc2defe7a8926631b77462929",
+      "title": "[2025 IEEE 19th International Conference on Control & Automation (ICCA)] Engineering Application Progress of Multi-Agent Deep Reinforcement Learning",
+      "published": "2025-06-30",
+      "link": "https://www.semanticscholar.org/paper/f86b61a8065c931bac2ed72e786c3dbb07259977",
       "ai_summary": "AI 总结生成失败。",
       "citations": 2
     },
@@ -552,16 +552,16 @@
       "citations": 0
     },
     {
-      "title": "[arXiv.org] Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue",
-      "published": "2026-04-09",
-      "link": "https://www.semanticscholar.org/paper/c57e9d4744cec293adfb6e6f102a8778ffff450b",
+      "title": "[International Research Journal on Advanced Engineering Hub (IRJAEH)] A Comprehensive Review of Energy Optimization Strategies for Sustainable Green Computing",
+      "published": "2026-07-23",
+      "link": "https://www.semanticscholar.org/paper/c19be241a8935c9ec7d1a6103fef1bbb81284a77",
       "ai_summary": "AI 总结生成失败。",
       "citations": 0
     },
     {
-      "title": "[International Research Journal on Advanced Engineering Hub (IRJAEH)] A Comprehensive Review of Energy Optimization Strategies for Sustainable Green Computing",
-      "published": "2026-07-23",
-      "link": "https://www.semanticscholar.org/paper/c19be241a8935c9ec7d1a6103fef1bbb81284a77",
+      "title": "[International Journal of Scientific Research in Engineering and Management] Real-Time Disaster Response and Recovery by using Neuromorphic Computing-Enabled Autonomous Agents",
+      "published": "2026-03-17",
+      "link": "https://www.semanticscholar.org/paper/f4afb520372f371312d51c8cc832a27b26ed4e9c",
       "ai_summary": "AI 总结生成失败。",
       "citations": 0
     }
