@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-08 04:11:54",
+  "updated": "2026-11-09 04:27:27",
   "classic_papers": [
     {
       "title": "[International Conference on Learning Representations] Spikformer: When Spiking Neural Network Meets Transformer",
       "published": "2022-09-29",
       "link": "https://www.semanticscholar.org/paper/ffd91f85d6d19e75309ececfd190afa6bb562284",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 626
+      "citations": 627
     },
     {
       "title": "[AAAI Conference on Artificial Intelligence] Spiking-YOLO: Spiking Neural Network for Energy-Efficient Object Detection",
@@ -76,7 +76,7 @@
       "published": "2022",
       "link": "https://www.semanticscholar.org/paper/0484f95ef6a6ee544e0a9f9eb5dfe35f7166c09f",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 73
+      "citations": 74
     },
     {
       "title": "[IEEE Transactions on Neural Networks and Learning Systems] Spiking Neural Network for Ultralow-Latency and High-Accurate Object Detection",
@@ -242,16 +242,16 @@
       "citations": 6
     },
     {
-      "title": "[IEEE transactions on circuits and systems for video technology (Print)] Event-Based Video Reconstruction Via Spatial–Temporal Heterogeneous Spiking Neural Network",
+      "title": "[IEEE Transactions on Circuits and Systems for Artificial Intelligence] FPGA-Based Adaptive LIF Neuron for High-Speed, Energy-Efficient Spiking Neural Network",
       "published": "2025-09-01",
-      "link": "https://www.semanticscholar.org/paper/6ce0fab2e3142069f13fcb27535570f08411d20a",
+      "link": "https://www.semanticscholar.org/paper/de88e6e0c3f8ea9a041f7582326276a4ca8c7086",
       "ai_summary": "AI 总结生成失败。",
       "citations": 18
     },
     {
-      "title": "[IEEE Transactions on Circuits and Systems for Artificial Intelligence] FPGA-Based Adaptive LIF Neuron for High-Speed, Energy-Efficient Spiking Neural Network",
+      "title": "[IEEE transactions on circuits and systems for video technology (Print)] Event-Based Video Reconstruction Via Spatial–Temporal Heterogeneous Spiking Neural Network",
       "published": "2025-09-01",
-      "link": "https://www.semanticscholar.org/paper/de88e6e0c3f8ea9a041f7582326276a4ca8c7086",
+      "link": "https://www.semanticscholar.org/paper/6ce0fab2e3142069f13fcb27535570f08411d20a",
       "ai_summary": "AI 总结生成失败。",
       "citations": 18
     },
@@ -290,7 +290,7 @@
       "published": "2024-01-01",
       "link": "https://www.semanticscholar.org/paper/f002a79ea4516d4dfa8a8d05808e5063b33b4163",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 136
+      "citations": 137
     },
     {
       "title": "[International Journal of Science and Technology Research Archive] Theoretical approaches to AI in supply chain optimization: Pathways to efficiency and resilience",
@@ -391,16 +391,16 @@
       "citations": 2
     },
     {
-      "title": "[2025 6th International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS)] A Next-Generation Cyber-Physical Architecture with Multi-Agent AI, IoT Sensing, and Autonomous Robotic Swarms",
-      "published": "2025-12-15",
-      "link": "https://www.semanticscholar.org/paper/bfdf48120e1d14dbc2defe7a8926631b77462929",
+      "title": "[2025 IEEE 19th International Conference on Control & Automation (ICCA)] Engineering Application Progress of Multi-Agent Deep Reinforcement Learning",
+      "published": "2025-06-30",
+      "link": "https://www.semanticscholar.org/paper/f86b61a8065c931bac2ed72e786c3dbb07259977",
       "ai_summary": "AI 总结生成失败。",
       "citations": 2
     },
     {
-      "title": "[2025 IEEE 19th International Conference on Control & Automation (ICCA)] Engineering Application Progress of Multi-Agent Deep Reinforcement Learning",
-      "published": "2025-06-30",
-      "link": "https://www.semanticscholar.org/paper/f86b61a8065c931bac2ed72e786c3dbb07259977",
+      "title": "[2025 6th International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS)] A Next-Generation Cyber-Physical Architecture with Multi-Agent AI, IoT Sensing, and Autonomous Robotic Swarms",
+      "published": "2025-12-15",
+      "link": "https://www.semanticscholar.org/paper/bfdf48120e1d14dbc2defe7a8926631b77462929",
       "ai_summary": "AI 总结生成失败。",
       "citations": 2
     },
@@ -552,16 +552,16 @@
       "citations": 0
     },
     {
-      "title": "[International Research Journal on Advanced Engineering Hub (IRJAEH)] A Comprehensive Review of Energy Optimization Strategies for Sustainable Green Computing",
-      "published": "2026-07-23",
-      "link": "https://www.semanticscholar.org/paper/c19be241a8935c9ec7d1a6103fef1bbb81284a77",
+      "title": "[arXiv.org] Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue",
+      "published": "2026-04-09",
+      "link": "https://www.semanticscholar.org/paper/c57e9d4744cec293adfb6e6f102a8778ffff450b",
       "ai_summary": "AI 总结生成失败。",
       "citations": 0
     },
     {
-      "title": "[arXiv.org] Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue",
-      "published": "2026-04-09",
-      "link": "https://www.semanticscholar.org/paper/c57e9d4744cec293adfb6e6f102a8778ffff450b",
+      "title": "[International Research Journal on Advanced Engineering Hub (IRJAEH)] A Comprehensive Review of Energy Optimization Strategies for Sustainable Green Computing",
+      "published": "2026-07-23",
+      "link": "https://www.semanticscholar.org/paper/c19be241a8935c9ec7d1a6103fef1bbb81284a77",
       "ai_summary": "AI 总结生成失败。",
       "citations": 0
     }
