@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17 06:20:33",
+  "updated": "2026-11-18 05:45:48",
   "classic_papers": [
     {
       "title": "[International Conference on Learning Representations] Spikformer: When Spiking Neural Network Meets Transformer",
@@ -13,7 +13,7 @@
       "published": "2019-03-12",
       "link": "https://www.semanticscholar.org/paper/71b411d47ae7b9cf8f6ff26dc2eda8e5038ef94c",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 584
+      "citations": 585
     },
     {
       "title": "[Computer Vision and Pattern Recognition] RMP-SNN: Residual Membrane Potential Neuron for Enabling Deeper High-Accuracy and Low-Latency Spiking Neural Network",
@@ -27,7 +27,7 @@
       "published": "2021-10-01",
       "link": "https://www.semanticscholar.org/paper/1921489a2801f053d0906079f0015ba6e68dd505",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 393
+      "citations": 394
     },
     {
       "title": "[Nature Communications] A biomimetic neural encoder for spiking neural network",
@@ -44,18 +44,18 @@
       "citations": 145
     },
     {
+      "title": "[Computer Vision and Pattern Recognition] Event-based Video Reconstruction via Potential-assisted Spiking Neural Network",
+      "published": "2022-01-25",
+      "link": "https://www.semanticscholar.org/paper/f40739ad93807944ce9b9816b25cdabb407308a0",
+      "ai_summary": "AI 总结生成失败。",
+      "citations": 144
+    },
+    {
       "title": "[Biomedical Signal Processing and Control] Energy efficient ECG classification with spiking neural network",
       "published": "2021-01-01",
       "link": "https://www.semanticscholar.org/paper/f11177822547ee2e23c62de2d50a81fc39ace6f3",
       "ai_summary": "AI 总结生成失败。",
       "citations": 129
-    },
-    {
-      "title": "[IEEE International Joint Conference on Neural Network] An Efficient Spiking Neural Network for Recognizing Gestures with a DVS Camera on the Loihi Neuromorphic Processor",
-      "published": "2020-05-16",
-      "link": "https://www.semanticscholar.org/paper/0c6dfd1688f2422224ecae0bbcd30df4e36042a6",
-      "ai_summary": "AI 总结生成失败。",
-      "citations": 118
     },
     {
       "title": "[IEEE transactions on neural systems and rehabilitation engineering] A Spiking Neural Network With Adaptive Graph Convolution and LSTM for EEG-Based Brain-Computer Interfaces",
@@ -304,7 +304,7 @@
       "published": "2024",
       "link": "https://www.semanticscholar.org/paper/1d8c606517a17faefe353f751899333b3a50f690",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 40
+      "citations": 41
     },
     {
       "title": "[Journal of King Saud University: Computer and Information Sciences] A survey on autonomous navigation for mobile robots: From traditional techniques to deep learning and large language models",
@@ -398,16 +398,16 @@
       "citations": 2
     },
     {
-      "title": "[2025 IEEE 19th International Conference on Control & Automation (ICCA)] Engineering Application Progress of Multi-Agent Deep Reinforcement Learning",
-      "published": "2025-06-30",
-      "link": "https://www.semanticscholar.org/paper/f86b61a8065c931bac2ed72e786c3dbb07259977",
+      "title": "[2025 6th International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS)] A Next-Generation Cyber-Physical Architecture with Multi-Agent AI, IoT Sensing, and Autonomous Robotic Swarms",
+      "published": "2025-12-15",
+      "link": "https://www.semanticscholar.org/paper/bfdf48120e1d14dbc2defe7a8926631b77462929",
       "ai_summary": "AI 总结生成失败。",
       "citations": 2
     },
     {
-      "title": "[2025 6th International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS)] A Next-Generation Cyber-Physical Architecture with Multi-Agent AI, IoT Sensing, and Autonomous Robotic Swarms",
-      "published": "2025-12-15",
-      "link": "https://www.semanticscholar.org/paper/bfdf48120e1d14dbc2defe7a8926631b77462929",
+      "title": "[2025 IEEE 19th International Conference on Control & Automation (ICCA)] Engineering Application Progress of Multi-Agent Deep Reinforcement Learning",
+      "published": "2025-06-30",
+      "link": "https://www.semanticscholar.org/paper/f86b61a8065c931bac2ed72e786c3dbb07259977",
       "ai_summary": "AI 总结生成失败。",
       "citations": 2
     },
