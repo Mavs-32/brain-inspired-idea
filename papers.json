@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-20 05:33:48",
+  "updated": "2026-11-21 05:28:04",
   "classic_papers": [
     {
       "title": "[International Conference on Learning Representations] Spikformer: When Spiking Neural Network Meets Transformer",
       "published": "2022-09-29",
       "link": "https://www.semanticscholar.org/paper/ffd91f85d6d19e75309ececfd190afa6bb562284",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 638
+      "citations": 639
     },
     {
       "title": "[AAAI Conference on Artificial Intelligence] Spiking-YOLO: Spiking Neural Network for Energy-Efficient Object Detection",
@@ -193,6 +193,13 @@
       "citations": 0
     },
     {
+      "title": "[Frontiers in Neuroscience] A hybrid Spiking Neural Network–Transformer architecture for motor imagery and sleep apnea detection",
+      "published": "2025-12-12",
+      "link": "https://www.semanticscholar.org/paper/86bb466e69b1eb08fe50e16862f38b8bca785aed",
+      "ai_summary": "AI 总结生成失败。",
+      "citations": 6
+    },
+    {
       "title": "[Nano letters (Print)] One-Step Annealing-Configured Hf0.2Zr0.8O2 Memristive-Antiferroelectric Devices for Bioinspired CSNN Neuromorphic Computing.",
       "published": "2025-12-04",
       "link": "https://www.semanticscholar.org/paper/1253d2377796996933db361709cf84761085eaa9",
@@ -275,13 +282,6 @@
       "link": "https://www.semanticscholar.org/paper/5ecd33890e96cac0f9369f79e0c11f0f1fe94d30",
       "ai_summary": "AI 总结生成失败。",
       "citations": 19
-    },
-    {
-      "title": "[International Conference on Systems] Generating Spiking Neural Network Code Libraries for Embedded Systems",
-      "published": "2025-07-29",
-      "link": "https://www.semanticscholar.org/paper/48d5153a552d747bc2e1542cfd6ce27d2605acde",
-      "ai_summary": "AI 总结生成失败。",
-      "citations": 8
     }
   ],
   "multi_agent_papers": [
@@ -297,7 +297,7 @@
       "published": "2024-03-30",
       "link": "https://www.semanticscholar.org/paper/42258b105bdad2bc0a9358c5c4a89534a8395a24",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 128
+      "citations": 130
     },
     {
       "title": "[IEEE Access] DermCDSM: Clinical Decision Support Model for Dermatosis Using Systematic Approaches of Machine Learning and Deep Learning",
@@ -318,7 +318,7 @@
       "published": "2025-09-01",
       "link": "https://www.semanticscholar.org/paper/c68ef987429f50c986b44c0744b2c2ea3f7a8a05",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 24
+      "citations": 25
     },
     {
       "title": "[International Journal of Communication Systems] AI‐Enabled Zero Trust Model for Cyberattack Mitigation in Decentralized 6G Network",
