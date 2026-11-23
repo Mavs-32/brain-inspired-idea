@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22 04:53:29",
+  "updated": "2026-11-23 05:33:13",
   "classic_papers": [
     {
       "title": "[International Conference on Learning Representations] Spikformer: When Spiking Neural Network Meets Transformer",
@@ -290,7 +290,7 @@
       "published": "2024-01-01",
       "link": "https://www.semanticscholar.org/paper/f002a79ea4516d4dfa8a8d05808e5063b33b4163",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 140
+      "citations": 141
     },
     {
       "title": "[International Journal of Science and Technology Research Archive] Theoretical approaches to AI in supply chain optimization: Pathways to efficiency and resilience",
