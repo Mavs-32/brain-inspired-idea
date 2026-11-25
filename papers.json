@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-24 08:12:00",
+  "updated": "2026-11-25 06:49:15",
   "classic_papers": [
     {
       "title": "[International Conference on Learning Representations] Spikformer: When Spiking Neural Network Meets Transformer",
       "published": "2022-09-29",
       "link": "https://www.semanticscholar.org/paper/ffd91f85d6d19e75309ececfd190afa6bb562284",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 642
+      "citations": 644
     },
     {
       "title": "[AAAI Conference on Artificial Intelligence] Spiking-YOLO: Spiking Neural Network for Energy-Efficient Object Detection",
@@ -242,16 +242,16 @@
       "citations": 7
     },
     {
-      "title": "[IEEE Transactions on Circuits and Systems for Artificial Intelligence] FPGA-Based Adaptive LIF Neuron for High-Speed, Energy-Efficient Spiking Neural Network",
+      "title": "[IEEE transactions on circuits and systems for video technology (Print)] Event-Based Video Reconstruction Via Spatial–Temporal Heterogeneous Spiking Neural Network",
       "published": "2025-09-01",
-      "link": "https://www.semanticscholar.org/paper/de88e6e0c3f8ea9a041f7582326276a4ca8c7086",
+      "link": "https://www.semanticscholar.org/paper/6ce0fab2e3142069f13fcb27535570f08411d20a",
       "ai_summary": "AI 总结生成失败。",
       "citations": 18
     },
     {
-      "title": "[IEEE transactions on circuits and systems for video technology (Print)] Event-Based Video Reconstruction Via Spatial–Temporal Heterogeneous Spiking Neural Network",
+      "title": "[IEEE Transactions on Circuits and Systems for Artificial Intelligence] FPGA-Based Adaptive LIF Neuron for High-Speed, Energy-Efficient Spiking Neural Network",
       "published": "2025-09-01",
-      "link": "https://www.semanticscholar.org/paper/6ce0fab2e3142069f13fcb27535570f08411d20a",
+      "link": "https://www.semanticscholar.org/paper/de88e6e0c3f8ea9a041f7582326276a4ca8c7086",
       "ai_summary": "AI 总结生成失败。",
       "citations": 18
     },
@@ -274,7 +274,7 @@
       "published": "2025-08-19",
       "link": "https://www.semanticscholar.org/paper/5ecd33890e96cac0f9369f79e0c11f0f1fe94d30",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 19
+      "citations": 20
     },
     {
       "title": "[International Conference on Systems] Generating Spiking Neural Network Code Libraries for Embedded Systems",
@@ -332,7 +332,7 @@
       "published": "2025-12-01",
       "link": "https://www.semanticscholar.org/paper/80c8581006a6fa1c5574886b7a9f041335ccc862",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 16
+      "citations": 17
     },
     {
       "title": "[Drones] Variations in Multi-Agent Actor–Critic Frameworks for Joint Optimizations in UAV Swarm Networks: Recent Evolution, Challenges, and Directions",
@@ -346,7 +346,7 @@
       "published": "2024-07-29",
       "link": "https://www.semanticscholar.org/paper/73fc348edc6f9b467b6a0c385bdd973321a3c9a9",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 12
+      "citations": 13
     },
     {
       "title": "[2025 IEEE International Conference on Communications Workshops (ICC Workshops)] Graph Based Deep Reinforcement Learning Aided by Transformers for Multi-Agent Cooperation",
