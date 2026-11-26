@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-25 06:49:15",
+  "updated": "2026-11-26 06:40:34",
   "classic_papers": [
     {
       "title": "[International Conference on Learning Representations] Spikformer: When Spiking Neural Network Meets Transformer",
       "published": "2022-09-29",
       "link": "https://www.semanticscholar.org/paper/ffd91f85d6d19e75309ececfd190afa6bb562284",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 644
+      "citations": 646
     },
     {
       "title": "[AAAI Conference on Artificial Intelligence] Spiking-YOLO: Spiking Neural Network for Energy-Efficient Object Detection",
@@ -62,7 +62,7 @@
       "published": "2023-02-22",
       "link": "https://www.semanticscholar.org/paper/147e306d10e8ee19caf3b84ffbda3a984cd5db8d",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 91
+      "citations": 92
     },
     {
       "title": "[Neural Networks] An unsupervised STDP-based spiking neural network inspired by biologically plausible learning rules and connections",
@@ -311,7 +311,7 @@
       "published": "2025-08-21",
       "link": "https://www.semanticscholar.org/paper/f4bcf903dd2843a1367ce0e8420785a872b88017",
       "ai_summary": "AI 总结生成失败。",
-      "citations": 35
+      "citations": 37
     },
     {
       "title": "[IEEE Transactions on Mobile Computing] Symmetry-Informed MARL: A Decentralized and Cooperative UAV Swarm Control Approach for Communication Coverage",
